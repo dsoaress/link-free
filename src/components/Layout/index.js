@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Header from '../Header'
 import * as S from './styled'
 import GlobalStyles from './global'
 
 const Layout = ({ children }) => (
   <S.Wrapper>
     <GlobalStyles />
+    <Header />
     {children}
   </S.Wrapper>
 )
