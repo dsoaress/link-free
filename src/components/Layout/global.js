@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
     margin: auto;
     padding: 3rem 1rem;
-    background: #262626;
+    background: ${props => props.background};
   }
 `
 

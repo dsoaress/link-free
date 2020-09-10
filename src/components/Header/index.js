@@ -1,5 +1,4 @@
 import React from 'react'
-import Img from 'gatsby-image'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import * as S from './styled'
@@ -25,7 +24,7 @@ const Header = () => {
 
   const logo = markdownRemark.frontmatter.logo.childImageSharp.fluid
 
-  return <S.Header>{logo && <Img fluid={logo} />}</S.Header>
+  return <S.Header>{logo && <S.Image fluid={logo} />}</S.Header>
 }
 
 export default Header

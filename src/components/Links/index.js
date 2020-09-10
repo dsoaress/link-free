@@ -4,10 +4,10 @@ import { useStaticQuery, graphql } from 'gatsby'
 import * as S from './styled'
 
 const Links = () => {
-  const { markdownRemark } = useStaticQuery(
+  const data = useStaticQuery(
     graphql`
       query {
-        markdownRemark(frontmatter: { key: { eq: "links" } }) {
+        links: markdownRemark(frontmatter: { key: { eq: "links" } }) {
           frontmatter {
             links {
               label
@@ -15,17 +15,30 @@ const Links = () => {
             }
           }
         }
+        styles: markdownRemark(frontmatter: { key: { eq: "styles" } }) {
+          frontmatter {
+            borderRadius
+            buttonsColor
+            fontColor
+          }
+        }
       }
     `
   )
 
-  const links = markdownRemark.frontmatter.links
+  const links = data.links.frontmatter.links
+  const styles = data.styles.frontmatter
 
   return (
     <S.Wrapper>
       {links.map((link, i) => (
-        <S.Link href={link.url} key={i}>
-          <S.List>{link.label}</S.List>
+        <S.Link fontColor={styles.fontColor} href={link.url} key={i}>
+          <S.List
+            borderRadius={styles.borderRadius}
+            buttonsColor={styles.buttonsColor}
+          >
+            {link.label}
+          </S.List>
         </S.Link>
       ))}
     </S.Wrapper>
