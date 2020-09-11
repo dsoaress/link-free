@@ -1,0 +1,93 @@
+backend:
+  name: git-gateway
+  branch: master
+  commit_messages:
+    create: 'create content'
+    update: 'update content'
+    delete: 'delete content'
+    uploadMedia: '[skip ci] upload asset'
+    deleteMedia: '[skip ci] delete asset'
+media_folder: 'content/images'
+public_folder: '/images'
+collections:
+  - name: 'settings'
+    label: 'Settings'
+    media_folder: ''
+    public_folder: ''
+    editor:
+      preview: false
+    files:
+      - file: 'content/links/index.md'
+        label: 'Links'
+        name: 'links'
+        fields:
+          - label: 'key'
+            name: 'key'
+            widget: 'hidden'
+            default: 'links'
+
+          - label: 'Links'
+            label_singular: 'link'
+            name: 'links'
+            widget: 'list'
+            fields:
+              - label: 'Label'
+                name: 'label'
+                widget: 'string'
+
+              - label: 'URL'
+                name: 'url'
+                widget: 'string'
+
+      - file: 'content/settings/styles.md'
+        label: 'Styles'
+        name: 'styles'
+        fields:
+          - label: 'key'
+            name: 'key'
+            widget: 'hidden'
+            default: 'styles'
+
+          - label: 'Logo'
+            name: 'logo'
+            widget: 'image'
+
+          - label: 'Buttons color'
+            name: 'buttonsColor'
+            widget: 'string'
+
+          - label: 'Border radius'
+            name: 'borderRadius'
+            widget: 'string'
+
+          - label: 'Font color'
+            name: 'fontColor'
+            widget: 'string'
+
+          - label: 'Footer font color'
+            name: 'footerFontColor'
+            widget: 'string'
+
+          - label: 'Background color'
+            name: 'background'
+            widget: 'string'
+
+      - file: 'content/settings/siteMetadata.json'
+        label: 'Metadata'
+        name: 'siteMetadata'
+        fields:
+          - label: 'Company name'
+            name: 'title'
+            widget: 'string'
+
+          - label: 'Short company name'
+            name: 'shortTitle'
+            widget: 'string'
+
+          - label: 'Description'
+            name: 'description'
+            widget: 'text'
+
+          - label: 'GTM ID'
+            name: 'gtmID'
+            widget: 'string'
