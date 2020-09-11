@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import * as data from '../../../content/settings/siteMetadata.json'
 import * as S from './styled'
 
 const Footer = () => {
@@ -20,7 +21,9 @@ const Footer = () => {
 
   return (
     <S.Wrapper footerFontColor={styles}>
-      <p>2020 © Mars Collective</p>
+      <p>
+        {new Date().getFullYear()} © {data.title}
+      </p>
     </S.Wrapper>
   )
 }
