@@ -10,11 +10,7 @@ const Header = () => {
         markdownRemark(frontmatter: { key: { eq: "styles" } }) {
           frontmatter {
             logo {
-              childImageSharp {
-                fluid(maxWidth: 256) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
+              publicURL
             }
           }
         }
@@ -22,9 +18,9 @@ const Header = () => {
     `
   )
 
-  const logo = markdownRemark.frontmatter.logo.childImageSharp.fluid
+  const logo = markdownRemark.frontmatter.logo.publicURL
 
-  return <S.Header>{logo && <S.Image fluid={logo} />}</S.Header>
+  return <S.Header>{logo && <S.Image src={logo} />}</S.Header>
 }
 
 export default Header

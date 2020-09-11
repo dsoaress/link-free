@@ -1,11 +1,10 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image'
 
 export const Header = styled.header`
   width: 100%;
 `
 
-export const Image = styled(Img)`
+export const Image = styled.img`
   max-width: 16rem;
   margin: auto;
 `
