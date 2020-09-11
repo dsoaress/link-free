@@ -32,6 +32,14 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: settings.gtmID,
+        includeInDevelopment: true,
+        defaultDataLayer: { platform: `gatsby` }
+      }
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify-cms`
