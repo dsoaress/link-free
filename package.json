@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
-    "gatsby": "^2.24.57",
+    "gatsby": "^2.24.58",
     "gatsby-plugin-google-tagmanager": "^2.3.11",
     "gatsby-plugin-manifest": "^2.4.28",
     "gatsby-plugin-netlify-cms": "^4.3.13",
