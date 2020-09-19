@@ -14,8 +14,6 @@ collections:
     label: 'Settings'
     media_folder: ''
     public_folder: ''
-    editor:
-      preview: true
     files:
       - file: 'content/index.md'
         label: 'Content'
