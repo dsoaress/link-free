@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: dev
   commit_messages:
     create: 'create content'
     update: 'update content'
@@ -15,17 +15,12 @@ collections:
     media_folder: ''
     public_folder: ''
     editor:
-      preview: false
+      preview: true
     files:
-      - file: 'content/links/index.md'
-        label: 'Links'
-        name: 'links'
+      - file: 'content/index.md'
+        label: 'Content'
+        name: 'content'
         fields:
-          - label: 'key'
-            name: 'key'
-            widget: 'hidden'
-            default: 'links'
-
           - label: 'Links'
             label_singular: 'link'
             name: 'links'
@@ -38,15 +33,6 @@ collections:
               - label: 'URL'
                 name: 'url'
                 widget: 'string'
-
-      - file: 'content/settings/styles.md'
-        label: 'Styles'
-        name: 'styles'
-        fields:
-          - label: 'key'
-            name: 'key'
-            widget: 'hidden'
-            default: 'styles'
 
           - label: 'Logo'
             name: 'logo'
@@ -72,7 +58,7 @@ collections:
             name: 'background'
             widget: 'string'
 
-      - file: 'content/settings/siteMetadata.json'
+      - file: 'content/siteMetadata.json'
         label: 'Metadata'
         name: 'siteMetadata'
         fields:

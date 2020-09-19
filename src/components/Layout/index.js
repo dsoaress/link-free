@@ -1,39 +1,31 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import PropTypes from 'prop-types'
 
 import Header from '../Header'
+import Links from '../Links'
 import Footer from '../Footer'
 import * as S from './styled'
 import GlobalStyles from './global'
 
-const Layout = ({ children }) => {
-  const { markdownRemark } = useStaticQuery(
-    graphql`
-      query {
-        markdownRemark(frontmatter: { key: { eq: "styles" } }) {
-          frontmatter {
-            background
-          }
-        }
-      }
-    `
-  )
-
-  const background = markdownRemark.frontmatter.background
-
-  return (
-    <S.Wrapper>
-      <GlobalStyles background={background} />
-      <Header />
-      {children}
-      <Footer />
-    </S.Wrapper>
-  )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
-}
+const Layout = ({
+  background,
+  logo,
+  links,
+  fontColor,
+  borderRadius,
+  buttonsColor,
+  footerFontColor
+}) => (
+  <S.Wrapper>
+    <GlobalStyles background={background} />
+    <Header logo={logo} />
+    <Links
+      links={links}
+      fontColor={fontColor}
+      borderRadius={borderRadius}
+      buttonsColor={buttonsColor}
+    />
+    <Footer footerFontColor={footerFontColor} />
+  </S.Wrapper>
+)
 
 export default Layout

@@ -1,5 +1,4 @@
 ---
-key: links
 links:
   - label: Chat with us on WhatsApp 💬
     url: https://wa.me/5545991328593
@@ -11,4 +10,10 @@ links:
     url: https://github.com/marscollective
   - label: Like us on Facebook 👍
     url: https://www.facebook.com/marscollective.co
+borderRadius: '1rem'
+buttonsColor: '#00d1b7'
+fontColor: '#262626'
+footerFontColor: '#fff'
+background: '#262626'
+logo: 'logo.png'
 ---
