@@ -35,11 +35,7 @@ collections:
               name: 'footerFontColor',
               widget: string,
             }
-          - {
-              label: 'Background color',
-              name: 'background',
-              widget: cstringolor,
-            }
+          - { label: 'Background color', name: 'background', widget: string }
       - file: 'content/siteMetadata.json'
         label: 'Metadata'
         name: 'siteMetadata'
