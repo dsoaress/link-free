@@ -3,7 +3,8 @@ const settings = require('./src/settings/siteMetadata')
 module.exports = {
   siteMetadata: {
     title: settings.title,
-    description: settings.description
+    description: settings.description,
+    lang: settings.lang
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

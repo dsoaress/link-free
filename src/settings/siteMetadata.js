@@ -5,6 +5,7 @@ const settings = {
   shortTitle: siteMetadata.shortTitle,
   description: siteMetadata.description,
   favicon: siteMetadata.favicon,
+  lang: siteMetadata.lang,
   gtmID: siteMetadata.gtmID
 }
 

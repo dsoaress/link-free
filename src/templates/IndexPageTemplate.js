@@ -9,10 +9,10 @@ import Footer from '../components/Footer'
 
 const IndexPageTemplate = ({ data }) => {
   const content = data.markdownRemark.frontmatter
-
+  const lang = data.site.siteMetadata.lang
   return (
     <Layout background={content.background}>
-      <SEO />
+      <SEO lang={lang} />
       <Header logo={content.logo.publicURL} />
       <Links
         links={content.links}
@@ -43,6 +43,13 @@ export const query = graphql`
         logo {
           publicURL
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
+        description
+        lang
       }
     }
   }
