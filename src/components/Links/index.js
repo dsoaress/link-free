@@ -7,7 +7,13 @@ const Links = ({ links, buttonsFontColor, borderRadius, buttonsColor }) => (
   <S.Wrapper>
     {links.map((link, i) => (
       <S.Item>
-        <S.Link buttonsFontColor={buttonsFontColor} href={link.url} key={i}>
+        <S.Link
+          buttonsFontColor={buttonsFontColor}
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          key={i}
+        >
           <Button
             borderRadius={borderRadius}
             buttonsColor={buttonsColor}
