@@ -2,11 +2,11 @@ backend:
   name: git-gateway
   branch: master
   commit_messages:
-    create: 'create content'
-    update: 'update content'
-    delete: 'delete content'
-    uploadMedia: '[skip ci] upload asset'
-    deleteMedia: '[skip ci] delete asset'
+    create: ':pencil: create content'
+    update: ':pencil: update content'
+    delete: ':fire: delete content'
+    uploadMedia: '[skip ci] :bento: upload asset'
+    deleteMedia: '[skip ci] :fire: delete asset'
 media_folder: 'content/images'
 public_folder: '/images'
 collections:
