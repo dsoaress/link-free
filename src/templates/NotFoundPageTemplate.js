@@ -7,11 +7,18 @@ import Header from '../components/Header'
 import NotFound from '../components/NotFound'
 import Footer from '../components/Footer'
 
-export const NotFoundPageTemplate = ({ title, message, buttonLabel, data }) => (
-  <Layout background={data.markdownRemark.frontmatter.background}>
-    <Header logo={data.markdownRemark.frontmatter.logo.publicURL} />
+export const NotFoundPageTemplate = ({
+  background,
+  logo,
+  title,
+  message,
+  buttonLabel,
+  fontColor
+}) => (
+  <Layout background={background}>
+    <Header logo={logo} />
     <NotFound title={title} message={message} buttonLabel={buttonLabel} />
-    <Footer fontColor={data.markdownRemark.frontmatter.fontColor} />
+    <Footer fontColor={fontColor} />
   </Layout>
 )
 
