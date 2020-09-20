@@ -28,7 +28,7 @@ collections:
             }
           - { label: 'Logo', name: 'logo', widget: 'image' }
           - { label: 'Buttons color', name: 'buttonsColor', widget: color }
-          - { label: 'Border radius', name: 'borderRadius', widget: string }
+          - { label: 'Border radius', name: 'borderRadius', widget: slider }
           - { label: 'Font color', name: 'buttonsFontColor', widget: color }
           - { label: 'Footer font color', name: 'fontColor', widget: color }
           - { label: 'Background color', name: 'background', widget: color }

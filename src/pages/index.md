@@ -11,7 +11,7 @@ links:
     url: https://github.com/marscollective
   - label: Like us on Facebook 👍
     url: https://www.facebook.com/marscollective.co
-borderRadius: '1rem'
+borderRadius: 16
 buttonsColor: '#00d1b7'
 buttonsFontColor: '#262626'
 fontColor: '#fff'
