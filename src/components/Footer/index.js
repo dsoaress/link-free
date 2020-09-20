@@ -1,6 +1,6 @@
 import React from 'react'
 
-import * as data from '../../../content/siteMetadata.json'
+import * as data from '../../settings/siteMetadata.json'
 import * as S from './styled'
 
 const Footer = ({ footerFontColor }) => (

@@ -4,6 +4,7 @@ const settings = {
   title: siteMetadata.title,
   shortTitle: siteMetadata.shortTitle,
   description: siteMetadata.description,
+  favicon: siteMetadata.favicon,
   gtmID: siteMetadata.gtmID
 }
 

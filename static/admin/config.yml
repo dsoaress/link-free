@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: dev
+  branch: master
   commit_messages:
     create: 'create content'
     update: 'update content'
@@ -15,7 +15,7 @@ collections:
     media_folder: ''
     public_folder: ''
     files:
-      - file: 'content/index.md'
+      - file: 'src/pages/index.md'
         label: 'Content'
         name: 'content'
         fields:
@@ -36,11 +36,12 @@ collections:
               widget: string,
             }
           - { label: 'Background color', name: 'background', widget: string }
-      - file: 'content/siteMetadata.json'
+      - file: 'src/settings/siteMetadata.json'
         label: 'Metadata'
         name: 'siteMetadata'
         fields:
           - { label: 'Company name', name: 'title', widget: string }
           - { label: 'Short company name', name: 'shortTitle', widget: string }
           - { label: 'Description', name: 'description', widget: text }
+          - { label: 'Favicon', name: 'favicon', widget: 'image' }
           - { label: 'GTM ID', name: 'gtmID', widget: string }

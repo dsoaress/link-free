@@ -1,11 +1,11 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import IndexPageTemplate from '../templates/IndexPageTemplate'
 
 const Preview = ({ entry, getAsset, widgetFor }) => {
   console.log(widgetFor('links'))
   const links = entry.getIn(['data', 'links'])
   return (
-    <Layout
+    <IndexPageTemplate
       background={entry.getIn(['data', 'background'])}
       logo={getAsset(entry.getIn(['data', 'logo']))}
       links={links.toJS()}
@@ -13,7 +13,7 @@ const Preview = ({ entry, getAsset, widgetFor }) => {
       borderRadius={entry.getIn(['data', 'borderRadius'])}
       buttonsColor={entry.getIn(['data', 'buttonsColor'])}
       footerFontColor={entry.getIn(['data', 'footerFontColor'])}
-    ></Layout>
+    />
   )
 }
 
