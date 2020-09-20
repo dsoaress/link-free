@@ -10,15 +10,21 @@ backend:
 media_folder: 'content/images'
 public_folder: '/images'
 collections:
-  - name: 'settings'
-    label: 'Settings'
+  - name: 'pages'
+    label: 'Pages'
     media_folder: ''
     public_folder: ''
     files:
       - file: 'src/pages/index.md'
-        label: 'Content'
-        name: 'content'
+        label: 'Index'
+        name: 'index'
         fields:
+          - {
+              label: 'key',
+              name: 'key',
+              widget: hidden,
+              default: IndexPageTemplate,
+            }
           - label: 'Links'
             label_singular: 'link'
             name: 'links'
@@ -29,13 +35,35 @@ collections:
           - { label: 'Logo', name: 'logo', widget: 'image' }
           - { label: 'Buttons color', name: 'buttonsColor', widget: string }
           - { label: 'Border radius', name: 'borderRadius', widget: string }
-          - { label: 'Font color', name: 'fontColor', widget: string }
-          - {
-              label: 'Footer font color',
-              name: 'footerFontColor',
-              widget: string,
-            }
+          - { label: 'Font color', name: 'buttonsFontColor', widget: string }
+          - { label: 'Footer font color', name: 'fontColor', widget: string }
           - { label: 'Background color', name: 'background', widget: string }
+
+      - file: 'src/pages/404.md'
+        label: '404'
+        name: 'notFound'
+        fields:
+          - {
+              label: 'key',
+              name: 'key',
+              widget: hidden,
+              default: NotFoundTemplate,
+            }
+          - { label: 'Title', name: 'title', widget: string }
+          - { label: 'Message', name: 'message', widget: string }
+          - { label: 'Button label', name: 'buttonLabel', widget: string }
+
+  - name: 'settings'
+    label: 'Settings'
+    media_folder: ''
+    public_folder: ''
+    files:
+      - file: 'README.md'
+        label: 'Readme'
+        name: 'readme'
+        fields:
+          - { label: 'Body', name: 'body', widget: markdown }
+
       - file: 'src/settings/siteMetadata.json'
         label: 'Metadata'
         name: 'siteMetadata'

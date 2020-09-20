@@ -7,12 +7,8 @@ export const Wrapper = styled.ul`
 `
 
 export const Link = styled.a`
-  color: ${props => props.fontColor};
+  color: ${props => props.buttonsFontColor};
   text-decoration: none;
 `
 
-export const List = styled.li`
-  background: ${props => props.buttonsColor};
-  border-radius: ${props => props.borderRadius};
-  padding: 1.5rem;
-`
+export const Item = styled.li``

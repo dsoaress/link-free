@@ -7,7 +7,28 @@ import Header from '../components/Header'
 import Links from '../components/Links'
 import Footer from '../components/Footer'
 
-const IndexPageTemplate = ({ data }) => {
+export const IndexPageTemplate = ({
+  background,
+  logo,
+  links,
+  buttonsFontColor,
+  borderRadius,
+  buttonsColor,
+  fontColor
+}) => (
+  <Layout background={background}>
+    <Header logo={logo} />
+    <Links
+      links={links}
+      buttonsFontColor={buttonsFontColor}
+      borderRadius={borderRadius}
+      buttonsColor={buttonsColor}
+    />
+    <Footer fontColor={fontColor} />
+  </Layout>
+)
+
+const IndexPage = ({ data }) => {
   const content = data.markdownRemark.frontmatter
   const lang = data.site.siteMetadata.lang
   return (
@@ -16,16 +37,16 @@ const IndexPageTemplate = ({ data }) => {
       <Header logo={content.logo.publicURL} />
       <Links
         links={content.links}
-        fontColor={content.fontColor}
+        buttonsFontColor={content.buttonsFontColor}
         borderRadius={content.borderRadius}
         buttonsColor={content.buttonsColor}
       />
-      <Footer footerFontColor={content.footerFontColor} />
+      <Footer fontColor={content.fontColor} />
     </Layout>
   )
 }
 
-export default IndexPageTemplate
+export default IndexPage
 
 export const query = graphql`
   query($id: String!) {
@@ -37,8 +58,8 @@ export const query = graphql`
         }
         borderRadius
         buttonsColor
+        buttonsFontColor
         fontColor
-        footerFontColor
         background
         logo {
           publicURL
@@ -47,8 +68,6 @@ export const query = graphql`
     }
     site {
       siteMetadata {
-        title
-        description
         lang
       }
     }

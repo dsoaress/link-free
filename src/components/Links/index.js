@@ -1,15 +1,20 @@
 import React from 'react'
 
+import Button from '../Button'
 import * as S from './styled'
 
-const Links = ({ links, fontColor, borderRadius, buttonsColor }) => (
+const Links = ({ links, buttonsFontColor, borderRadius, buttonsColor }) => (
   <S.Wrapper>
     {links.map((link, i) => (
-      <S.Link fontColor={fontColor} href={link.url} key={i}>
-        <S.List borderRadius={borderRadius} buttonsColor={buttonsColor}>
-          {link.label}
-        </S.List>
-      </S.Link>
+      <S.Item>
+        <S.Link buttonsFontColor={buttonsFontColor} href={link.url} key={i}>
+          <Button
+            borderRadius={borderRadius}
+            buttonsColor={buttonsColor}
+            label={link.label}
+          />
+        </S.Link>
+      </S.Item>
     ))}
   </S.Wrapper>
 )

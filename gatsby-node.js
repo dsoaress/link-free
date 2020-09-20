@@ -13,6 +13,9 @@ exports.createPages = ({ actions, graphql }) => {
             fields {
               slug
             }
+            frontmatter {
+              key
+            }
           }
         }
       }
@@ -29,7 +32,9 @@ exports.createPages = ({ actions, graphql }) => {
 
       createPage({
         path: edge.node.fields.slug,
-        component: path.resolve(`src/templates/IndexPageTemplate.js`),
+        component: path.resolve(
+          `src/templates/${String(edge.node.frontmatter.key)}Template.js`
+        ),
         context: {
           id
         }

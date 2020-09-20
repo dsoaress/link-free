@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import CMS from 'netlify-cms-app'
-import Preview from './preview'
 import { StyleSheetManager } from 'styled-components'
+
+import IndexPageTemplate from './templates/IndexPageTemplate'
+import NotFoundPageTemplate from './templates/NotFoundPageTemplate'
 
 function StyleInjector({ children }) {
   const [iframeRef, setIframeRef] = useState(null)
@@ -27,4 +29,11 @@ export default function withStyledComponentsRendered(Comp) {
   )
 }
 
-CMS.registerPreviewTemplate('content', withStyledComponentsRendered(Preview))
+CMS.registerPreviewTemplate(
+  'index',
+  withStyledComponentsRendered(IndexPageTemplate)
+)
+CMS.registerPreviewTemplate(
+  'notFound',
+  withStyledComponentsRendered(NotFoundPageTemplate)
+)
