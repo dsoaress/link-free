@@ -62,7 +62,7 @@ collections:
     editor:
       preview: false
     files:
-      - file: 'README.md'
+      - file: '.github/README.md'
         label: 'Readme'
         name: 'readme'
         fields:
