@@ -5,7 +5,7 @@
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.63",
     "gatsby-plugin-google-tagmanager": "^2.3.12",
-    "gatsby-plugin-manifest": "^2.4.30",
+    "gatsby-plugin-manifest": "^2.4.31",
     "gatsby-plugin-netlify-cms": "^4.3.14",
     "gatsby-plugin-offline": "^3.2.28",
     "gatsby-plugin-react-helmet": "^3.3.11",
