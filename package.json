@@ -1,6 +1,9 @@
 {
   "name": "link-free",
   "private": true,
+  "description": "An open source alternative to Linktree built by Mars with speed and customization in mind.",
+  "version": "1.0.0",
+  "author": "Mars Collective <hi@marscollective.co>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.63",
@@ -34,5 +37,12 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "yarn build && netlify deploy -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marscollective/link-free"
+  },
+  "bugs": {
+    "url": "https://github.com/marscollective/link-free/issues"
   }
 }
