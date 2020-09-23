@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: daily
     open-pull-requests-limit: 20
-    target-branch: dev
+    target-branch: master
     versioning-strategy: increase
     commit-message:
       prefix: ':arrow_up:'
@@ -14,6 +14,6 @@ updates:
     directory: '/'
     schedule:
       interval: 'daily'
-    target-branch: dev
+    target-branch: master
     commit-message:
       prefix: ':arrow_up:'
