@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 20
+    target-branch: dev
+    versioning-strategy: increase
+    commit-message:
+      prefix: ':arrow_up:'
+
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    target-branch: dev
+    commit-message:
+      prefix: ':arrow_up:'
