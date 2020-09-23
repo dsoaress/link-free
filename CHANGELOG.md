@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="next"></a>
+## next
+
+### Changed
+
+- ⬆️ Bump gatsby from 2.24.63 to 2.24.64 [[a06ab91](https://github.com/marscollective/link-free/commit/a06ab91d2730e0a4aca1196aeda0b01532bc5233)]
+- ⬆️ Bump gatsby-plugin-manifest from 2.4.30 to 2.4.31 [[502471f](https://github.com/marscollective/link-free/commit/502471ff77f35d4dde0be650165ddb4567681ffe)]
+- ⬆️ Bump actions/setup-node from v1 to v2.1.1 [[f899aa6](https://github.com/marscollective/link-free/commit/f899aa6fddea72be6b66b77a997ef7c1b8fc3054)]
+
+### Miscellaneous
+
+-  👷 Change dependabot config file [[63b42d2](https://github.com/marscollective/link-free/commit/63b42d2a9eb30f6010f710945ff5d07dbcbfd3c9)]
+
+
 <a name="1.0.0"></a>
 
 ## 1.0.0 (2020-09-23)
