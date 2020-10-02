@@ -3,12 +3,12 @@ updates:
   - package-ecosystem: npm
     directory: '/'
     schedule:
-      interval: daily
+      interval: 'daily'
     open-pull-requests-limit: 20
     target-branch: master
     versioning-strategy: increase
     commit-message:
-      prefix: ':arrow_up:'
+      prefix: '[skip netlify]'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
@@ -16,4 +16,4 @@ updates:
       interval: 'daily'
     target-branch: master
     commit-message:
-      prefix: ':arrow_up:'
+      prefix: '[skip netlify]'
