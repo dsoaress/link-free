@@ -14,7 +14,22 @@ jobs:
           node-version: 12.x
 
       - name: Install dependencies
-        run: yarn install && npm i -g gatsby-cli
+        run: yarn --frozen-lockfile
 
       - name: Build
-        run: gatsby build
+        run: yarn build
+
+      - name: Merge
+        uses: pascalgn/automerge-action@v0.12.0
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          MERGE_LABELS: ''
+          MERGE_METHOD: 'squash'
+          MERGE_FORKS: 'false'
+          MERGE_RETRIES: '10'
+          MERGE_RETRY_SLEEP: '200000'
+          MERGE_DELETE_BRANCH: 'true'
+          UPDATE_LABELS: ''
+          UPDATE_METHOD: 'merge'
+          UPDATE_RETRIES: '10'
+          UPDATE_RETRY_SLEEP: '200000'
