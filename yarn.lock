@@ -3072,24 +3072,6 @@ buble-jsx-only@^0.19.8:
     minimist "^1.2.0"
     regexpu-core "^4.5.4"
 
-buffer-alloc-unsafe@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/buffer-alloc-unsafe/-/buffer-alloc-unsafe-1.1.0.tgz#bd7dc26ae2972d0eda253be061dba992349c19f0"
-  integrity sha512-TEM2iMIEQdJ2yjPJoSIsldnleVaAk1oW3DBVUykyOLsEsFmEc9kn+SFFPz+gl54KQNxlDnAwCXosOS9Okx2xAg==
-
-buffer-alloc@^1.1.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/buffer-alloc/-/buffer-alloc-1.2.0.tgz#890dd90d923a873e08e10e5fd51a57e5b7cce0ec"
-  integrity sha512-CFsHQgjtW1UChdXgbyJGtnm+O/uLQeZdtbDo8mfUgYXCHSM1wgrVxXm6bSyrUuErEb+4sYVGCzASBRot7zyrow==
-  dependencies:
-    buffer-alloc-unsafe "^1.1.0"
-    buffer-fill "^1.0.0"
-
-buffer-fill@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/buffer-fill/-/buffer-fill-1.0.0.tgz#f8f78b76789888ef39f205cd637f68e702122b2c"
-  integrity sha1-+PeLdniYiO858gXNY39o5wISKyw=
-
 buffer-from@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
@@ -5960,10 +5942,10 @@ fuzzy@^0.1.1:
   resolved "https://registry.yarnpkg.com/fuzzy/-/fuzzy-0.1.3.tgz#4c76ec2ff0ac1a36a9dccf9a00df8623078d4ed8"
   integrity sha1-THbsL/CsGjap3M+aAN+GIweNTtg=
 
-gatsby-cli@^2.12.106:
-  version "2.12.106"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.12.106.tgz#e75926ba4912f14b36c0eb5037ce7f5c07f0fdda"
-  integrity sha512-xVN9Urrl/XFaC8/bZ+e2ae8yOzzKbTzVFApoXTpjMj5qHI+WpqVKKNsqlmfp5DE9b6tCwyNt81AL9IAGBgztSQ==
+gatsby-cli@^2.12.107:
+  version "2.12.107"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.12.107.tgz#1d5efdf96a97c2192eaa9f2fb6ee64a6d314a6fb"
+  integrity sha512-MEmqvYcz0TEVHVIZAjAClu9HY5SG0cRygizVRXrimQr7td7lg172zGIq3NJ6PgRbmQZIUF3MmQ8ublYqAjdg7g==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@hapi/joi" "^15.1.1"
@@ -6340,10 +6322,10 @@ gatsby-transformer-remark@^2.8.38:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.4.1"
 
-gatsby@^2.24.72:
-  version "2.24.72"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.24.72.tgz#cb1ae91ef0117c49417536c4187d8467e330b212"
-  integrity sha512-+fxkKhFgMPea4YF4FcXF5lKQbQ6iJHH/VwwG4Z//T2u0TjCkhyRCbdBRcboIH+XNtiuytNMOgzktlTg48IAHTg==
+gatsby@^2.24.73:
+  version "2.24.73"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.24.73.tgz#4065712b1f5aff45e230e2d593d53825aed978f3"
+  integrity sha512-05OVEIl6lf+jcumKyZetc+Wh7UQsDbhH++Rk+PlUjzwg21BBKZFNwIv3Dz+ctCo6JSqrJXI+BmNpNsNYOuview==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/core" "^7.11.6"
@@ -6411,7 +6393,7 @@ gatsby@^2.24.72:
     find-cache-dir "^3.3.1"
     fs-exists-cached "1.0.0"
     fs-extra "^8.1.0"
-    gatsby-cli "^2.12.106"
+    gatsby-cli "^2.12.107"
     gatsby-core-utils "^1.3.23"
     gatsby-graphiql-explorer "^0.4.15"
     gatsby-legacy-polyfills "^0.0.5"
@@ -8909,13 +8891,6 @@ material-colors@^1.2.1:
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/material-colors/-/material-colors-1.2.6.tgz#6d1958871126992ceecc72f4bcc4d8f010865f46"
   integrity sha512-6qE4B9deFBIa9YSpOc9O0Sgc43zTeVYbgDT5veRKSlB2+ZuHNoVVxA1L/ckMUayV9Ay9y7Z/SZCLcGteW9i7bg==
-
-md5-file@^3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/md5-file/-/md5-file-3.2.3.tgz#f9bceb941eca2214a4c0727f5e700314e770f06f"
-  integrity sha512-3Tkp1piAHaworfcCgH0jKbTvj1jWWFgbvh2cXaNCgHwyTCBxxvD1Y04rmfpvdPm1P4oXMOpm6+2H7sr7v9v8Fw==
-  dependencies:
-    buffer-alloc "^1.1.0"
 
 md5-file@^5.0.0:
   version "5.0.0"
