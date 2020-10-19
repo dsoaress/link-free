@@ -13,7 +13,7 @@
     "gatsby-plugin-offline": "^3.2.33",
     "gatsby-plugin-react-helmet": "^3.3.14",
     "gatsby-plugin-styled-components": "^3.3.14",
-    "gatsby-source-filesystem": "^2.3.34",
+    "gatsby-source-filesystem": "^2.3.35",
     "gatsby-transformer-remark": "^2.8.42",
     "netlify-cms-app": "^2.12.27",
     "netlify-plugin-gatsby-cache": "^0.3.2",
