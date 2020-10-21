@@ -6,7 +6,7 @@
   "author": "Mars Collective <hi@marscollective.co>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
-    "gatsby": "^2.24.82",
+    "gatsby": "^2.24.83",
     "gatsby-plugin-google-tagmanager": "^2.3.16",
     "gatsby-plugin-manifest": "^2.4.35",
     "gatsby-plugin-netlify-cms": "^4.3.16",
