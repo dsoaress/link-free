@@ -3,17 +3,21 @@ updates:
   - package-ecosystem: npm
     directory: '/'
     schedule:
-      interval: 'daily'
-    open-pull-requests-limit: 20
-    target-branch: master
+      interval: 'weekly'
+      day: 'tuesday'
+      time: '00:00'
+      timezone: 'America/Sao_Paulo'
+    open-pull-requests-limit: 50
     versioning-strategy: increase
     commit-message:
-      prefix: '[skip netlify]'
+      prefix: '⬆️ [skip ci]'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: 'daily'
-    target-branch: master
+      interval: 'weekly'
+      day: 'tuesday'
+      time: '00:00'
+      timezone: 'America/Sao_Paulo'
     commit-message:
-      prefix: '[skip netlify]'
+      prefix: '⬆️ [skip ci]'

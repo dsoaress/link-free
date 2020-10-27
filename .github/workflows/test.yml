@@ -1,9 +1,14 @@
-name: ci
-on: [pull_request]
+name: Test and merge
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build:
+  test-and-merge:
+    name: Test and merge
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -16,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
-      - name: Build
+      - name: Test
         run: yarn build
 
       - name: Merge
