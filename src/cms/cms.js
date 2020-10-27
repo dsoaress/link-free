@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import CMS from 'netlify-cms-app'
 import { StyleSheetManager } from 'styled-components'
 
-import { Control as ColorControl } from './colorpicker'
 import { Control as SliderControl } from './slider'
 import IndexPageTemplate from './templates/IndexPageTemplate'
 import NotFoundPageTemplate from './templates/NotFoundPageTemplate'
@@ -31,7 +30,6 @@ export default function withStyledComponentsRendered(Comp) {
   )
 }
 
-CMS.registerWidget('color', ColorControl)
 CMS.registerWidget('slider', SliderControl)
 CMS.registerPreviewTemplate(
   'index',
