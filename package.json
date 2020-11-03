@@ -22,7 +22,7 @@
     "react-color": "^2.19.3",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.0",
+    "styled-components": "^5.2.1",
     "validate-color": "^2.1.0"
   },
   "devDependencies": {
