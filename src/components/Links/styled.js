@@ -7,7 +7,6 @@ export const Wrapper = styled.ul`
 `
 
 export const Link = styled.a`
-  color: ${props => props.buttonsFontColor};
   text-decoration: none;
 `
 
