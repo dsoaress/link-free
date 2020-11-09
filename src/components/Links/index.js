@@ -8,7 +8,6 @@ const Links = ({ links, buttonsFontColor, borderRadius, buttonsColor }) => (
     {links.map((link, i) => (
       <S.Item>
         <S.Link
-          buttonsFontColor={buttonsFontColor}
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
@@ -16,6 +15,7 @@ const Links = ({ links, buttonsFontColor, borderRadius, buttonsColor }) => (
         >
           <Button
             borderRadius={borderRadius}
+            buttonsFontColor={buttonsFontColor}
             buttonsColor={buttonsColor}
             label={link.label}
           />
