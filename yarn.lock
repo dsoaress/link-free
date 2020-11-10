@@ -5817,10 +5817,10 @@ gatsby-page-utils@^0.2.30:
     lodash "^4.17.20"
     micromatch "^4.0.2"
 
-gatsby-plugin-google-tagmanager@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.4.0.tgz#551c6df37f60a5eb0c2f24a3d8191a06fc5fee0e"
-  integrity sha512-1DsLaHeLoUq5RUWPDPgHxa0mxdnCvJLuyoqP+h4U3w5PyMhk2Knso40PlR8NU7CfIWKn52m9CbFefjPpw9z5AA==
+gatsby-plugin-google-tagmanager@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.4.1.tgz#58de169c531df7f8168281f69abf15ad47134969"
+  integrity sha512-DzSVx3N0slNsYupENQ5GNmQ7V/CWUkwf0bp5pjUIsYPa6ctT8APqx+4CFneApmLynpTq2soyAhfTMvgad6CCBQ==
   dependencies:
     "@babel/runtime" "^7.11.2"
 
