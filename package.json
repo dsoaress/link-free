@@ -7,7 +7,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.25.3",
-    "gatsby-plugin-google-tagmanager": "^2.4.0",
+    "gatsby-plugin-google-tagmanager": "^2.4.1",
     "gatsby-plugin-manifest": "^2.5.2",
     "gatsby-plugin-netlify-cms": "^4.3.17",
     "gatsby-plugin-offline": "^3.3.3",
