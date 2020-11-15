@@ -1,4 +1,5 @@
 const siteMetadata = require('./site-metadata.json')
+const indexPage = require('./index-page.json')
 
 const settings = {
   title: siteMetadata.title,
@@ -6,6 +7,8 @@ const settings = {
   description: siteMetadata.description,
   favicon: siteMetadata.favicon,
   lang: siteMetadata.lang,
+  background: indexPage.background,
+  themeColor: indexPage.buttonsColor,
   gtmID: siteMetadata.gtmID
 }
 

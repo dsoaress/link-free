@@ -15,8 +15,8 @@ module.exports = {
         name: settings.title,
         short_name: settings.shortTitle,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: settings.background,
+        theme_color: settings.themeColor,
         display: `fullscreen`,
         icon: `static/${settings.favicon}`,
         icon_options: {
