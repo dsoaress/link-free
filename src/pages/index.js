@@ -1,19 +1,21 @@
 import React from 'react'
 import SEO from '../components/seo'
 import IndexPageTemplate from '../templates/index'
-import * as data from '../settings/index-page.json'
+import * as indexPage from '../settings/index-page.json'
+import * as siteMetadata from '../settings/site-metadata.json'
 
 const IndexPage = () => (
   <>
     <SEO />
     <IndexPageTemplate
-      background={data.background}
-      borderRadius={data.borderRadius}
-      buttonsColor={data.buttonsColor}
-      buttonsFontColor={data.buttonsFontColor}
-      fontColor={data.fontColor}
-      links={data.links}
-      logo={data.logo}
+      background={indexPage.background}
+      borderRadius={indexPage.borderRadius}
+      buttonsColor={indexPage.buttonsColor}
+      buttonsFontColor={indexPage.buttonsFontColor}
+      fontColor={indexPage.fontColor}
+      links={indexPage.links}
+      logo={indexPage.logo}
+      title={siteMetadata.title}
     />
   </>
 )

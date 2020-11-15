@@ -8,8 +8,8 @@ const NotFound = ({
   buttonsFontColor,
   buttonsColor,
   fontColor,
-  message,
-  title
+  header,
+  message
 }) => (
   <div
     style={{
@@ -19,7 +19,7 @@ const NotFound = ({
       color: `${fontColor}`
     }}
   >
-    <h1 style={{ fontSize: '4rem' }}>{title}</h1>
+    <h1 style={{ fontSize: '4rem' }}>{header}</h1>
     <p>{message}</p>
     <Link to="/">
       <Button

@@ -1,10 +1,8 @@
 import React from 'react'
 
-const Header = ({ logo }) => (
+const Header = ({ logo, title }) => (
   <header style={{ width: '100%' }}>
-    {logo && (
-      <img src={logo} style={{ maxWidth: '16rem', margin: 'auto' }} alt="" />
-    )}
+    <img src={logo} style={{ maxWidth: '16rem', margin: 'auto' }} alt={title} />
   </header>
 )
 

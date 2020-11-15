@@ -9,19 +9,25 @@ export const NotFoundPageTemplate = ({
   buttonsFontColor,
   buttonLabel,
   fontColor,
+  header,
   logo,
   message,
   title
 }) => (
-  <Layout background={background} fontColor={fontColor} logo={logo}>
+  <Layout
+    background={background}
+    fontColor={fontColor}
+    logo={logo}
+    title={title}
+  >
     <NotFound
       borderRadius={borderRadius}
       buttonsColor={buttonsColor}
       buttonLabel={buttonLabel}
       buttonsFontColor={buttonsFontColor}
       fontColor={fontColor}
+      header={header}
       message={message}
-      title={title}
     />
   </Layout>
 )

@@ -3,7 +3,7 @@ import Header from './header'
 import Footer from './footer'
 import './style.css'
 
-const Layout = ({ children, background, fontColor, logo }) => (
+const Layout = ({ background, children, fontColor, logo, title }) => (
   <section style={{ background: `${background}` }}>
     <div
       style={{
@@ -13,9 +13,9 @@ const Layout = ({ children, background, fontColor, logo }) => (
         margin: 'auto'
       }}
     >
-      <Header logo={logo} />
+      <Header logo={logo} title={title} />
       {children}
-      <Footer fontColor={fontColor} />
+      <Footer fontColor={fontColor} title={title} />
     </div>
   </section>
 )

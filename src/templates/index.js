@@ -9,9 +9,15 @@ const IndexPageTemplate = ({
   buttonsFontColor,
   fontColor,
   links,
-  logo
+  logo,
+  title
 }) => (
-  <Layout background={background} fontColor={fontColor} logo={logo}>
+  <Layout
+    background={background}
+    fontColor={fontColor}
+    logo={logo}
+    title={title}
+  >
     <Links
       borderRadius={borderRadius}
       buttonsColor={buttonsColor}

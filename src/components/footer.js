@@ -1,10 +1,9 @@
 import React from 'react'
-import * as data from '../settings/site-metadata.json'
 
-const Footer = ({ fontColor }) => (
+const Footer = ({ fontColor, title }) => (
   <footer style={{ fontSize: '0.8rem', color: `${fontColor}` }}>
     <p>
-      {new Date().getFullYear()} © {data.title}
+      {new Date().getFullYear()} © {title}
     </p>
   </footer>
 )

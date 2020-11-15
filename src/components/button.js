@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = ({ buttonsFontColor, borderRadius, buttonsColor, label }) => (
+const Button = ({ borderRadius, buttonsColor, buttonsFontColor, label }) => (
   <button
     style={{
       width: '100%',

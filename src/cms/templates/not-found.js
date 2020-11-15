@@ -1,21 +1,23 @@
 import React from 'react'
 import NotFoundPageTemplate from '../../templates/not-found'
-import * as data from '../../settings/index-page.json'
+import * as indexPage from '../../settings/index-page.json'
+import * as siteMetadata from '../../settings/site-metadata.json'
 
-const IndexPage = ({ entry }) => {
+const NotFoundPage = ({ entry }) => {
   return (
     <NotFoundPageTemplate
-      background={data.background}
-      borderRadius={data.borderRadius}
-      buttonsColor={data.buttonsColor}
+      background={indexPage.background}
+      borderRadius={indexPage.borderRadius}
+      buttonsColor={indexPage.buttonsColor}
       buttonLabel={entry.getIn(['data', 'buttonLabel'])}
-      buttonsFontColor={data.buttonsFontColor}
-      fontColor={data.fontColor}
-      logo={data.logo}
+      buttonsFontColor={indexPage.buttonsFontColor}
+      fontColor={indexPage.fontColor}
+      header={entry.getIn(['data', 'title'])}
+      logo={'/' + indexPage.logo}
       message={entry.getIn(['data', 'message'])}
-      title={entry.getIn(['data', 'title'])}
+      title={siteMetadata.title}
     />
   )
 }
 
-export default IndexPage
+export default NotFoundPage
