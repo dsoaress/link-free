@@ -8,7 +8,7 @@ const Layout = ({ children, background, fontColor, logo }) => (
     <div
       style={{
         maxWidth: '60rem',
-        height: '100vh',
+        minHeight: '100vh',
         padding: '3rem 1rem',
         margin: 'auto'
       }}

@@ -14,7 +14,7 @@ const NotFound = ({
   <div
     style={{
       display: 'grid',
-      gap: '4rem',
+      gap: '3rem',
       margin: '6rem 0',
       color: `${fontColor}`
     }}
