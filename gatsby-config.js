@@ -39,7 +39,6 @@ module.exports = {
         defaultDataLayer: { platform: `gatsby` }
       }
     },
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-offline`,
     {
       resolve: 'gatsby-plugin-netlify-cms',

@@ -1,17 +1,22 @@
 import React from 'react'
-
-import Button from '../Button'
-import * as S from './styled'
+import Button from './button'
 
 const Links = ({ links, buttonsFontColor, borderRadius, buttonsColor }) => (
-  <S.Wrapper>
+  <ul
+    style={{
+      display: 'grid',
+      gap: '1rem',
+      padding: '3rem 0',
+      listStyle: 'none'
+    }}
+  >
     {links.map((link, i) => (
-      <S.Item>
-        <S.Link
+      <li key={i}>
+        <a
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          key={i}
+          style={{ textDecoration: 'none' }}
         >
           <Button
             borderRadius={borderRadius}
@@ -19,10 +24,10 @@ const Links = ({ links, buttonsFontColor, borderRadius, buttonsColor }) => (
             buttonsColor={buttonsColor}
             label={link.label}
           />
-        </S.Link>
-      </S.Item>
+        </a>
+      </li>
     ))}
-  </S.Wrapper>
+  </ul>
 )
 
 export default Links

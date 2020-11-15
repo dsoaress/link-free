@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import Header from '../components/Header'
-import Links from '../components/Links'
-import Footer from '../components/Footer'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Header from '../components/header'
+import Links from '../components/links'
+import Footer from '../components/footer'
 
 export const IndexPageTemplate = ({
   background,

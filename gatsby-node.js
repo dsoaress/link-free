@@ -33,7 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.key)}Template.js`
+          `src/templates/${String(edge.node.frontmatter.key)}-template.js`
         ),
         context: {
           id

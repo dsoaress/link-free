@@ -20,12 +20,7 @@ collections:
         label: 'Index'
         name: 'index'
         fields:
-          - {
-              label: 'key',
-              name: 'key',
-              widget: hidden,
-              default: IndexPageTemplate,
-            }
+          - { label: 'key', name: 'key', widget: hidden, default: index }
           - { label: 'Logo', name: 'logo', widget: 'image' }
           - { label: 'Buttons color', name: 'buttonsColor', widget: color }
           - { label: 'Border radius', name: 'borderRadius', widget: slider }
@@ -44,12 +39,7 @@ collections:
         label: '404'
         name: 'notFound'
         fields:
-          - {
-              label: 'key',
-              name: 'key',
-              widget: hidden,
-              default: NotFoundTemplate,
-            }
+          - { label: 'key', name: 'key', widget: hidden, default: not-found }
           - { label: 'Title', name: 'title', widget: string }
           - { label: 'Message', name: 'message', widget: string }
           - { label: 'Button label', name: 'buttonLabel', widget: string }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { NotFoundPageTemplate } from '../../templates/NotFoundPageTemplate'
+import { NotFoundPageTemplate } from '../../templates/not-found-template'
 
 const IndexPage = ({ entry }) => {
   return (

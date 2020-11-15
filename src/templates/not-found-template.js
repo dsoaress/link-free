@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import Header from '../components/Header'
-import NotFound from '../components/NotFound'
-import Footer from '../components/Footer'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Header from '../components/header'
+import NotFound from '../components/not-found'
+import Footer from '../components/footer'
 
 export const NotFoundPageTemplate = ({
   background,

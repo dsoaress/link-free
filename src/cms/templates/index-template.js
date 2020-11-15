@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { IndexPageTemplate } from '../../templates/IndexPageTemplate'
+import { IndexPageTemplate } from '../../templates/index-template'
 
 const IndexPage = ({ entry, getAsset }) => {
   const links = entry.getIn(['data', 'links'])

@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
-import Button from '../Button'
-import * as S from './styled'
+import Button from './button'
 
 const NotFound = ({
   title,
@@ -13,8 +11,15 @@ const NotFound = ({
   buttonsColor,
   fontColor
 }) => (
-  <S.Wrapper fontColor={fontColor}>
-    <S.Title>{title}</S.Title>
+  <div
+    style={{
+      display: 'grid',
+      gap: '4rem',
+      margin: '6rem 0',
+      color: `${fontColor}`
+    }}
+  >
+    <h1 style={{ fontSize: '4rem' }}>{title}</h1>
     <p>{message}</p>
     <Link to="/">
       <Button
@@ -24,7 +29,7 @@ const NotFound = ({
         buttonsColor={buttonsColor}
       />
     </Link>
-  </S.Wrapper>
+  </div>
 )
 
 export default NotFound

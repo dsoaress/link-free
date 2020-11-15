@@ -1,5 +1,5 @@
 ---
-key: IndexPage
+key: index
 links:
   - label: Chat with us on WhatsApp 💬
     url: https://wa.me/5545991328593
