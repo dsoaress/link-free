@@ -25,10 +25,9 @@ export const NotFoundPageTemplate = ({
 const NotFoundPage = ({ data }) => {
   const content = data.markdownRemark.frontmatter
   const styles = data.styles.frontmatter
-  const lang = data.site.siteMetadata.lang
   return (
     <Layout background={styles.background}>
-      <SEO lang={lang} />
+      <SEO />
       <Header logo={styles.logo.publicURL} />
       <NotFound
         title={content.title}
@@ -65,11 +64,6 @@ export const query = graphql`
         logo {
           publicURL
         }
-      }
-    }
-    site {
-      siteMetadata {
-        lang
       }
     }
   }
