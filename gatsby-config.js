@@ -1,4 +1,4 @@
-const settings = require('./src/settings/siteMetadata')
+const settings = require('./src/settings')
 
 module.exports = {
   siteMetadata: {
@@ -15,7 +15,6 @@ module.exports = {
         path: `${__dirname}/src/pages`
       }
     },
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -25,7 +24,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `fullscreen`,
-        icon: `src/settings/${settings.favicon}`,
+        icon: `static/${settings.favicon}`,
         icon_options: {
           purpose: `maskable`
         }
@@ -43,7 +42,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        htmlFavicon: `src/settings/${settings.favicon}`,
+        htmlFavicon: `static/${settings.favicon}`,
         modulePath: `${__dirname}/src/cms/cms.js`
       }
     }

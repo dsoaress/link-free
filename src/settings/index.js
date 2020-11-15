@@ -1,4 +1,4 @@
-const siteMetadata = require('./siteMetadata.json')
+const siteMetadata = require('./site-metadata.json')
 
 const settings = {
   title: siteMetadata.title,

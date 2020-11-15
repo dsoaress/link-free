@@ -9,16 +9,15 @@ backend:
     uploadMedia: ':bento: Upload “{{path}}” [skip ci]'
     deleteMedia: ':fire: Delete “{{path}}” [skip ci]'
 
-media_folder: 'src/assets'
+media_folder: 'static/images'
+public_folder: 'images'
 
 collections:
   - name: pages
     label: Pages
-    media_folder: ''
-    public_folder: ''
     sortable_fields: []
     files:
-      - file: src/pages/index.md
+      - file: src/settings/index-page.json
         label: Index
         name: index
         fields:
@@ -37,9 +36,9 @@ collections:
               - { label: Label, name: label, widget: string }
               - { label: URL, name: url, widget: string }
 
-      - file: src/pages/404.md
+      - file: src/settings/not-found-page.json
         label: '404'
-        name: notFound
+        name: not-found
         fields:
           - { label: key, name: key, widget: hidden, default: not-found }
           - { label: Title, name: title, widget: string }
@@ -60,9 +59,9 @@ collections:
         fields:
           - { label: Body, name: body, widget: markdown }
 
-      - file: src/settings/siteMetadata.json
+      - file: src/settings/site-metadata.json
         label: Metadata
-        name: siteMetadata
+        name: site-metadata
         fields:
           - { label: Company name, name: title, widget: string }
           - { label: Short company name, name: shortTitle, widget: string }

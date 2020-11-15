@@ -1,5 +1,5 @@
 import React from 'react'
-import * as data from '../settings/siteMetadata.json'
+import * as data from '../settings/site-metadata.json'
 
 const Footer = ({ fontColor }) => (
   <footer

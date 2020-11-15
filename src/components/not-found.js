@@ -3,13 +3,13 @@ import { Link } from 'gatsby'
 import Button from './button'
 
 const NotFound = ({
-  title,
-  message,
+  borderRadius,
   buttonLabel,
   buttonsFontColor,
-  borderRadius,
   buttonsColor,
-  fontColor
+  fontColor,
+  message,
+  title
 }) => (
   <div
     style={{
@@ -23,10 +23,10 @@ const NotFound = ({
     <p>{message}</p>
     <Link to="/">
       <Button
-        label={buttonLabel}
-        buttonsFontColor={buttonsFontColor}
         borderRadius={borderRadius}
+        buttonsFontColor={buttonsFontColor}
         buttonsColor={buttonsColor}
+        label={buttonLabel}
       />
     </Link>
   </div>

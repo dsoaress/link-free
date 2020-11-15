@@ -1,7 +1,9 @@
 import React from 'react'
+import Header from './header'
+import Footer from './footer'
 import './style.css'
 
-const Layout = ({ children, background }) => (
+const Layout = ({ children, background, fontColor, logo }) => (
   <section style={{ background: `${background}` }}>
     <div
       style={{
@@ -11,7 +13,9 @@ const Layout = ({ children, background }) => (
         margin: 'auto'
       }}
     >
+      <Header logo={logo} />
       {children}
+      <Footer fontColor={fontColor} />
     </div>
   </section>
 )
