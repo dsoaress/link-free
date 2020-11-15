@@ -8,13 +8,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`
-      }
-    },
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -38,7 +32,6 @@ module.exports = {
         defaultDataLayer: { platform: `gatsby` }
       }
     },
-    `gatsby-plugin-offline`,
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {

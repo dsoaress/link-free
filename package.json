@@ -11,7 +11,6 @@
     "gatsby-plugin-netlify-cms": "^4.3.17",
     "gatsby-plugin-offline": "^3.3.3",
     "gatsby-plugin-react-helmet": "^3.3.14",
-    "gatsby-source-filesystem": "^2.4.2",
     "netlify-cms-app": "^2.13.3",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
