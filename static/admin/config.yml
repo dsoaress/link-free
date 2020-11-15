@@ -47,18 +47,10 @@ collections:
 
   - name: settings
     label: Settings
-    media_folder: ''
-    public_folder: ''
     sortable_fields: []
     editor:
       preview: false
     files:
-      - file: .github/README.md
-        label: Readme
-        name: readme
-        fields:
-          - { label: Body, name: body, widget: markdown }
-
       - file: src/settings/site-metadata.json
         label: Metadata
         name: site-metadata
