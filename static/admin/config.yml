@@ -1,69 +1,71 @@
 backend:
   name: git-gateway
   branch: main
+
   commit_messages:
-    create: ':pencil: create content'
-    update: ':pencil: update content'
-    delete: ':fire: delete content'
-    uploadMedia: '[skip ci] :bento: upload asset'
-    deleteMedia: '[skip ci] :fire: delete asset'
-media_folder: 'content/images'
-public_folder: '/images'
+    create: ':pencil: Create “{{slug}}”'
+    update: ':pencil: Update “{{slug}}”'
+    delete: ':fire: Delete “{{slug}}”'
+    uploadMedia: ':bento: Upload “{{path}}” [skip ci]'
+    deleteMedia: ':fire: Delete “{{path}}” [skip ci]'
+
+media_folder: 'src/assets'
+
 collections:
-  - name: 'pages'
-    label: 'Pages'
+  - name: pages
+    label: Pages
     media_folder: ''
     public_folder: ''
     sortable_fields: []
     files:
-      - file: 'src/pages/index.md'
-        label: 'Index'
-        name: 'index'
+      - file: src/pages/index.md
+        label: Index
+        name: index
         fields:
-          - { label: 'key', name: 'key', widget: hidden, default: index }
-          - { label: 'Logo', name: 'logo', widget: 'image' }
-          - { label: 'Buttons color', name: 'buttonsColor', widget: color }
-          - { label: 'Border radius', name: 'borderRadius', widget: slider }
-          - { label: 'Font color', name: 'buttonsFontColor', widget: color }
-          - { label: 'Footer font color', name: 'fontColor', widget: color }
-          - { label: 'Background color', name: 'background', widget: color }
-          - label: 'Links'
-            label_singular: 'link'
-            name: 'links'
+          - { label: key, name: key, widget: hidden, default: index }
+          - { label: Logo, name: logo, widget: image }
+          - { label: Buttons color, name: buttonsColor, widget: color }
+          - { label: Border radius, name: borderRadius, widget: slider }
+          - { label: Font color, name: buttonsFontColor, widget: color }
+          - { label: Footer font color, name: fontColor, widget: color }
+          - { label: Background color, name: background, widget: color }
+          - label: Links
+            label_singular: link
+            name: links
             widget: list
             fields:
-              - { label: 'Label', name: 'label', widget: string }
-              - { label: 'URL', name: 'url', widget: string }
+              - { label: Label, name: label, widget: string }
+              - { label: URL, name: url, widget: string }
 
-      - file: 'src/pages/404.md'
+      - file: src/pages/404.md
         label: '404'
-        name: 'notFound'
+        name: notFound
         fields:
-          - { label: 'key', name: 'key', widget: hidden, default: not-found }
-          - { label: 'Title', name: 'title', widget: string }
-          - { label: 'Message', name: 'message', widget: string }
-          - { label: 'Button label', name: 'buttonLabel', widget: string }
+          - { label: key, name: key, widget: hidden, default: not-found }
+          - { label: Title, name: title, widget: string }
+          - { label: Message, name: message, widget: string }
+          - { label: Button label, name: buttonLabel, widget: string }
 
-  - name: 'settings'
-    label: 'Settings'
+  - name: settings
+    label: Settings
     media_folder: ''
     public_folder: ''
     sortable_fields: []
     editor:
       preview: false
     files:
-      - file: '.github/README.md'
-        label: 'Readme'
-        name: 'readme'
+      - file: .github/README.md
+        label: Readme
+        name: readme
         fields:
-          - { label: 'Body', name: 'body', widget: markdown }
+          - { label: Body, name: body, widget: markdown }
 
-      - file: 'src/settings/siteMetadata.json'
-        label: 'Metadata'
-        name: 'siteMetadata'
+      - file: src/settings/siteMetadata.json
+        label: Metadata
+        name: siteMetadata
         fields:
-          - { label: 'Company name', name: 'title', widget: string }
-          - { label: 'Short company name', name: 'shortTitle', widget: string }
-          - { label: 'Description', name: 'description', widget: text }
-          - { label: 'Favicon', name: 'favicon', widget: 'image' }
-          - { label: 'GTM ID', name: 'gtmID', widget: string }
+          - { label: Company name, name: title, widget: string }
+          - { label: Short company name, name: shortTitle, widget: string }
+          - { label: Description, name: description, widget: text }
+          - { label: Favicon, name: favicon, widget: 'image' }
+          - { label: GTM ID, name: gtmID, widget: string }
