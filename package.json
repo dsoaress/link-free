@@ -16,14 +16,10 @@
     "gatsby-source-filesystem": "^2.4.2",
     "gatsby-transformer-remark": "^2.9.2",
     "netlify-cms-app": "^2.13.3",
-    "netlify-plugin-gatsby-cache": "^0.3.2",
-    "prop-types": "^15.7.2",
     "react": "^16.14.0",
-    "react-color": "^2.19.3",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.1",
-    "validate-color": "^2.1.0"
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "prettier": "2.1.2"
@@ -31,12 +27,11 @@
   "license": "0BSD",
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\"",
-    "start": "gatsby develop",
+    "dev": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "yarn build && netlify deploy -p"
+    "deploy": "yarn build && netlify deploy -p",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\""
   },
   "repository": {
     "type": "git",
@@ -44,5 +39,8 @@
   },
   "bugs": {
     "url": "https://github.com/marscollective/link-free/issues"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }
