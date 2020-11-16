@@ -2,8 +2,8 @@
   "name": "link-free",
   "private": true,
   "description": "An open source alternative to Linktree built by Mars with speed and customization in mind.",
-  "version": "1.0.1",
   "author": "Mars Collective <hi@marscollective.co>",
+  "version": "2.0.0",
   "dependencies": {
     "gatsby": "^2.25.3",
     "gatsby-plugin-google-tagmanager": "^2.4.1",
