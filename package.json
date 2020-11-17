@@ -5,7 +5,7 @@
   "author": "Mars Collective <hi@marscollective.co>",
   "version": "2.0.0",
   "dependencies": {
-    "gatsby": "^2.25.3",
+    "gatsby": "^2.26.1",
     "gatsby-plugin-google-tagmanager": "^2.4.1",
     "gatsby-plugin-manifest": "^2.6.0",
     "gatsby-plugin-netlify-cms": "^4.3.17",
