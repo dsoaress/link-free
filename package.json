@@ -6,7 +6,7 @@
   "version": "2.0.0",
   "dependencies": {
     "gatsby": "^2.27.1",
-    "gatsby-plugin-google-tagmanager": "^2.5.0",
+    "gatsby-plugin-google-tagmanager": "^2.6.0",
     "gatsby-plugin-manifest": "^2.6.0",
     "gatsby-plugin-netlify-cms": "^4.5.0",
     "gatsby-plugin-offline": "^3.4.0",
