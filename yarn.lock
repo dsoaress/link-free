@@ -1774,10 +1774,10 @@
     gatsby-transformer-remark "^2.12.0"
     gatsby-transformer-sharp "^2.8.0"
 
-"@marscollective/gatsby-theme-link-free@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-link-free/-/gatsby-theme-link-free-0.0.1.tgz#9c28e2eca5cb301b1b0e944d6850d5d8a99688c2"
-  integrity sha512-B+1+RKY1VtHbHj0OvlH8xc5GB//hUhJ3G65K2A3hulkaqLrg5A5KP87YP8B65G/Sy63DTRrXSCcT0hJDrIPSTg==
+"@marscollective/gatsby-theme-link-free@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-link-free/-/gatsby-theme-link-free-0.0.4.tgz#3402db39fd4b08b511d5d550f62552acfd212170"
+  integrity sha512-dFHwjYiREsDI2HhqhIO4efRZxRb4J82Sq5WgYzEDd1/zladC5XNU2rzJL7PledBFyi9VENhAIdSqKAm88NLK0w==
   dependencies:
     "@marscollective/gatsby-theme-core" "^0.0.2"
     autoprefixer "^10.1.0"
@@ -1789,6 +1789,7 @@
     gatsby-source-filesystem "^2.7.0"
     gatsby-transformer-json "^2.7.0"
     netlify-cms-app "^2.14.4"
+    postcss "^8.2.1"
     react-helmet "^6.1.0"
     tailwindcss "^2.0.1"
 
@@ -12505,7 +12506,7 @@ postcss@^6.0.1, postcss@^6.0.23, postcss@^6.0.9:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^8.1.6:
+postcss@^8.1.6, postcss@^8.2.1:
   version "8.2.1"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.1.tgz#eabc5557c4558059b9d9e5b15bce7ffa9089c2a8"
   integrity sha512-RhsqOOAQzTgh1UB/IZdca7F9WDb7SUCR2Vnv1x7DbvuuggQIpoDwjK+q0rzoPffhYvWNKX5JSwS4so4K3UC6vA==
