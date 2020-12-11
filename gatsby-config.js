@@ -1,43 +1,14 @@
-const settings = require('./src/settings')
+const fs = require(`fs`);
+const metadataFile = `./content/metadata.json`;
+const metadata = fs.existsSync(metadataFile) ? require(metadataFile) : "";
 
 module.exports = {
-  siteMetadata: {
-    title: settings.title,
-    description: settings.description,
-    lang: settings.lang
-  },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-offline`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `@marscollective/gatsby-theme-link-free`,
       options: {
-        name: settings.title,
-        short_name: settings.shortTitle,
-        start_url: `/`,
-        background_color: settings.background,
-        theme_color: settings.themeColor,
-        display: `fullscreen`,
-        icon: `static/${settings.favicon}`,
-        icon_options: {
-          purpose: `maskable`
-        }
-      }
+        metadata,
+      },
     },
-    {
-      resolve: `gatsby-plugin-google-tagmanager`,
-      options: {
-        id: settings.gtmID,
-        includeInDevelopment: true,
-        defaultDataLayer: { platform: `gatsby` }
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        htmlFavicon: `static/${settings.favicon}`,
-        modulePath: `${__dirname}/src/cms/cms.js`
-      }
-    }
-  ]
-}
+  ],
+};

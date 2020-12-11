@@ -1,41 +1,20 @@
 {
-  "name": "link-free",
-  "private": true,
-  "description": "An open source alternative to Linktree built by Mars with speed and customization in mind.",
+  "name": "@marscollective/gatsby-theme-link-free",
   "author": "Mars Collective <hi@marscollective.co>",
-  "version": "2.0.0",
-  "dependencies": {
-    "gatsby": "^2.28.1",
-    "gatsby-plugin-google-tagmanager": "^2.7.0",
-    "gatsby-plugin-manifest": "^2.8.0",
-    "gatsby-plugin-netlify-cms": "^4.6.0",
-    "gatsby-plugin-offline": "^3.6.0",
-    "gatsby-plugin-react-helmet": "^3.6.0",
-    "netlify-cms-app": "^2.14.4",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-helmet": "^6.1.0"
-  },
-  "devDependencies": {
-    "prettier": "2.2.1"
-  },
+  "description": "An open source alternative to Linktree built by Mars with speed and customization in mind.",
+  "version": "3.0.0",
+  "private": true,
   "license": "0BSD",
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
-    "dev": "gatsby develop",
+    "dev": "GATSBY_EXPERIMENTAL_LAZY_DEVJS=true gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "deploy": "yarn build && netlify deploy -p",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\""
+    "clean": "gatsby clean"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/marscollective/link-free"
-  },
-  "bugs": {
-    "url": "https://github.com/marscollective/link-free/issues"
-  },
-  "engines": {
-    "node": "12.x"
+  "dependencies": {
+    "@marscollective/gatsby-theme-link-free": "^0.0.1",
+    "gatsby": "^2.28.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
