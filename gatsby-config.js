@@ -1,7 +1,4 @@
-const fs = require(`fs`)
-const metadataFile = `./content/metadata.json`
-const metadata = fs.existsSync(metadataFile) ? require(metadataFile) : ''
-
+const metadata = require(`./content/metadata.json`)
 module.exports = {
   plugins: [
     {
