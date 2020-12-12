@@ -1777,10 +1777,10 @@
     gatsby-transformer-sharp "^2.8.0"
     react-helmet "^6.1.0"
 
-"@marscollective/gatsby-theme-link-free@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-link-free/-/gatsby-theme-link-free-0.0.7.tgz#628ab3617a88283ffd396c257427b0f4b33c44aa"
-  integrity sha512-z0/ChM+Gl1tuKgSHX2V1aoKde63oMsTDT64fUpIKX2F9wbFY9PiNwjJrd3KU3bwIaAlKbx9qbBAaraZq17C+rA==
+"@marscollective/gatsby-theme-link-free@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-link-free/-/gatsby-theme-link-free-0.0.8.tgz#54df996dad18fa1baeb9646d8d6b823cd84f2ee7"
+  integrity sha512-WBHj2AYQGQnOwlpfdIHdlwDybpNtVaRzGFSCVBOt1pJwIy0QikusIBptws5RmRFCjCcf0gCjzuB/Hqobx0n2yw==
   dependencies:
     "@marscollective/gatsby-theme-core" "^0.0.5"
     autoprefixer "^10.1.0"
