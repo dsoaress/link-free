@@ -1,14 +1,14 @@
 # Linkfree
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/marscollective/link-free)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/marscollective/link-free&stack=cms)
 
-Linkfree is an open-source alternative to paid, limited tools like [Linktree](https://linktr.ee/).
+Linkfree is an open-source alternative to paid, limited tools like [Linktree](https://linktr.ee/).
 
-![Linkfree interface](link-free.png)
+![Linkfree interface](https://marscollective.co/assets/link-free.png)
 
-It is developed by [Mars](https://marscollective.co/) using the Jamstack architecture, combining the power of Gatsby (React and GraphQL) with styled-components and Netlify CMS to provide a fast, reliable, and fully customizable tool, *served* by the Netlify CDN. 🚀
+It is developed by [Mars](https://marscollective.co/) using the Jamstack architecture, combining the power of Gatsby (React and GraphQL) with styled-components and Netlify CMS to provide a fast, reliable, and fully customizable tool, _served_ by the Netlify CDN. 🚀
 
-You can see it in action by visiting [our Linkfree page](https://links.marscollective.co/) 🌎, and while you're at it, go have a look at our social networks. 😉
+You can see it in action by visiting [our Linkfree page](https://links.marscollective.co/) 🌎, and while you're at it, go have a look at our social networks. 😉
 
 ## Why use it?
 
@@ -38,4 +38,4 @@ You just have to follow the instructions and you'll have a copy of our repositor
 
 This project is open source and you're free to fork and remix it to fit your needs.
 
-If there's any feature you'd like to see implemented, we'd love to see your feedback on our [issues page](https://github.com/marscollective/link-free/issues). While we can't promise to develop every request, we're happy to accept community contributions.
+If there's any feature you'd like to see implemented, we'd love to see your feedback on our [issues page](https://github.com/marscollective/gatsby-themes/issues). While we can't promise to develop every request, we're happy to accept community contributions.
