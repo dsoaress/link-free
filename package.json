@@ -1,8 +1,7 @@
 {
-  "name": "@marscollective/gatsby-theme-link-free",
+  "name": "@marscollective/gatsby-starter-link-free",
   "author": "Mars Collective <hi@marscollective.co>",
   "description": "An open source alternative to Linktree built by Mars with speed and customization in mind.",
-  "version": "3.0.0",
   "private": true,
   "license": "0BSD",
   "scripts": {
@@ -12,7 +11,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@marscollective/gatsby-theme-link-free": "^0.0.4",
+    "@marscollective/gatsby-theme-link-free": "^0.0.6",
     "gatsby": "^2.28.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
