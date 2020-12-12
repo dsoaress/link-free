@@ -1,6 +1,6 @@
 {
   "name": "@marscollective/gatsby-starter-link-free",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
@@ -9,7 +9,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@marscollective/gatsby-theme-link-free": "^0.0.5",
+    "@marscollective/gatsby-theme-link-free": "^0.0.6",
     "gatsby": "^2.28.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
