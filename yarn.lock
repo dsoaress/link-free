@@ -1757,16 +1757,17 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
-"@marscollective/gatsby-theme-core@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-core/-/gatsby-theme-core-0.0.4.tgz#ea566f5ec5d667585acba8fbc7195c25133d0f5b"
-  integrity sha512-6KJ9+j1rnno700OywwuyL7ePcNeVZ1OO0/gr5iLftC9FB0XeoIafom3LIxFtw82wXF2nUSzk6+j8/1L3mDmXrw==
+"@marscollective/gatsby-theme-core@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-core/-/gatsby-theme-core-0.0.5.tgz#04f423988a52573bd12a8dfb34997a84b65123cb"
+  integrity sha512-u1XYT8nh5PZJz9On8RKwhfj8yOfN2oDeD/gL1O97eBGYxudz5ONjnZrhWg8tFG3haqvXpGoaR0tNh+jmnqlbGQ==
   dependencies:
     gatsby-image "^2.7.0"
     gatsby-plugin-catch-links "^2.6.0"
     gatsby-plugin-manifest "^2.8.0"
     gatsby-plugin-netlify "^2.7.0"
     gatsby-plugin-offline "^3.6.0"
+    gatsby-plugin-react-helmet "^3.6.0"
     gatsby-plugin-sharp "^2.10.1"
     gatsby-plugin-sitemap "^2.8.0"
     gatsby-remark-copy-linked-files "^2.6.0"
@@ -1774,21 +1775,20 @@
     gatsby-source-filesystem "^2.7.0"
     gatsby-transformer-remark "^2.12.0"
     gatsby-transformer-sharp "^2.8.0"
+    react-helmet "^6.1.0"
 
-"@marscollective/gatsby-theme-link-free@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-link-free/-/gatsby-theme-link-free-0.0.6.tgz#6e7e930959127a038fce5c98f013979e0b7e1688"
-  integrity sha512-YSz8rY+p4QBiVVRcD/PizArJhi+llh9p0zrnbxiWi4OEMI8x0QDEgx53zd4jIpD7O8GiWHfCtRq+rRlzgWEDGA==
+"@marscollective/gatsby-theme-link-free@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-link-free/-/gatsby-theme-link-free-0.0.7.tgz#628ab3617a88283ffd396c257427b0f4b33c44aa"
+  integrity sha512-z0/ChM+Gl1tuKgSHX2V1aoKde63oMsTDT64fUpIKX2F9wbFY9PiNwjJrd3KU3bwIaAlKbx9qbBAaraZq17C+rA==
   dependencies:
-    "@marscollective/gatsby-theme-core" "^0.0.4"
+    "@marscollective/gatsby-theme-core" "^0.0.5"
     autoprefixer "^10.1.0"
     gatsby-plugin-netlify-cms "^4.6.0"
     gatsby-plugin-postcss "^3.3.0"
-    gatsby-plugin-react-helmet "^3.6.0"
     gatsby-transformer-json "^2.7.0"
     netlify-cms-app "^2.14.4"
     postcss "^8.2.1"
-    react-helmet "^6.1.0"
     tailwindcss "^2.0.1"
 
 "@mdx-js/util@^2.0.0-next.7":
