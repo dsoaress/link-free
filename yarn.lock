@@ -1757,13 +1757,15 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
-"@marscollective/gatsby-theme-core@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-core/-/gatsby-theme-core-0.0.5.tgz#04f423988a52573bd12a8dfb34997a84b65123cb"
-  integrity sha512-u1XYT8nh5PZJz9On8RKwhfj8yOfN2oDeD/gL1O97eBGYxudz5ONjnZrhWg8tFG3haqvXpGoaR0tNh+jmnqlbGQ==
+"@marscollective/gatsby-theme-core@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-core/-/gatsby-theme-core-0.0.7.tgz#faaac52820486f0a901dd19ae8f83b1a1eac03f0"
+  integrity sha512-s4HHCKhDd3JE8b63WPMW26Gf2fri7wyVl3YhyInlPPYl6y5kYecpDysU8gbUy8ltFzMpqlo5SZfk3/+zyHOlKw==
   dependencies:
     gatsby-image "^2.7.0"
     gatsby-plugin-catch-links "^2.6.0"
+    gatsby-plugin-google-analytics "^2.7.0"
+    gatsby-plugin-google-tagmanager "^2.7.0"
     gatsby-plugin-manifest "^2.8.0"
     gatsby-plugin-netlify "^2.7.0"
     gatsby-plugin-offline "^3.6.0"
@@ -1777,19 +1779,19 @@
     gatsby-transformer-sharp "^2.8.0"
     react-helmet "^6.1.0"
 
-"@marscollective/gatsby-theme-link-free@^0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-link-free/-/gatsby-theme-link-free-0.0.8.tgz#54df996dad18fa1baeb9646d8d6b823cd84f2ee7"
-  integrity sha512-WBHj2AYQGQnOwlpfdIHdlwDybpNtVaRzGFSCVBOt1pJwIy0QikusIBptws5RmRFCjCcf0gCjzuB/Hqobx0n2yw==
+"@marscollective/gatsby-theme-link-free@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-link-free/-/gatsby-theme-link-free-0.0.10.tgz#c86f72eaf13acfbbcb295f2087ee53bc98353a7d"
+  integrity sha512-WMYm+SZU4e/taeeERghcsvwJz9SSIvdGWIGfjrPdDOLAr61R52y7U1ooLeffUfVXgU3qdZEBRgNeah6Ud1l/LA==
   dependencies:
-    "@marscollective/gatsby-theme-core" "^0.0.5"
+    "@marscollective/gatsby-theme-core" "^0.0.7"
     autoprefixer "^10.1.0"
     gatsby-plugin-netlify-cms "^4.6.0"
     gatsby-plugin-postcss "^3.3.0"
     gatsby-transformer-json "^2.7.0"
-    netlify-cms-app "^2.14.4"
+    netlify-cms-app "^2.14.5"
     postcss "^8.2.1"
-    tailwindcss "^2.0.1"
+    tailwindcss "^2.0.2"
 
 "@mdx-js/util@^2.0.0-next.7":
   version "2.0.0-next.7"
@@ -6949,6 +6951,21 @@ gatsby-plugin-catch-links@^2.6.0:
     "@babel/runtime" "^7.12.5"
     escape-string-regexp "^1.0.5"
 
+gatsby-plugin-google-analytics@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.7.0.tgz#93b061ac3d98130bea21905fcfdb1f57803be0a4"
+  integrity sha512-MJir2U3Dk9waATUl60XS1WhHtWQnRTWEm9qwhTEmP83phTsts2WXNhgDgqE/OZ6B0pZn6cSb4zVY86x2zDch0g==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    minimatch "3.0.4"
+
+gatsby-plugin-google-tagmanager@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.7.0.tgz#82ccba309a0b8d335a72fd26f43f1c3221be5d39"
+  integrity sha512-eaNQU8aSt0BvRnv+niuRI+/vyRj1OLyFWmwKpjXRhH0uLnyIleNjzM95uteEkPUCOwjArCSd4ai6LBmT4PydmQ==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+
 gatsby-plugin-manifest@^2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.8.0.tgz#a0383e70201c3c4314fcd685de384258e0b797a1"
@@ -10640,10 +10657,10 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-netlify-cms-app@^2.14.4:
-  version "2.14.4"
-  resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.14.4.tgz#6c2f3ae2053b96248624a503ba46642200e8a94a"
-  integrity sha512-C4m9+4VKrcTnFPqmZoxXxnDZ7yugUcmI3AVUA87o+d0s64QTN7gpmqNy4arCgKJdK7f95gYP3q4pdauFnH1Scg==
+netlify-cms-app@^2.14.5:
+  version "2.14.5"
+  resolved "https://registry.yarnpkg.com/netlify-cms-app/-/netlify-cms-app-2.14.5.tgz#65d9f0b11f012969f6cc0b6f11ed1a0c152e9683"
+  integrity sha512-Ja3o3pk8ik6X7UO+dg5KUl4s6fqWXfLmNLavUcZr8nb0ZfpQoob79uvv1tCe7YFAZsFK/74CWdNxx74KBY55EA==
   dependencies:
     "@emotion/core" "^10.0.35"
     "@emotion/styled" "^10.0.27"
@@ -10656,10 +10673,10 @@ netlify-cms-app@^2.14.4:
     netlify-cms-backend-github "^2.11.7"
     netlify-cms-backend-gitlab "^2.9.5"
     netlify-cms-backend-test "^2.10.5"
-    netlify-cms-core "^2.36.3"
+    netlify-cms-core "^2.36.4"
     netlify-cms-editor-component-image "^2.6.7"
     netlify-cms-lib-auth "^2.3.0"
-    netlify-cms-lib-util "^2.12.0"
+    netlify-cms-lib-util "^2.12.1"
     netlify-cms-locales "^1.21.0"
     netlify-cms-ui-default "^2.12.0"
     netlify-cms-widget-boolean "^2.3.4"
@@ -10738,10 +10755,10 @@ netlify-cms-backend-test@^2.10.5:
   resolved "https://registry.yarnpkg.com/netlify-cms-backend-test/-/netlify-cms-backend-test-2.10.5.tgz#b06cf3adc425841d89689c1bf0c0658949fc48c9"
   integrity sha512-YHuMfAuzmDKd89YvMNfZh4F0DhGYGJVBVEV5H/MgOkPQcREG9SdLNjDyBcr/Y7mpjlu6MwR3s71BgMWIlFGpJg==
 
-netlify-cms-core@^2.36.3:
-  version "2.36.3"
-  resolved "https://registry.yarnpkg.com/netlify-cms-core/-/netlify-cms-core-2.36.3.tgz#a68b1c6fde76c9c4d9537da5895d48cc04650cb2"
-  integrity sha512-Ytu39DFpFocF3mMIRIJxj6HZCIg0qudiK65EbfiInCAWLIn6xfsHrHTraYk+IOms4nQ0NE6IzAiOHn87VEVZuA==
+netlify-cms-core@^2.36.4:
+  version "2.36.4"
+  resolved "https://registry.yarnpkg.com/netlify-cms-core/-/netlify-cms-core-2.36.4.tgz#7ef6da2033498f4014ec654482f4a727619bc6ba"
+  integrity sha512-yIKbhdOB7xb69R9jtt0pF8MtW5VRKypqAmpNEY0fxlF3+863DaB27ZuyxCOObWpc/rsdVzzj0/WzD35BQ2RhZw==
   dependencies:
     "@iarna/toml" "2.2.5"
     ajv "^6.10.0"
@@ -10798,10 +10815,10 @@ netlify-cms-lib-auth@^2.3.0:
   resolved "https://registry.yarnpkg.com/netlify-cms-lib-auth/-/netlify-cms-lib-auth-2.3.0.tgz#0bf539bb1988721195b08e2df645e8d8851347ea"
   integrity sha512-+428eI/EkRSchRslhtWagjgtbgN+CZhhHMUXTDmpjqPiRVCYeIfKDubDI2yUa2PVIATGFr0Z/v7tJQSdKDop5w==
 
-netlify-cms-lib-util@^2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/netlify-cms-lib-util/-/netlify-cms-lib-util-2.12.0.tgz#5ed260529f08d94f6957d20fd1b351a841d5538e"
-  integrity sha512-2l81lYNkc2YLzzWfVwgB9nPqHwjtNc0ohvIFJEeVXfMQVMmnI8XyMY2aPsiyu4g8/DIOAq0KMrlPz1mvHYo3oQ==
+netlify-cms-lib-util@^2.12.1:
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/netlify-cms-lib-util/-/netlify-cms-lib-util-2.12.1.tgz#1bd9d51ac017f1b1d9214447a1c5767d442be5f9"
+  integrity sha512-UKlVbl1zo20lXFy/UcSuYE2l6c/4yOINE+qg9k63nVFYg9s9w3ZL6G1tP1I0MDW9G2nB0tE7E3pbozE192kxrA==
   dependencies:
     js-sha256 "^0.9.0"
     localforage "^1.7.3"
@@ -15228,10 +15245,10 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-tailwindcss@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-2.0.1.tgz#8d336917819341d1018208e8b3ed8cbc46e6b643"
-  integrity sha512-57G3jdcVBWTPkHCNSAfDAo1Qp2Nkr4H6WnLD0luNFh1td+KwQp9FOVcqj0SYBH6qwVQJawzT+0/zLxzKmyznGw==
+tailwindcss@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-2.0.2.tgz#28e1573d29dd4547b26782facb05bcfaa92be366"
+  integrity sha512-nO9JRE1pO7SF9RnYAl6g7uzeHdrmKAFqNjT9NtZUfxqimJZAOOLOEyIEUiMq12+xIc7mC2Ey3Vf90XjHpWKfbw==
   dependencies:
     "@fullhuman/postcss-purgecss" "^3.0.0"
     bytes "^3.0.0"
