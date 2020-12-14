@@ -1757,10 +1757,10 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
-"@marscollective/gatsby-theme-core@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-core/-/gatsby-theme-core-0.0.7.tgz#faaac52820486f0a901dd19ae8f83b1a1eac03f0"
-  integrity sha512-s4HHCKhDd3JE8b63WPMW26Gf2fri7wyVl3YhyInlPPYl6y5kYecpDysU8gbUy8ltFzMpqlo5SZfk3/+zyHOlKw==
+"@marscollective/gatsby-theme-core@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-core/-/gatsby-theme-core-0.1.0.tgz#210bf567568e1521eaaf71517e008b6de5f04644"
+  integrity sha512-euJiLn0+3YlTD2vZhDlG/Mf/WtBHZQ8RBRli10VdjiEWfN/pouXZoyfUfxEz70qhNO47hRy0GkkHXukmLM9x5w==
   dependencies:
     gatsby-image "^2.7.0"
     gatsby-plugin-catch-links "^2.6.0"
@@ -1779,12 +1779,12 @@
     gatsby-transformer-sharp "^2.8.0"
     react-helmet "^6.1.0"
 
-"@marscollective/gatsby-theme-link-free@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-link-free/-/gatsby-theme-link-free-0.0.10.tgz#c86f72eaf13acfbbcb295f2087ee53bc98353a7d"
-  integrity sha512-WMYm+SZU4e/taeeERghcsvwJz9SSIvdGWIGfjrPdDOLAr61R52y7U1ooLeffUfVXgU3qdZEBRgNeah6Ud1l/LA==
+"@marscollective/gatsby-theme-link-free@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-link-free/-/gatsby-theme-link-free-0.1.0.tgz#ed3e0d348f2efedead0bb1b593a83f77b7e57265"
+  integrity sha512-0eKoiWbZq089R4gHik2OljG57t//OseKPZX1xVMAWUyrHBC9sdvIDPhRwHHSxjbktw03S7TqxnazEMQYrvgRqg==
   dependencies:
-    "@marscollective/gatsby-theme-core" "^0.0.7"
+    "@marscollective/gatsby-theme-core" "^0.1.0"
     autoprefixer "^10.1.0"
     gatsby-plugin-netlify-cms "^4.6.0"
     gatsby-plugin-postcss "^3.3.0"
