@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/marscollective/gatsby-theme-jdoe/compare/@marscollective/gatsby-starter-link-free@0.1.0...@marscollective/gatsby-starter-link-free@0.2.0) (2020-12-14)
+
+
+### Bug Fixes
+
+* 🐛 Data import ([#34](https://github.com/marscollective/gatsby-theme-jdoe/issues/34)) ([5b3c7ed](https://github.com/marscollective/gatsby-theme-jdoe/commit/5b3c7eda09079aa827642d01594c280b7225bb3e))
+
+
+
+
+
 # [0.1.0](https://github.com/marscollective/gatsby-theme-jdoe/compare/@marscollective/gatsby-starter-link-free@0.0.7...@marscollective/gatsby-starter-link-free@0.1.0) (2020-12-14)
 
 **Note:** Version bump only for package @marscollective/gatsby-starter-link-free
