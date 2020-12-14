@@ -1,4 +1,9 @@
-const metadata = require(`./content/metadata.json`)
+const fs = require('fs')
+const yaml = require('js-yaml')
+const metadata = yaml.safeLoad(
+  fs.readFileSync('./content/metadata.yaml', 'utf8')
+)
+
 module.exports = {
   plugins: [
     {

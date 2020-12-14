@@ -6,7 +6,8 @@
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "dev": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "yarn build && netlify deploy -p"
   },
   "dependencies": {
     "@marscollective/gatsby-theme-link-free": "^0.1.0",
