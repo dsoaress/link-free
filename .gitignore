@@ -1,0 +1,28 @@
+# Logs
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules
+
+# Dotenv environment variable files
+.env
+
+# Gatsby files
+.cache
+public
+
+# Mac files
+.DS_Store
+
+# Yarn
+yarn-error.log
+.yarn-integrity
+
+# Local Netlify folder
+.netlify
+
+# Dev metadata file
+*.temp.json
