@@ -1,14 +1,14 @@
-# Linkfree
+# Gatsby Theme Link Free
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/marscollective/link-free&stack=cms)
 
-Linkfree is an open-source alternative to paid, limited tools like [Linktree](https://linktr.ee/).
+Link Free is an open-source alternative to paid, limited tools like [Linktree](https://linktr.ee/).
 
-![Linkfree interface](https://marscollective.co/assets/link-free.png)
+![Link Free interface](https://marscollective.co/assets/link-free.png)
 
-It is developed by [Mars](https://marscollective.co/) using the Jamstack architecture, combining the power of Gatsby (React and GraphQL) with styled-components and Netlify CMS to provide a fast, reliable, and fully customizable tool, _served_ by the Netlify CDN. 🚀
+It is developed by [Mars](https://marscollective.co/) using the Jamstack architecture, combining the power of Gatsby (React and GraphQL) with Tailwind CSS and Netlify CMS to provide a fast, reliable, and fully customizable tool, _served_ by the Netlify CDN. 🚀
 
-You can see it in action by visiting [our Linkfree page](https://links.marscollective.co/) 🌎, and while you're at it, go have a look at our social networks. 😉
+You can see it in action by visiting [our Link Free page](https://links.marscollective.co/) 🌎, and while you're at it, go have a look at our social networks. 😉
 
 ## Why use it?
 
@@ -22,13 +22,13 @@ Other than creating a link list, currently, you can:
 
 - Add a custom logo;
 - Add a custom favicon;
-- Integrate Google Tag Manager with just an ID;
+- Integrate Google Analytics or Google Tag Manager with just an ID;
 - Freely customize buttons, background, and font colors;
 - Customize the button's border-radius (make it square or rounder).
 
 You can also live preview all your changes while you work on them.
 
-## Deploying your Linkfree
+## Deploying your Link Free
 
 Just click the "Netlify" button at the top of this README. Yup, that's it. 😄
 
