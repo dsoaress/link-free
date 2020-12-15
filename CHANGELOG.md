@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/marscollective/gatsby-themes/compare/@marscollective/gatsby-starter-link-free@0.2.1...@marscollective/gatsby-starter-link-free@0.2.2) (2020-12-15)
+
+**Note:** Version bump only for package @marscollective/gatsby-starter-link-free
+
+
+
+
+
 ## [0.2.1](https://github.com/marscollective/gatsby-theme-jdoe/compare/@marscollective/gatsby-starter-link-free@0.2.0...@marscollective/gatsby-starter-link-free@0.2.1) (2020-12-15)
 
 **Note:** Version bump only for package @marscollective/gatsby-starter-link-free
