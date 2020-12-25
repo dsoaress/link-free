@@ -1701,7 +1701,7 @@
     netlify-cms-proxy-server "^1.3.8"
     react-helmet "^6.1.0"
 
-"@marscollective/gatsby-theme-link-free@^0.2.7":
+"@marscollective/gatsby-theme-link-free@0.2.7":
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-link-free/-/gatsby-theme-link-free-0.2.7.tgz#787e90798e30c12a5a002650074025af97ae3556"
   integrity sha512-hXTFEcaD0zPQoT607JUNyzK3WfY9L3X04t50G0Yr+RSDOHzZzhCd+KIq6XMD/LjM5+3jsa2h3g/GnGdjRl2Tdw==
