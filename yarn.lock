@@ -1676,10 +1676,10 @@
   resolved "https://registry.yarnpkg.com/@kwsites/promise-deferred/-/promise-deferred-1.1.1.tgz#8ace5259254426ccef57f3175bc64ed7095ed919"
   integrity sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==
 
-"@marscollective/gatsby-theme-core@^0.2.5":
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-core/-/gatsby-theme-core-0.2.5.tgz#dafb6c600e6e02b158099ae147519aeabda28bad"
-  integrity sha512-sq+1eL9DQoAyGZGKN/DxygXOTf4xiTnEydmwBeV0QfCvpNzJDj7FLhborxVgm0ROvDPMq79kIFu5Zxlvw80auw==
+"@marscollective/gatsby-theme-core@^0.2.6":
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-core/-/gatsby-theme-core-0.2.6.tgz#b630d152ed089f3f0fa1dd0706d264544686773a"
+  integrity sha512-h+5DWtwevSNftFxUhNILGonNmeuylI8H2spLFgWvswNZbPE+wcD0aaSO0ogokw/QjxAMADWW8ZLxLzd6xN5udQ==
   dependencies:
     gatsby-image "^2.7.0"
     gatsby-plugin-catch-links "^2.6.0"
@@ -1701,12 +1701,12 @@
     netlify-cms-proxy-server "^1.3.8"
     react-helmet "^6.1.0"
 
-"@marscollective/gatsby-theme-link-free@0.2.6":
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-link-free/-/gatsby-theme-link-free-0.2.6.tgz#2d359eaf1cd009563d2f272298284d30fb5b7bc0"
-  integrity sha512-5ekIUnzbs5QksNk2puGHnh55NGxxoyPDTRKAbuhEo/TCDf2NhoDkopoG3RtaA5zBpnxnNedCDfAuNczQCOdeqw==
+"@marscollective/gatsby-theme-link-free@^0.2.7":
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@marscollective/gatsby-theme-link-free/-/gatsby-theme-link-free-0.2.7.tgz#787e90798e30c12a5a002650074025af97ae3556"
+  integrity sha512-hXTFEcaD0zPQoT607JUNyzK3WfY9L3X04t50G0Yr+RSDOHzZzhCd+KIq6XMD/LjM5+3jsa2h3g/GnGdjRl2Tdw==
   dependencies:
-    "@marscollective/gatsby-theme-core" "^0.2.5"
+    "@marscollective/gatsby-theme-core" "^0.2.6"
     autoprefixer "^10.1.0"
     gatsby-plugin-netlify-cms "^4.6.0"
     gatsby-plugin-postcss "^3.3.0"
@@ -1714,6 +1714,7 @@
     netlify-cms-app "^2.14.6"
     postcss "^8.2.1"
     tailwindcss "^2.0.2"
+    typeface-baloo-2 "^1.1.13"
 
 "@mdx-js/util@^2.0.0-next.8":
   version "2.0.0-next.8"
@@ -15758,6 +15759,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typeface-baloo-2@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-baloo-2/-/typeface-baloo-2-1.1.13.tgz#877a4e21614e641592b129b9564e47ddd05c25d8"
+  integrity sha512-NTqW+P/z44n+h24Em/mAf0Fpx+RHnmMjWUT/12pkh9+KMARJJ2EXQm3sgjdDoQ3Uf8zHmBzQaoPpfl1oR1iEhA==
 
 uglify-js@3.4.x:
   version "3.4.10"
