@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@marscollective/gatsby-theme-link-free": "0.2.7",
-    "gatsby": "2.31.0",
+    "gatsby": "2.31.1",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   }
