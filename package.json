@@ -10,8 +10,9 @@
     "deploy": "yarn build && netlify deploy -p"
   },
   "dependencies": {
-    "@marscollective/gatsby-theme-link-free": "0.2.7",
+    "@marscollective/gatsby-theme-link-free": "0.2.8",
     "gatsby": "3.0.4",
+    "html-webpack-plugin": "^5.3.1",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   }
