@@ -7,13 +7,23 @@
     "dev": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "yarn build && netlify deploy -p"
+    "deploy": "yarn build && netlify deploy -p",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,mdx,yaml,yml}\""
   },
   "dependencies": {
-    "@marscollective/gatsby-theme-link-free": "0.2.8",
-    "gatsby": "3.2.1",
-    "html-webpack-plugin": "5.3.1",
+    "@marscollective/gatsby-theme-link-free": "^0.2.7",
+    "gatsby": "2.32.11",
     "react": "17.0.2",
     "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
+  },
+  "prettier": {
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "arrowParens": "avoid"
   }
 }
