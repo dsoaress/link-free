@@ -4,7 +4,7 @@
 
 Link Free is an open-source alternative to paid, limited tools like [Linktree](https://linktr.ee/).
 
-![Link Free interface](https://marscollective.co/assets/link-free.png)
+![Link Free interface](content/link-free.png)
 
 It is developed by [Mars](https://marscollective.co/) using the Jamstack architecture, combining the power of Gatsby (React and GraphQL) with Tailwind CSS and Netlify CMS to provide a fast, reliable, and fully customizable tool, _served_ by the Netlify CDN. 🚀
 
