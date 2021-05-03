@@ -38,4 +38,4 @@ You just have to follow the instructions and you'll have a copy of our repositor
 
 This project is open source and you're free to fork and remix it to fit your needs.
 
-If there's any feature you'd like to see implemented, we'd love to see your feedback on our [issues page](https://github.com/marscollective/gatsby-themes/issues). While we can't promise to develop every request, we're happy to accept community contributions.
+If there's any feature you'd like to see implemented, we'd love to see your feedback on our [issues page](https://github.com/marscollective/link-free/issues). While we can't promise to develop every request, we're happy to accept community contributions.
