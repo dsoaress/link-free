@@ -1,0 +1,23 @@
+{
+  "extends": ["config:base", ":disableDependencyDashboard"],
+  "labels": ["dependencies"],
+  "semanticCommits": "enabled",
+  "rangeStrategy": "replace",
+  "rebaseLabel": "rebase",
+  "rebaseWhen": "auto",
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "depTypeList": ["devDependencies"],
+      "automerge": true
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
+  "schedule": ["before 10am on the first day of the month"]
+}
