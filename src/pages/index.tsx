@@ -20,7 +20,7 @@ export default function Home() {
     <div>
       {links.map(link => (
         <>
-          <Button color="sky" schema="square" key={link.href}>
+          <Button color="sky" schema="rounded" outline key={link.href}>
             {link.label}
           </Button>
           <br />

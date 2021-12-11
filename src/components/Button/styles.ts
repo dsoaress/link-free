@@ -87,8 +87,11 @@ export const Wrapper = styled('button', {
       },
       pill: {
         borderRadius: '9999px'
-      },
-      outline: {
+      }
+    },
+
+    outline: {
+      true: {
         background: 'transparent'
       }
     }
@@ -97,118 +100,119 @@ export const Wrapper = styled('button', {
   compoundVariants: [
     {
       color: 'slate',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('slate50', 'slate100', 'slate600')
     },
     {
       color: 'gray',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('gray50', 'gray100', 'gray600')
     },
     {
       color: 'zinc',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('zinc50', 'zinc100', 'zinc600')
     },
     {
       color: 'neutral',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('neutral50', 'neutral100', 'neutral600')
     },
     {
       color: 'stone',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('stone50', 'stone100', 'stone600')
     },
     {
       color: 'red',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('red50', 'red100', 'red600')
     },
     {
       color: 'orange',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('orange50', 'orange100', 'orange600')
     },
     {
       color: 'amber',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('amber50', 'amber100', 'amber600')
     },
     {
       color: 'yellow',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('yellow50', 'yellow100', 'yellow600')
     },
     {
       color: 'lime',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('lime50', 'lime100', 'lime600')
     },
     {
       color: 'green',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('green50', 'green100', 'green600')
     },
     {
       color: 'emerald',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('emerald50', 'emerald100', 'emerald600')
     },
     {
       color: 'teal',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('teal50', 'teal100', 'teal600')
     },
     {
       color: 'cyan',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('cyan50', 'cyan100', 'cyan600')
     },
     {
       color: 'sky',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('sky50', 'sky100', 'sky600')
     },
     {
       color: 'blue',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('blue50', 'blue100', 'blue600')
     },
     {
       color: 'indigo',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('indigo50', 'indigo100', 'indigo600')
     },
     {
       color: 'violet',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('violet50', 'violet100', 'violet600')
     },
     {
       color: 'purple',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('purple50', 'purple100', 'purple600')
     },
     {
       color: 'fuchsia',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('fuchsia50', 'fuchsia100', 'fuchsia600')
     },
     {
       color: 'pink',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('pink50', 'pink100', 'pink600')
     },
     {
       color: 'rose',
-      schema: 'outline',
+      outline: true,
       css: outlineVariantFn('rose50', 'rose100', 'rose600')
     }
   ],
 
   defaultVariants: {
     color: 'teal',
-    schema: 'outline'
+    schema: 'pill',
+    outline: false
   }
 })
