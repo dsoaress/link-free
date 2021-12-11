@@ -1,12 +1,10 @@
-import { styled, theme } from '../../styles/stitches.config'
-
-type Color = keyof typeof theme.colors
+import { ColorsType, styled, theme, VariantProps } from '../../styles/stitches.config'
 
 const colorVariantFn = (
-  lightColor: Color,
-  regularColor: Color,
-  darkColor: Color,
-  darkerColor: Color
+  lightColor: ColorsType,
+  regularColor: ColorsType,
+  darkColor: ColorsType,
+  darkerColor: ColorsType
 ) => ({
   background: theme.colors[regularColor],
   borderColor: theme.colors[regularColor],
@@ -23,7 +21,11 @@ const colorVariantFn = (
   }
 })
 
-const outlineVariantFn = (lightColor: Color, regularColor: Color, darkColor: Color) => ({
+const outlineVariantFn = (
+  lightColor: ColorsType,
+  regularColor: ColorsType,
+  darkColor: ColorsType
+) => ({
   color: theme.colors[darkColor],
 
   '&:hover': {
@@ -216,3 +218,5 @@ export const Wrapper = styled('button', {
     outline: false
   }
 })
+
+export type ButtonVariantProps = VariantProps<typeof Wrapper>

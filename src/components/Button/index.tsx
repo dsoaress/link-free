@@ -1,9 +1,8 @@
-import { VariantProps } from '@stitches/react'
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 
-import { Wrapper } from './styles'
+import { ButtonVariantProps, Wrapper } from './styles'
 
-type ButtonProps = VariantProps<typeof Wrapper> &
+type ButtonProps = ButtonVariantProps &
   ButtonHTMLAttributes<HTMLButtonElement> & {
     children: ReactNode
   }

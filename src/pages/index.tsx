@@ -1,5 +1,6 @@
 import { Avatar } from '../components/Avatar'
 import { Button } from '../components/Button'
+import { SocialLinks } from '../components/SocialLinks'
 
 export default function Home() {
   const links = [
@@ -17,6 +18,33 @@ export default function Home() {
     }
   ]
 
+  const socialLinks = [
+    {
+      label: 'Email',
+      href: '1'
+    },
+    {
+      label: 'GitHub',
+      href: '2'
+    },
+    {
+      label: 'LinkedIn',
+      href: '3'
+    },
+    {
+      label: 'Dev',
+      href: '4'
+    },
+    {
+      label: 'Instagram',
+      href: '5'
+    },
+    {
+      label: 'WhatsApp',
+      href: '6'
+    }
+  ]
+
   return (
     <div
       style={{
@@ -28,6 +56,7 @@ export default function Home() {
       }}
     >
       <Avatar src="/avatar.jpeg" />
+      <SocialLinks socialLinks={socialLinks} color="rose" />
       {links.map(link => (
         <Button color="sky" schema="rounded" outline key={link.href}>
           {link.label}
