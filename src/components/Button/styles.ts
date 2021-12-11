@@ -46,7 +46,6 @@ export const Wrapper = styled('button', {
   borderWidth: '2.5px',
   borderStyle: 'solid',
   fontSize: '1rem',
-  fontWeight: 'bold',
   cursor: 'pointer',
   transition: 'all 0.25s ease-in-out',
 

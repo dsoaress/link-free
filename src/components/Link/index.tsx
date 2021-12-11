@@ -3,10 +3,10 @@ import { AnchorHTMLAttributes } from 'react'
 
 import { LinkVariantProps, Wrapper } from './styles'
 
-export type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
-  href: string
-  color?: LinkVariantProps['color']
-}
+export type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> &
+  LinkVariantProps & {
+    href: string
+  }
 
 export function Link({ href, ...rest }: LinkProps) {
   return (

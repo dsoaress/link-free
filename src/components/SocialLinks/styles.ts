@@ -2,9 +2,7 @@ import { styled } from '../../styles/stitches.config'
 
 export const Wrapper = styled('ul', {
   display: 'inline-flex',
-  listStyle: 'none',
-  margin: 0,
-  padding: 0
+  listStyle: 'none'
 })
 
 export const SocialItem = styled('li', {

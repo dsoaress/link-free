@@ -17,7 +17,6 @@ const colorVariantFn = (
 })
 
 export const Wrapper = styled('a', {
-  fontWeight: 'medium',
   textDecoration: 'none',
   transition: 'color 0.25s ease',
   cursor: 'pointer',
