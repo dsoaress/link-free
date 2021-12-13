@@ -13,7 +13,8 @@ export const Home = () => {
     <Wrapper
       css={{
         background: theme.colors[colors.background as keyof typeof theme.colors],
-        color: theme.colors[colors.texts as keyof typeof theme.colors]
+        color: theme.colors[colors.texts as keyof typeof theme.colors],
+        fontFamily: theme.fonts[font as keyof typeof theme.fonts]
       }}
     >
       <Content>
