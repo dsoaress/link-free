@@ -1,17 +1,20 @@
 import NextLink from 'next/link'
-import { AnchorHTMLAttributes } from 'react'
+import type { AnchorHTMLAttributes } from 'react'
 
-import { LinkVariantProps, Wrapper } from './styles'
+import type { LinkVariantProps } from './styles'
+import { Wrapper } from './styles'
 
-export type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> &
-  LinkVariantProps & {
-    href: string
-  }
+export type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: string
+  theme?: LinkVariantProps['theme']
+}
 
-export function Link({ href, ...rest }: LinkProps) {
+export function Link({ href, theme, ...rest }: LinkProps) {
   return (
     <NextLink href={href} passHref>
-      <Wrapper {...rest} />
+      <Wrapper theme={theme} {...rest} />
     </NextLink>
   )
 }
+
+export type { LinkVariantProps }

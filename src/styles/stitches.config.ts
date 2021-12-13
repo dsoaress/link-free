@@ -1,4 +1,5 @@
-import { createStitches, VariantProps } from '@stitches/react'
+import type { VariantProps } from '@stitches/react'
+import { createStitches } from '@stitches/react'
 
 export const { css, styled, globalCss, theme, keyframes, getCssText } = createStitches({
   theme: {
@@ -253,6 +254,7 @@ export const { css, styled, globalCss, theme, keyframes, getCssText } = createSt
   }
 })
 
-type ColorsType = keyof typeof theme.colors
+type Colors = keyof typeof theme.colors
+type Fonts = keyof typeof theme.fonts
 
-export type { ColorsType, VariantProps }
+export type { Colors, Fonts, VariantProps }

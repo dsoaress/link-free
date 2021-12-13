@@ -1,4 +1,4 @@
-import data from '../../data/data.json'
+import data from '../../temp/data.json'
 import { globalCss, theme } from './stitches.config'
 
 export const globalStyles = globalCss({

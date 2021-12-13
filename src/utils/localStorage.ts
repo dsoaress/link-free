@@ -1,6 +1,8 @@
+import type { Data } from '../types/Data'
+
 const KEY = 'link-free-data'
 
-export function getLocalStorageData() {
+export function getLocalStorageData(): Data | null {
   const data = process.browser && localStorage.getItem(KEY)
   return data ? JSON.parse(data) : null
 }

@@ -1,4 +1,4 @@
-import { useData } from '../../contexts/DataContext'
+import { useData } from '../../hooks/useData'
 import { Wrapper } from './styles'
 
 export function Avatar() {

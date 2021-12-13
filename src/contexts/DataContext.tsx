@@ -1,27 +1,22 @@
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from 'react'
+import type { Dispatch, ReactNode, SetStateAction } from 'React'
+import { createContext, useState } from 'react'
 
-import initialData from '../../data/data.json'
-
-type DataType = typeof initialData
+import initialData from '../../temp/data.json'
+import type { Data } from '../types/Data'
 
 type DataContextType = {
-  initialData: DataType
-  data: DataType
-  setData: Dispatch<SetStateAction<DataType>>
+  data: Data
+  setData: Dispatch<SetStateAction<Data>>
 }
 
 type DataProviderProps = {
   children: ReactNode
 }
 
-const DataContext = createContext({} as DataContextType)
+export const DataContext = createContext({} as DataContextType)
 
 export const DataProvider = ({ children }: DataProviderProps) => {
-  const [data, setData] = useState<DataType>(initialData)
+  const [data, setData] = useState<Data>(initialData as Data)
 
-  return (
-    <DataContext.Provider value={{ initialData, data, setData }}>{children}</DataContext.Provider>
-  )
+  return <DataContext.Provider value={{ data, setData }}>{children}</DataContext.Provider>
 }
-
-export const useData = () => useContext(DataContext)

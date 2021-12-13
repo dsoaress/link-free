@@ -1,4 +1,4 @@
-import { useData } from '../../contexts/DataContext'
+import { useData } from '../../hooks/useData'
 import { theme } from '../../styles/stitches.config'
 import { Avatar } from '../Avatar'
 import { Button } from '../Button'
@@ -22,13 +22,17 @@ export const Home = () => {
         <Name>{name}</Name>
         <SocialLinks />
         <Description>{description}</Description>
-        {data.buttonLinks?.map(link =>
-          // @ts-ignore
-          // prettier-ignore
-          <Button color={colors.buttonLinks} schema={buttonsSchema} outline={outline} font={font} key={link.href}>
-          {link.label}
-        </Button>
-        )}
+        {data.buttonLinks?.map(link => (
+          <Button
+            theme={colors.buttonLinks}
+            schema={buttonsSchema}
+            outline={outline}
+            font={font}
+            key={link.href}
+          >
+            {link.label}
+          </Button>
+        ))}
       </Content>
     </Wrapper>
   )

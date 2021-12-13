@@ -1,29 +1,19 @@
-import { PrismaClient } from '@prisma/client'
 import fs from 'fs'
 
-const prisma = new PrismaClient()
+import { fetchData } from '../src/services/fetchData'
 
 async function initialdata() {
-  const dataDir = './data'
-  const data = await prisma.data.findFirst()
+  const dataDir = './temp'
+  const data = await fetchData()
 
-  if (data) {
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir)
-    }
-
-    const parsedData = JSON.parse(data.data)
-    fs.writeFileSync(`${dataDir}/data.json`, JSON.stringify(parsedData, null, 2))
-  } else {
-    throw new Error('No data found')
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir)
   }
+
+  fs.writeFileSync(`${dataDir}/data.json`, JSON.stringify(data, null, 2))
 }
 
-initialdata()
-  .catch(e => {
-    console.error(e)
-    process.exit(1)
-  })
-  .finally(async () => {
-    await prisma.$disconnect()
-  })
+initialdata().catch(e => {
+  console.error(e)
+  process.exit(1)
+})

@@ -2,7 +2,6 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import nc from 'next-connect'
 
 import { prisma } from '../../services/prisma'
-const { RAILWAY_TOKEN } = process.env
 
 const handler = nc<NextApiRequest, NextApiResponse>()
   .get(async (_req, res) => {
@@ -23,10 +22,6 @@ const handler = nc<NextApiRequest, NextApiResponse>()
         },
         data: { data: JSON.stringify(req.body.data) }
       })
-
-      if (RAILWAY_TOKEN) {
-        console.log('railway token', RAILWAY_TOKEN)
-      }
 
       res.status(200).json(response)
     } catch (error) {

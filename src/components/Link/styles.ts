@@ -1,10 +1,6 @@
-import { ColorsType, styled, theme, VariantProps } from '../../styles/stitches.config'
+import { Colors, styled, theme, VariantProps } from '../../styles/stitches.config'
 
-const colorVariantFn = (
-  regularColor: ColorsType,
-  darkColor: ColorsType,
-  darkerColor: ColorsType
-) => ({
+const themeVariantFn = (regularColor: Colors, darkColor: Colors, darkerColor: Colors) => ({
   color: theme.colors[regularColor],
 
   '&:hover': {
@@ -22,34 +18,34 @@ export const Wrapper = styled('a', {
   cursor: 'pointer',
 
   variants: {
-    color: {
-      slate: colorVariantFn('slate600', 'slate700', 'slate800'),
-      gray: colorVariantFn('gray600', 'gray700', 'gray800'),
-      zinc: colorVariantFn('zinc600', 'zinc700', 'zinc800'),
-      neutral: colorVariantFn('neutral600', 'neutral700', 'neutral800'),
-      stone: colorVariantFn('stone600', 'stone700', 'stone800'),
-      red: colorVariantFn('red600', 'red700', 'red800'),
-      orange: colorVariantFn('orange600', 'orange700', 'orange800'),
-      amber: colorVariantFn('amber600', 'amber700', 'amber800'),
-      yellow: colorVariantFn('yellow600', 'yellow700', 'yellow800'),
-      lime: colorVariantFn('lime600', 'lime700', 'lime800'),
-      green: colorVariantFn('green600', 'green700', 'green800'),
-      emerald: colorVariantFn('emerald600', 'emerald700', 'emerald800'),
-      teal: colorVariantFn('teal600', 'teal700', 'teal800'),
-      cyan: colorVariantFn('cyan600', 'cyan700', 'cyan800'),
-      sky: colorVariantFn('sky600', 'sky700', 'sky800'),
-      blue: colorVariantFn('blue600', 'blue700', 'blue800'),
-      indigo: colorVariantFn('indigo600', 'indigo700', 'indigo800'),
-      violet: colorVariantFn('violet600', 'violet700', 'violet800'),
-      purple: colorVariantFn('purple600', 'purple700', 'purple800'),
-      fuchsia: colorVariantFn('fuchsia600', 'fuchsia700', 'fuchsia800'),
-      pink: colorVariantFn('pink600', 'pink700', 'pink800'),
-      rose: colorVariantFn('rose600', 'rose700', 'rose800')
+    theme: {
+      slate: themeVariantFn('slate600', 'slate700', 'slate800'),
+      gray: themeVariantFn('gray600', 'gray700', 'gray800'),
+      zinc: themeVariantFn('zinc600', 'zinc700', 'zinc800'),
+      neutral: themeVariantFn('neutral600', 'neutral700', 'neutral800'),
+      stone: themeVariantFn('stone600', 'stone700', 'stone800'),
+      red: themeVariantFn('red600', 'red700', 'red800'),
+      orange: themeVariantFn('orange600', 'orange700', 'orange800'),
+      amber: themeVariantFn('amber600', 'amber700', 'amber800'),
+      yellow: themeVariantFn('yellow600', 'yellow700', 'yellow800'),
+      lime: themeVariantFn('lime600', 'lime700', 'lime800'),
+      green: themeVariantFn('green600', 'green700', 'green800'),
+      emerald: themeVariantFn('emerald600', 'emerald700', 'emerald800'),
+      teal: themeVariantFn('teal600', 'teal700', 'teal800'),
+      cyan: themeVariantFn('cyan600', 'cyan700', 'cyan800'),
+      sky: themeVariantFn('sky600', 'sky700', 'sky800'),
+      blue: themeVariantFn('blue600', 'blue700', 'blue800'),
+      indigo: themeVariantFn('indigo600', 'indigo700', 'indigo800'),
+      violet: themeVariantFn('violet600', 'violet700', 'violet800'),
+      purple: themeVariantFn('purple600', 'purple700', 'purple800'),
+      fuchsia: themeVariantFn('fuchsia600', 'fuchsia700', 'fuchsia800'),
+      pink: themeVariantFn('pink600', 'pink700', 'pink800'),
+      rose: themeVariantFn('rose600', 'rose700', 'rose800')
     }
   },
 
   defaultVariants: {
-    color: 'teal'
+    theme: 'teal'
   }
 })
 
