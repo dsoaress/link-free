@@ -2,6 +2,7 @@ import { isEqual } from 'lodash'
 import { useEffect, useState } from 'react'
 
 import { useData } from '../../contexts/DataContext'
+import { api } from '../../services/api'
 import { theme } from '../../styles/stitches.config'
 import {
   getLocalStorageData,
@@ -38,6 +39,16 @@ export function Dash() {
     }
   }, [data, initialData])
 
+  const handleSave = async () => {
+    try {
+      await api.put('data', { data })
+      setHasUnsavedChanges(false)
+      removeLocalStorageData()
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   const handleChangeBackground = (background: string) => {
     setData({
       ...data,
@@ -64,7 +75,14 @@ export function Dash() {
   return (
     <Wrapper>
       <Content>
-        <h1>Dash {hasUnsavedChanges && '- has unsaved changes'}</h1>
+        <h1>
+          Dash{' '}
+          {hasUnsavedChanges && (
+            <>
+              - has unsaved changes <button onClick={() => handleSave()}>save</button>
+            </>
+          )}
+        </h1>
         <NameInput />
         <DescriptionInput />
 

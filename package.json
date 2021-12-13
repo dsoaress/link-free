@@ -5,18 +5,27 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "prisma": "yarn prisma:push && yarn prisma:seed",
+    "initialdata": "ts-node scripts/initialdata.ts",
+    "predev": "yarn prisma && yarn initialdata",
     "dev": "next dev",
+    "prebuild": "yarn prisma && yarn initialdata",
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
     "prepare": "husky install",
     "clean": "rm -rf node_modules .next data public",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "prisma:push": "prisma db push",
+    "prisma:seed": "prisma db seed"
   },
   "dependencies": {
+    "@prisma/client": "^3.6.0",
     "@stitches/react": "^1.2.6",
+    "axios": "^0.24.0",
     "lodash": "^4.17.21",
     "next": "12.0.7",
+    "next-connect": "^0.11.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1"
@@ -25,7 +34,7 @@
     "@commitlint/cli": "15.0.0",
     "@commitlint/config-conventional": "15.0.0",
     "@types/lodash": "^4.14.178",
-    "@types/node": "16.11.12",
+    "@types/node": "^16.11.12",
     "@types/react": "17.0.37",
     "eslint": "8.4.1",
     "eslint-config-next": "12.0.7",
@@ -36,6 +45,11 @@
     "lint-staged": "12.1.2",
     "prettier": "2.5.0",
     "pretty-quick": "3.1.2",
-    "typescript": "4.5.3"
+    "prisma": "^3.6.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.3"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
   }
 }
