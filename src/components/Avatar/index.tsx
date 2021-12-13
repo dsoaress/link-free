@@ -1,11 +1,9 @@
-import { ImageProps } from 'next/image'
-
+import { useData } from '../../contexts/DataContext'
 import { Wrapper } from './styles'
 
-type AvatarProps = ImageProps & {
-  src?: string
-}
+export function Avatar() {
+  const { data } = useData()
+  const { avatar } = data.settings
 
-export function Avatar({ src, ...rest }: AvatarProps) {
-  return !!src ? <Wrapper src={src} width={84} height={84} quality={100} {...rest} /> : null
+  return !!avatar ? <Wrapper src={avatar} width={84} height={84} quality={100} /> : null
 }

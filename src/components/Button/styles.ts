@@ -21,19 +21,15 @@ const colorVariantFn = (
   }
 })
 
-const outlineVariantFn = (
-  lightColor: ColorsType,
-  regularColor: ColorsType,
-  darkColor: ColorsType
-) => ({
-  color: theme.colors[darkColor],
+const outlineVariantFn = (color: ColorsType) => ({
+  color: theme.colors[color],
 
   '&:hover': {
-    background: theme.colors[lightColor]
+    background: 'rgba(0, 0, 0, 0.05)'
   },
 
   '&:active': {
-    background: theme.colors[regularColor]
+    background: 'rgba(0, 0, 0, 0.1)'
   }
 })
 
@@ -46,6 +42,7 @@ export const Wrapper = styled('button', {
   borderWidth: '2.5px',
   borderStyle: 'solid',
   fontSize: '1rem',
+  fontWeight: 500,
   cursor: 'pointer',
   transition: 'all 0.25s ease-in-out',
 
@@ -91,6 +88,18 @@ export const Wrapper = styled('button', {
       }
     },
 
+    font: {
+      baloo: {
+        fontFamily: theme.fonts.baloo
+      },
+      montserrat: {
+        fontFamily: theme.fonts.montserrat
+      },
+      roboto: {
+        fontFamily: theme.fonts.roboto
+      }
+    },
+
     outline: {
       true: {
         background: 'transparent'
@@ -102,118 +111,119 @@ export const Wrapper = styled('button', {
     {
       color: 'slate',
       outline: true,
-      css: outlineVariantFn('slate50', 'slate100', 'slate600')
+      css: outlineVariantFn('slate600')
     },
     {
       color: 'gray',
       outline: true,
-      css: outlineVariantFn('gray50', 'gray100', 'gray600')
+      css: outlineVariantFn('gray600')
     },
     {
       color: 'zinc',
       outline: true,
-      css: outlineVariantFn('zinc50', 'zinc100', 'zinc600')
+      css: outlineVariantFn('zinc600')
     },
     {
       color: 'neutral',
       outline: true,
-      css: outlineVariantFn('neutral50', 'neutral100', 'neutral600')
+      css: outlineVariantFn('neutral600')
     },
     {
       color: 'stone',
       outline: true,
-      css: outlineVariantFn('stone50', 'stone100', 'stone600')
+      css: outlineVariantFn('stone600')
     },
     {
       color: 'red',
       outline: true,
-      css: outlineVariantFn('red50', 'red100', 'red600')
+      css: outlineVariantFn('red600')
     },
     {
       color: 'orange',
       outline: true,
-      css: outlineVariantFn('orange50', 'orange100', 'orange600')
+      css: outlineVariantFn('orange600')
     },
     {
       color: 'amber',
       outline: true,
-      css: outlineVariantFn('amber50', 'amber100', 'amber600')
+      css: outlineVariantFn('amber600')
     },
     {
       color: 'yellow',
       outline: true,
-      css: outlineVariantFn('yellow50', 'yellow100', 'yellow600')
+      css: outlineVariantFn('yellow600')
     },
     {
       color: 'lime',
       outline: true,
-      css: outlineVariantFn('lime50', 'lime100', 'lime600')
+      css: outlineVariantFn('lime600')
     },
     {
       color: 'green',
       outline: true,
-      css: outlineVariantFn('green50', 'green100', 'green600')
+      css: outlineVariantFn('green600')
     },
     {
       color: 'emerald',
       outline: true,
-      css: outlineVariantFn('emerald50', 'emerald100', 'emerald600')
+      css: outlineVariantFn('emerald600')
     },
     {
       color: 'teal',
       outline: true,
-      css: outlineVariantFn('teal50', 'teal100', 'teal600')
+      css: outlineVariantFn('teal600')
     },
     {
       color: 'cyan',
       outline: true,
-      css: outlineVariantFn('cyan50', 'cyan100', 'cyan600')
+      css: outlineVariantFn('cyan600')
     },
     {
       color: 'sky',
       outline: true,
-      css: outlineVariantFn('sky50', 'sky100', 'sky600')
+      css: outlineVariantFn('sky600')
     },
     {
       color: 'blue',
       outline: true,
-      css: outlineVariantFn('blue50', 'blue100', 'blue600')
+      css: outlineVariantFn('blue600')
     },
     {
       color: 'indigo',
       outline: true,
-      css: outlineVariantFn('indigo50', 'indigo100', 'indigo600')
+      css: outlineVariantFn('indigo600')
     },
     {
       color: 'violet',
       outline: true,
-      css: outlineVariantFn('violet50', 'violet100', 'violet600')
+      css: outlineVariantFn('violet600')
     },
     {
       color: 'purple',
       outline: true,
-      css: outlineVariantFn('purple50', 'purple100', 'purple600')
+      css: outlineVariantFn('purple600')
     },
     {
       color: 'fuchsia',
       outline: true,
-      css: outlineVariantFn('fuchsia50', 'fuchsia100', 'fuchsia600')
+      css: outlineVariantFn('fuchsia600')
     },
     {
       color: 'pink',
       outline: true,
-      css: outlineVariantFn('pink50', 'pink100', 'pink600')
+      css: outlineVariantFn('pink600')
     },
     {
       color: 'rose',
       outline: true,
-      css: outlineVariantFn('rose50', 'rose100', 'rose600')
+      css: outlineVariantFn('rose600')
     }
   ],
 
   defaultVariants: {
     color: 'teal',
     schema: 'pill',
+    font: 'roboto',
     outline: false
   }
 })

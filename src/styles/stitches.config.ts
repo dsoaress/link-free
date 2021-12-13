@@ -1,9 +1,12 @@
 import { createStitches, VariantProps } from '@stitches/react'
 
-import { fonts } from './fonts'
-
 export const { css, styled, globalCss, theme, keyframes, getCssText } = createStitches({
   theme: {
+    fonts: {
+      baloo: "'Baloo Bhaijaan 2', cursive",
+      montserrat: "'Montserrat', sans-serif",
+      roboto: "'Roboto', sans-serif"
+    },
     colors: {
       slate50: '#f8fafc',
       slate100: '#f1f5f9',
@@ -253,4 +256,3 @@ export const { css, styled, globalCss, theme, keyframes, getCssText } = createSt
 type ColorsType = keyof typeof theme.colors
 
 export type { ColorsType, VariantProps }
-export { fonts }

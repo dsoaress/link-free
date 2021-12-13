@@ -1,4 +1,5 @@
-import { fonts, globalCss } from './stitches.config'
+import data from '../../data/data.json'
+import { globalCss, theme } from './stitches.config'
 
 export const globalStyles = globalCss({
   '*': {
@@ -6,8 +7,7 @@ export const globalStyles = globalCss({
     padding: 0,
     boxSizing: 'border-box'
   },
-  'body, button, a': {
-    fontFamily: fonts['baloo'].name,
-    fontWeight: 500
+  body: {
+    fontFamily: theme.fonts[data.settings.font as keyof typeof theme.fonts]
   }
 })
