@@ -2,7 +2,8 @@ import { styled } from '../../styles/stitches.config'
 
 export const Wrapper = styled('main', {
   width: '100%',
-  height: '100vh'
+  height: '100vh',
+  transition: 'all 0.25s ease-in-out'
 })
 
 export const Content = styled('div', {

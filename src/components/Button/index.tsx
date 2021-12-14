@@ -5,10 +5,10 @@ import { Wrapper } from './styles'
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode
-  theme?: ButtonVariantProps['theme']
-  schema?: ButtonVariantProps['schema']
-  outline?: ButtonVariantProps['outline']
+  colorSchema?: ButtonVariantProps['colorSchema']
+  styleSchema?: ButtonVariantProps['styleSchema']
   font?: ButtonVariantProps['font']
+  outline?: ButtonVariantProps['outline']
 }
 
 export function Button({ children, ...rest }: ButtonProps) {

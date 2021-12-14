@@ -8,12 +8,12 @@ export type Data = {
     name: string
     description: string
     font: Fonts
-    buttonsSchema: ButtonVariantProps['schema']
+    buttonsSchema: ButtonVariantProps['styleSchema']
     outline: ButtonVariantProps['outline']
     colors: {
       texts: Colors
       socialLinks: LinkVariantProps['theme']
-      buttonLinks: ButtonVariantProps['theme']
+      buttonLinks: ButtonVariantProps['colorSchema']
       background: Colors
     }
   }

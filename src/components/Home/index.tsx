@@ -24,8 +24,8 @@ export const Home = () => {
         <Description>{description}</Description>
         {data.buttonLinks?.map(link => (
           <Button
-            theme={colors.buttonLinks}
-            schema={buttonsSchema}
+            colorSchema={colors.buttonLinks}
+            styleSchema={buttonsSchema}
             outline={outline}
             font={font}
             key={link.href}

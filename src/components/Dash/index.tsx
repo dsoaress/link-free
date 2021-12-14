@@ -4,16 +4,16 @@ import { useEffect, useState } from 'react'
 
 import { useData } from '../../hooks/useData'
 import { api } from '../../services/api'
-import type { Colors, Fonts } from '../../styles/stitches.config'
-import { theme } from '../../styles/stitches.config'
+import type { Fonts } from '../../styles/stitches.config'
 import type { Data } from '../../types/Data'
 import {
   getLocalStorageData,
   removeLocalStorageData,
   setLocalStorageData
 } from '../../utils/localStorage'
-import type { ButtonVariantProps } from '../Button'
+import { ButtonVariantProps } from '../Button'
 import { Home } from '../Home'
+import { ColorSelect } from './ColorSelect'
 import { DescriptionInput } from './DescriptionInput'
 import { NameInput } from './NameInput'
 import { Content, Preview, Wrapper } from './styles'
@@ -56,14 +56,7 @@ export function Dash({ initialData }: DashProps) {
     }
   }
 
-  const handleChangeBackground = (background: Colors) => {
-    setData({
-      ...data,
-      settings: { ...data.settings, colors: { ...data.settings.colors, background } }
-    })
-  }
-
-  const handleChangeButtonsSchema = (schema: ButtonVariantProps['schema']) => {
+  const handleChangeButtonsSchema = (schema: ButtonVariantProps['styleSchema']) => {
     setData({ ...data, settings: { ...data.settings, buttonsSchema: schema } })
   }
 
@@ -98,20 +91,16 @@ export function Dash({ initialData }: DashProps) {
           <option value="roboto">Roboto</option>
         </select>
 
-        <select
-          value={data.settings.colors.background}
-          onChange={e => handleChangeBackground(e.target.value as Colors)}
-        >
-          {Object.keys(theme.colors).map(color => (
-            <option key={color} value={color}>
-              {color}
-            </option>
-          ))}
-        </select>
+        <ColorSelect prop="texts" />
+        <ColorSelect prop="socialLinks" />
+        <ColorSelect prop="buttonLinks" />
+        <ColorSelect prop="background" />
 
         <select
           value={data.settings.buttonsSchema as string}
-          onChange={e => handleChangeButtonsSchema(e.target.value as ButtonVariantProps['schema'])}
+          onChange={e =>
+            handleChangeButtonsSchema(e.target.value as ButtonVariantProps['styleSchema'])
+          }
         >
           <option value="square">Square</option>
           <option value="rounded">Rounded</option>

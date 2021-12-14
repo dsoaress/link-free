@@ -20,11 +20,6 @@ export const Wrapper = styled('a', {
   variants: {
     theme: {
       slate: themeVariantFn('slate600', 'slate700', 'slate800'),
-      gray: themeVariantFn('gray600', 'gray700', 'gray800'),
-      zinc: themeVariantFn('zinc600', 'zinc700', 'zinc800'),
-      neutral: themeVariantFn('neutral600', 'neutral700', 'neutral800'),
-      stone: themeVariantFn('stone600', 'stone700', 'stone800'),
-      red: themeVariantFn('red600', 'red700', 'red800'),
       orange: themeVariantFn('orange600', 'orange700', 'orange800'),
       amber: themeVariantFn('amber600', 'amber700', 'amber800'),
       yellow: themeVariantFn('yellow600', 'yellow700', 'yellow800'),
