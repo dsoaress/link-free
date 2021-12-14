@@ -1,0 +1,1 @@
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fdsoaress%2Flink-free%2Ftree%2Fwith-next&plugins=postgresql&envs=PORT&PORTDefault=3000)
