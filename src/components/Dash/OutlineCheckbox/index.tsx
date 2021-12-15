@@ -1,18 +1,18 @@
 import { useData } from '../../../hooks/useData'
 
-export function DescriptionInput() {
+export function OutlineCheckbox() {
   const { data, setData } = useData()
 
   return (
-    <textarea
-      style={{ height: '200px !important', width: '100% !important' }}
-      value={data.settings.description}
-      onChange={e =>
+    <input
+      type="checkbox"
+      defaultChecked={data.settings.outline}
+      onChange={() =>
         setData({
           ...data,
           settings: {
             ...data.settings,
-            description: e.target.value
+            outline: !data.settings.outline
           }
         })
       }

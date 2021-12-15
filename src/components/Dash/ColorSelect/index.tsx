@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { useData } from '../../../hooks/useData'
 import type { Colors } from '../../../styles/stitches.config'
@@ -11,7 +11,11 @@ type ColorSelectProps = {
 
 export function ColorSelect({ prop }: ColorSelectProps) {
   const { data, setData } = useData()
-  const [activeColor, setActiveColor] = useState<string>(data.settings.colors[prop] as string)
+  const [activeColor, setActiveColor] = useState(data.settings.colors[prop] as string)
+
+  useEffect(() => {
+    setActiveColor(data.settings.colors[prop] as string)
+  }, [data, prop])
 
   const allColors = Object.keys(theme.colors) as Colors[]
   const colorsSchema = [

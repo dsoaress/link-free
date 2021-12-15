@@ -38,10 +38,9 @@ export const Wrapper = styled('button', {
   alignItems: 'center',
   justifyContent: 'center',
   width: '100%',
-  height: '3rem',
+  padding: '0 1rem',
   borderWidth: '2.5px',
   borderStyle: 'solid',
-  fontSize: '1rem',
   fontWeight: 500,
   cursor: 'pointer',
   transition: 'all 0.25s ease-in-out',
@@ -81,6 +80,17 @@ export const Wrapper = styled('button', {
       },
       pill: {
         borderRadius: '9999px'
+      }
+    },
+
+    size: {
+      small: {
+        height: '2rem',
+        fontSize: '0.875rem'
+      },
+      medium: {
+        height: '3rem',
+        fontSize: '1rem'
       }
     },
 
@@ -199,6 +209,7 @@ export const Wrapper = styled('button', {
   defaultVariants: {
     colorSchema: 'teal',
     styleSchema: 'pill',
+    size: 'medium',
     font: 'roboto',
     outline: false
   }

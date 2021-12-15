@@ -1,5 +1,4 @@
-import data from '../../temp/data.json'
-import { globalCss, theme } from './stitches.config'
+import { globalCss } from './stitches.config'
 
 export const globalStyles = globalCss({
   '*': {
@@ -8,6 +7,6 @@ export const globalStyles = globalCss({
     boxSizing: 'border-box'
   },
   body: {
-    fontFamily: theme.fonts[data.settings.font as keyof typeof theme.fonts]
+    transition: 'all 0.25s ease-in-out'
   }
 })

@@ -9,7 +9,7 @@ export type Data = {
     description: string
     font: Fonts
     buttonsSchema: ButtonVariantProps['styleSchema']
-    outline: ButtonVariantProps['outline']
+    outline: boolean
     colors: {
       texts: Colors
       socialLinks: LinkVariantProps['theme']

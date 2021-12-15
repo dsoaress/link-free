@@ -10,10 +10,11 @@ export const SelectButton = styled('button', {
   width: '100%',
   height: '3rem',
   padding: '0.25rem',
-  borderRadius: '0.25rem',
+  borderRadius: '0.2rem',
   borderWidth: '3px',
   borderStyle: 'solid',
   borderColor: theme.colors.slate200,
+  background: 'transparent',
   cursor: 'pointer',
 
   variants: {

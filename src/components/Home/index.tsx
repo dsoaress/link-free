@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 import { useData } from '../../hooks/useData'
 import { theme } from '../../styles/stitches.config'
 import { Avatar } from '../Avatar'
@@ -12,11 +14,17 @@ export const Home = () => {
   return (
     <Wrapper
       css={{
-        background: theme.colors[colors.background as keyof typeof theme.colors],
-        color: theme.colors[colors.texts as keyof typeof theme.colors],
-        fontFamily: theme.fonts[font as keyof typeof theme.fonts]
+        color: theme.colors[colors.texts],
+        fontFamily: theme.fonts[font]
       }}
     >
+      <Head>
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `body { background: ${theme.colors[colors.background]} }`
+          }}
+        />
+      </Head>
       <Content>
         <Avatar />
         <Name>{name}</Name>

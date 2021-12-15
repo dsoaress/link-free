@@ -207,6 +207,14 @@ export const { css, styled, globalCss, theme, keyframes, getCssText } = createSt
       rose800: '#9f1239',
       rose900: '#881337'
     }
+  },
+  utils: {
+    inset: (value: number | string) => ({
+      top: value,
+      right: value,
+      left: value,
+      bottom: value
+    })
   }
 })
 

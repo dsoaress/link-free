@@ -61,13 +61,20 @@ async function main() {
     ]
   }
 
-  const hasData = await prisma.data.findFirst()
+  const hasData = await prisma.data.findUnique({
+    where: {
+      id: 1
+    }
+  })
 
   if (!hasData) {
     console.log(`Start seeding...`)
 
     await prisma.data.create({
-      data: { data: JSON.stringify(data) }
+      data: {
+        id: 1,
+        data: JSON.stringify(data)
+      }
     })
   }
 }

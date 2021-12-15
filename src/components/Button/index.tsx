@@ -7,8 +7,9 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode
   colorSchema?: ButtonVariantProps['colorSchema']
   styleSchema?: ButtonVariantProps['styleSchema']
+  size?: ButtonVariantProps['size']
   font?: ButtonVariantProps['font']
-  outline?: ButtonVariantProps['outline']
+  outline?: boolean
 }
 
 export function Button({ children, ...rest }: ButtonProps) {

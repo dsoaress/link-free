@@ -2,11 +2,13 @@ import type { Data } from '../types/Data'
 import { prisma } from './prisma'
 
 export async function fetchData(): Promise<Data> {
-  const data = await prisma.data.findFirst()
+  const response = await prisma.data.findUnique({
+    where: { id: 1 }
+  })
 
-  if (data) {
-    return JSON.parse(data.data)
-  } else {
+  if (!response) {
     throw new Error('No data found')
   }
+
+  return JSON.parse(response.data)
 }
