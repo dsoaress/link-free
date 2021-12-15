@@ -1,6 +1,12 @@
 import { PrismaClient } from '@prisma/client'
+import { hashSync } from 'bcryptjs'
+import dotenv from 'dotenv'
 
 const prisma = new PrismaClient()
+
+dotenv.config({
+  path: './.env'
+})
 
 async function main() {
   const data = {
@@ -62,9 +68,7 @@ async function main() {
   }
 
   const hasData = await prisma.data.findUnique({
-    where: {
-      id: 1
-    }
+    where: { id: 1 }
   })
 
   if (!hasData) {
@@ -74,6 +78,26 @@ async function main() {
       data: {
         id: 1,
         data: JSON.stringify(data)
+      }
+    })
+  }
+
+  const hasUser = await prisma.user.findFirst()
+
+  if (!hasUser) {
+    console.log(`Start seeding user...`)
+
+    const { USERNAME, PASSWORD } = process.env
+
+    if (!USERNAME || !PASSWORD) {
+      throw new Error('USERNAME and PASSWORD env variables are required')
+    }
+
+    await prisma.user.create({
+      data: {
+        username: USERNAME,
+        password: hashSync(PASSWORD, 10),
+        role: 'ADMIN'
       }
     })
   }
