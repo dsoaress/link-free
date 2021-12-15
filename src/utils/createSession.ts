@@ -1,4 +1,4 @@
-import { User } from '@prisma/client'
+import type { User } from '@prisma/client'
 import jwt from 'jsonwebtoken'
 
 import { prisma } from '../services/prisma'

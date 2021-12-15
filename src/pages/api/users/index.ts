@@ -4,9 +4,15 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import nc from 'next-connect'
 
 import { prisma } from '../../../services/prisma'
+import { authMiddleware } from '../../../utils/authMiddleware'
 import { ExceptionError } from '../../../utils/error'
 
-const handler = nc<NextApiRequest, NextApiResponse>({
+interface Request extends NextApiRequest {
+  userId: string
+  userRole: string
+}
+
+const handler = nc<Request, NextApiResponse>({
   onNoMatch: (_req, res) => {
     res.status(404).json({ error: 'Not found' })
   },
@@ -29,6 +35,7 @@ const handler = nc<NextApiRequest, NextApiResponse>({
     }
   }
 })
+  .use(authMiddleware)
   .get(async (_req, res) => {
     const response = await prisma.user.findMany({
       select: {
@@ -44,7 +51,6 @@ const handler = nc<NextApiRequest, NextApiResponse>({
 
     res.status(200).json(response)
   })
-
   .post(async (req, res) => {
     const { username, password, role } = req.body
 
@@ -56,7 +62,9 @@ const handler = nc<NextApiRequest, NextApiResponse>({
       throw new ExceptionError('Role must be either ADMIN or EDITOR')
     }
 
-    // TODO implement role validation
+    if (req.userRole !== 'ADMIN') {
+      throw new ExceptionError('Only admins can create users')
+    }
 
     const usernameExists = await prisma.user.findUnique({
       where: { username }

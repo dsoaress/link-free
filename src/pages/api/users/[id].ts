@@ -6,7 +6,12 @@ import nc from 'next-connect'
 import { prisma } from '../../../services/prisma'
 import { ExceptionError } from '../../../utils/error'
 
-const handler = nc<NextApiRequest, NextApiResponse>({
+interface Request extends NextApiRequest {
+  userId: string
+  userRole: string
+}
+
+const handler = nc<Request, NextApiResponse>({
   onNoMatch: (_req, res) => {
     res.status(404).json({ error: 'Not found' })
   },
@@ -51,7 +56,6 @@ const handler = nc<NextApiRequest, NextApiResponse>({
 
     res.status(200).json(response)
   })
-
   .patch(async (req, res) => {
     const { id } = req.query
     const { username, password, newPassword, role } = req.body
@@ -67,6 +71,10 @@ const handler = nc<NextApiRequest, NextApiResponse>({
 
     if (!id) {
       throw new ExceptionError('No id provided')
+    }
+
+    if (req.userRole !== 'ADMIN' && req.userId !== id) {
+      throw new ExceptionError('Only admins can update other users')
     }
 
     if (username) {
@@ -118,7 +126,6 @@ const handler = nc<NextApiRequest, NextApiResponse>({
       throw new ExceptionError(err)
     }
   })
-
   .delete(async (req, res) => {
     const { id } = req.query
 
@@ -128,6 +135,10 @@ const handler = nc<NextApiRequest, NextApiResponse>({
 
     if (id === '1') {
       throw new ExceptionError('Cannot delete admin', 403)
+    }
+
+    if (req.userRole !== 'ADMIN' && req.userId !== id) {
+      throw new ExceptionError('Only admins can delete other users')
     }
 
     try {
