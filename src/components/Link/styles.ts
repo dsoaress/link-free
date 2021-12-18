@@ -1,47 +1,22 @@
-import { Colors, styled, theme, VariantProps } from '../../styles/stitches.config'
+import { darken } from 'polished'
+import styled from 'styled-components'
 
-const themeVariantFn = (regularColor: Colors, darkColor: Colors, darkerColor: Colors) => ({
-  color: theme.colors[regularColor],
+type LinkProps = {
+  color?: string
+}
 
-  '&:hover': {
-    color: theme.colors[darkColor]
-  },
+export const Link = styled.a.attrs((props: LinkProps) => ({
+  color: props.color || '#e11d48'
+}))<LinkProps>`
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.25s ease;
 
-  '&:active': {
-    color: theme.colors[darkerColor]
+  &:hover {
+    color: ${({ color }) => darken(0.1, color)};
   }
-})
 
-export const Wrapper = styled('a', {
-  textDecoration: 'none',
-  transition: 'color 0.25s ease',
-  cursor: 'pointer',
-
-  variants: {
-    theme: {
-      slate: themeVariantFn('slate600', 'slate700', 'slate800'),
-      orange: themeVariantFn('orange600', 'orange700', 'orange800'),
-      amber: themeVariantFn('amber600', 'amber700', 'amber800'),
-      yellow: themeVariantFn('yellow600', 'yellow700', 'yellow800'),
-      lime: themeVariantFn('lime600', 'lime700', 'lime800'),
-      green: themeVariantFn('green600', 'green700', 'green800'),
-      emerald: themeVariantFn('emerald600', 'emerald700', 'emerald800'),
-      teal: themeVariantFn('teal600', 'teal700', 'teal800'),
-      cyan: themeVariantFn('cyan600', 'cyan700', 'cyan800'),
-      sky: themeVariantFn('sky600', 'sky700', 'sky800'),
-      blue: themeVariantFn('blue600', 'blue700', 'blue800'),
-      indigo: themeVariantFn('indigo600', 'indigo700', 'indigo800'),
-      violet: themeVariantFn('violet600', 'violet700', 'violet800'),
-      purple: themeVariantFn('purple600', 'purple700', 'purple800'),
-      fuchsia: themeVariantFn('fuchsia600', 'fuchsia700', 'fuchsia800'),
-      pink: themeVariantFn('pink600', 'pink700', 'pink800'),
-      rose: themeVariantFn('rose600', 'rose700', 'rose800')
-    }
-  },
-
-  defaultVariants: {
-    theme: 'teal'
+  &:active {
+    color: ${({ color }) => darken(0.2, color)};
   }
-})
-
-export type LinkVariantProps = VariantProps<typeof Wrapper>
+`

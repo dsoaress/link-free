@@ -1,30 +1,40 @@
-import { styled } from '../../styles/stitches.config'
+import styled from 'styled-components'
 
-export const Wrapper = styled('main', {
-  width: '100%',
-  height: '100vh',
-  transition: 'all 0.25s ease-in-out'
-})
+type Props = {
+  color?: string
+  font?: string
+}
 
-export const Content = styled('div', {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  gap: '1rem',
-  margin: '0 auto',
-  maxWidth: '640px',
-  padding: '2rem 1rem'
-})
+export const Wrapper = styled.main.attrs((props: Props) => ({
+  color: props.color || '#e11d48',
+  font: props.font || 'inherit'
+}))<Props>`
+  color: ${({ color }) => color};
+  font-family: ${({ font }) => font};
+  width: 100%;
+  height: 100vh;
+  transition: all 0.25s ease;
+`
 
-export const Name = styled('h1', {
-  fontSize: '2rem',
-  fontWeight: 500,
-  margin: 0
-})
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 640px;
+  padding: 2rem 1rem;
+`
 
-export const Description = styled('p', {
-  fontSize: '1rem',
-  textAlign: 'center',
-  fontWeight: 400,
-  lineHeight: '1.5'
-})
+export const Name = styled.h1`
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+`
+
+export const Description = styled.p`
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.5;
+`

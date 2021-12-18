@@ -1,20 +1,16 @@
-import type { ButtonVariantProps } from '../components/Button'
-import type { LinkVariantProps } from '../components/Link'
-import type { Colors, Fonts } from '../styles/stitches.config'
-
 export type Data = {
   settings: {
     avatar: string
     name: string
     description: string
-    font: Fonts
-    buttonsSchema: ButtonVariantProps['styleSchema']
+    font: string
+    buttonsSchema: 'square' | 'rounded' | 'pill'
     outline: boolean
     colors: {
-      texts: Colors
-      socialLinks: LinkVariantProps['theme']
-      buttonLinks: ButtonVariantProps['colorSchema']
-      background: Colors
+      texts: string
+      socialLinks: string
+      buttonLinks: string
+      background: string
     }
   }
   socialLinks: {
@@ -22,6 +18,7 @@ export type Data = {
     href: string
   }[]
   buttonLinks: {
+    id: string
     label: string
     href: string
   }[]

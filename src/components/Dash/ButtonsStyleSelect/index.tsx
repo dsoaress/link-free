@@ -1,18 +1,17 @@
 import { useData } from '../../../hooks/useData'
-import type { ButtonVariantProps } from '../../Button'
 
 export function ButtonsStyleSelect() {
   const { data, setData } = useData()
 
   return (
     <select
-      value={data.settings.buttonsSchema as string}
+      value={data.settings.buttonsSchema}
       onChange={e =>
         setData({
           ...data,
           settings: {
             ...data.settings,
-            buttonsSchema: e.target.value as ButtonVariantProps['styleSchema']
+            buttonsSchema: e.target.value as 'square' | 'rounded' | 'pill'
           }
         })
       }

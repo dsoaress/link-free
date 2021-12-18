@@ -1,5 +1,4 @@
 import { useData } from '../../../hooks/useData'
-import type { Fonts } from '../../../styles/stitches.config'
 
 export function FontsSelect() {
   const { data, setData } = useData()
@@ -12,14 +11,14 @@ export function FontsSelect() {
           ...data,
           settings: {
             ...data.settings,
-            font: e.target.value as Fonts
+            font: e.target.value
           }
         })
       }
     >
-      <option value="baloo">Baloo</option>
-      <option value="montserrat">Montserrat</option>
-      <option value="roboto">Roboto</option>
+      <option value="'Baloo Bhaijaan 2', sans-serif">Baloo</option>
+      <option value="'Montserrat', sans-serif">Montserrat</option>
+      <option value="'Roboto', sans-serif">Roboto</option>
     </select>
   )
 }

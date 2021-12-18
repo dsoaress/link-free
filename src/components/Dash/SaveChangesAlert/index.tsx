@@ -40,23 +40,17 @@ export function SaveChangesAlert({
     setData(initialData)
   }
 
-  return (
-    <Wrapper show={hasUnsavedChanges}>
+  return hasUnsavedChanges ? (
+    <Wrapper>
       You have unsaved changes.
       <ButtonsGroup>
-        <Button
-          size="small"
-          styleSchema="square"
-          colorSchema="rose"
-          outline
-          onClick={() => handleCancel()}
-        >
+        <Button size="small" outlined onClick={() => handleCancel()}>
           Cancel
         </Button>
-        <Button size="small" styleSchema="square" colorSchema="slate" onClick={() => handleSave()}>
+        <Button size="small" onClick={() => handleSave()}>
           Save
         </Button>
       </ButtonsGroup>
     </Wrapper>
-  )
+  ) : null
 }

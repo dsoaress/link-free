@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import nc from 'next-connect'
 
 import { prisma } from '../../services/prisma'
-import { authMiddleware } from '../../utils/authMiddleware'
+// import { authMiddleware } from '../../utils/authMiddleware'
 import { ExceptionError } from '../../utils/error'
 
 const handler = nc<NextApiRequest, NextApiResponse>({
@@ -29,7 +29,6 @@ const handler = nc<NextApiRequest, NextApiResponse>({
     }
   }
 })
-  .use(authMiddleware)
   .get(async (_req, res) => {
     const response = await prisma.data.findUnique({
       where: { id: 1 }
@@ -41,6 +40,7 @@ const handler = nc<NextApiRequest, NextApiResponse>({
 
     res.status(200).json(response?.data)
   })
+  // .use(authMiddleware)
   .put(async (req, res) => {
     const { data } = req.body
 

@@ -25,16 +25,16 @@ export function SocialLinks() {
 
   return (
     <Wrapper>
-      {data.socialLinks?.map(({ label, href }) => {
+      {data.socialLinks?.map(({ label, href }, i) => {
         const Icon: IconType = Icons[label as keyof typeof Icons]
         return (
-          <SocialItem key={href}>
+          <SocialItem key={i}>
             <Link
               href={href}
               aria-label={label}
               rel="noopener noreferrer"
               target="_blank"
-              theme={data.settings.colors.socialLinks}
+              color={data.settings.colors.socialLinks}
             >
               <Icon size={22} />
             </Link>

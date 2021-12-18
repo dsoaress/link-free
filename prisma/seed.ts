@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 import { hashSync } from 'bcryptjs'
+import cuid from 'cuid'
 import dotenv from 'dotenv'
 
 const prisma = new PrismaClient()
@@ -53,16 +54,19 @@ async function main() {
     ],
     buttonLinks: [
       {
+        id: cuid(),
         label: 'Home',
         href: '#'
       },
       {
+        id: cuid(),
         label: 'About',
-        href: '/about'
+        href: '#'
       },
       {
+        id: cuid(),
         label: 'Contact',
-        href: '/contact'
+        href: '#'
       }
     ]
   }

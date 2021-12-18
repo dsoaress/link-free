@@ -1,22 +1,22 @@
-import { styled } from '../../styles/stitches.config'
+import styled from 'styled-components'
 
-export const Wrapper = styled('ul', {
-  display: 'inline-flex',
-  listStyle: 'none'
-})
+export const Wrapper = styled.div`
+  display: inline-flex;
+  list-style: none;
+`
 
-export const SocialItem = styled('li', {
-  transition: 'transform 0.2s ease-in-out',
+export const SocialItem = styled.li`
+  transition: transform 0.25s ease;
 
-  '&:not(:last-child)': {
-    marginRight: '1rem'
-  },
-
-  '&:hover': {
-    transform: 'scale(1.1)'
-  },
-
-  '&:active': {
-    transform: 'scale(0.95)'
+  &:not(:last-child) {
+    margin-right: 1rem;
   }
-})
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+`

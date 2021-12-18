@@ -1,10 +1,9 @@
 import Image from 'next/image'
+import styled from 'styled-components'
 
-import { styled } from '../../styles/stitches.config'
-
-export const Wrapper = styled(Image, {
-  borderRadius: '9999px',
-  objectFit: 'cover',
-  width: '84px',
-  height: '84px'
-})
+export const Wrapper = styled(Image)`
+  border-radius: 9999px;
+  object-fit: cover;
+  width: 84px;
+  height: 84px;
+`

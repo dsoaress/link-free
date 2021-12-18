@@ -1,13 +1,14 @@
 import type { AppProps } from 'next/app'
 
 import { DataProvider } from '../contexts/DataContext'
-import { globalStyles } from '../styles/globals'
+import { Layout } from '../styles/layout'
 
 export default function App({ Component, pageProps }: AppProps) {
-  globalStyles()
   return (
-    <DataProvider>
-      <Component {...pageProps} />
+    <DataProvider initialData={pageProps.initialData}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </DataProvider>
   )
 }

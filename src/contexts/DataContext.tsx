@@ -1,7 +1,6 @@
-import type { Dispatch, ReactNode, SetStateAction } from 'React'
+import { Dispatch, ReactNode, SetStateAction } from 'react'
 import { createContext, useState } from 'react'
 
-import initialData from '../../temp/data.json'
 import type { Data } from '../types/Data'
 
 type DataContextType = {
@@ -11,12 +10,13 @@ type DataContextType = {
 
 type DataProviderProps = {
   children: ReactNode
+  initialData: Data
 }
 
 export const DataContext = createContext({} as DataContextType)
 
-export const DataProvider = ({ children }: DataProviderProps) => {
-  const [data, setData] = useState<Data>(initialData as Data)
+export const DataProvider = ({ children, initialData }: DataProviderProps) => {
+  const [data, setData] = useState<Data>(initialData)
 
   return <DataContext.Provider value={{ data, setData }}>{children}</DataContext.Provider>
 }
