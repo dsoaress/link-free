@@ -16,14 +16,14 @@ async function main() {
       name: 'John Doe',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam nunc nisl euismod.',
-      font: 'baloo',
+      font: '"Roboto", sans-serif',
       buttonsSchema: 'rounded',
       outline: true,
       colors: {
-        texts: 'neutral50',
-        socialLinks: 'rose',
-        buttonLinks: 'rose',
-        background: 'neutral700'
+        texts: '#000000',
+        socialLinks: '#e11d48',
+        buttonLinks: '#e11d48',
+        background: '#f8fafc'
       }
     },
     socialLinks: [
