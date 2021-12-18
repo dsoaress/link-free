@@ -2,9 +2,14 @@ import { GetServerSideProps } from 'next'
 
 import { Dash } from '../components/Dash'
 import { fetchData } from '../services/fetchData'
+import type { Data } from '../types/Data'
 
-export default function DashPage() {
-  return <Dash />
+type DashPageProps = {
+  initialData: Data
+}
+
+export default function DashPage({ initialData }: DashPageProps) {
+  return <Dash initialData={initialData} />
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {

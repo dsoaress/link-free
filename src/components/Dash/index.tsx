@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Collapsible from 'react-collapsible'
 
 import { useData } from '../../hooks/useData'
+import type { Data } from '../../types/Data'
 import { getLocalStorageData, setLocalStorageData } from '../../utils/localStorage'
 import { Home } from '../Home'
 import { ColorsSettings } from './ColorsSettings'
@@ -10,12 +11,15 @@ import { DataSettings } from './DataSettings'
 import { SaveChangesAlert } from './SaveChangesAlert'
 import { Content, Preview, Wrapper } from './styles'
 
-export function Dash() {
+type DashProps = {
+  initialData: Data
+}
+
+export function Dash({ initialData }: DashProps) {
   const { data, setData } = useData()
   const [isLoading, setIsLoading] = useState(true)
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false)
   const [activeTab, setActiveTab] = useState<'data' | 'colors'>('data')
-  const initialData = data
 
   useEffect(() => {
     if (isLoading) {
