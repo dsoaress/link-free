@@ -1,4 +1,4 @@
-import type { Data } from '../types/Data'
+import type { Data } from 'types/Data'
 
 const KEY = 'link-free-data'
 
@@ -8,9 +8,9 @@ export function getLocalStorageData(): Data | null {
 }
 
 export function setLocalStorageData(data = {}) {
-  localStorage.setItem(KEY, JSON.stringify(data))
+  process.browser && localStorage.setItem(KEY, JSON.stringify(data))
 }
 
 export function removeLocalStorageData() {
-  localStorage.removeItem(KEY)
+  process.browser && localStorage.removeItem(KEY)
 }

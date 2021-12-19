@@ -5,11 +5,13 @@ import {
 } from 'react-icons/ai'
 import { BsEnvelope as Email } from 'react-icons/bs'
 import { FaDev as Dev, FaLinkedinIn as LinkedIn } from 'react-icons/fa'
-import type { IconType } from 'react-icons/lib'
 
-import { useData } from '../../hooks/useData'
-import { Link } from '../Link'
+import { useData } from 'hooks/useData'
+import { Link } from 'components/Link'
+
 import { SocialItem, Wrapper } from './styles'
+
+import type { IconType } from 'react-icons/lib'
 
 const Icons = {
   Email,

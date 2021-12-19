@@ -1,9 +1,11 @@
+import type { Fonts } from './Fonts'
+
 export type Data = {
   settings: {
     avatar: string
     name: string
     description: string
-    font: string
+    font: Fonts
     buttonBorderRadius: string
     colors: {
       texts: string

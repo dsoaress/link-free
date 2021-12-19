@@ -1,8 +1,8 @@
-import type { AppProps } from 'next/app'
+import { Layout } from 'components/Layout'
+import { AuthProvider } from 'contexts/AuthContext'
+import { DataProvider } from 'contexts/DataContext'
 
-import { AuthProvider } from '../contexts/AuthContext'
-import { DataProvider } from '../contexts/DataContext'
-import { Layout } from '../styles/layout'
+import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

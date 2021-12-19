@@ -2,10 +2,10 @@ import 'rc-slider/assets/index.css'
 
 import Slider from 'rc-slider'
 
-import { useData } from '../../../hooks/useData'
-import { DescriptionInput } from '../DescriptionInput'
-import { FontsSelect } from '../FontsSelect'
-import { NameInput } from '../NameInput'
+import { useData } from 'hooks/useData'
+import { DescriptionInput } from 'components/Dash/DescriptionInput'
+import { FontsSelect } from 'components/Dash/FontsSelect'
+import { NameInput } from 'components/Dash/NameInput'
 
 export function DataSettings() {
   const { data, setData } = useData()

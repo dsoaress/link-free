@@ -1,8 +1,8 @@
-import type { GetServerSideProps } from 'next'
+import { Dash } from 'components/Dash'
+import { fetchData } from 'services/fetchData'
 
-import { Dash } from '../components/Dash'
-import { fetchData } from '../services/fetchData'
-import type { Data } from '../types/Data'
+import type { GetServerSideProps } from 'next'
+import type { Data } from 'types/Data'
 
 type DashPageProps = {
   initialData: Data
@@ -14,8 +14,5 @@ export default function DashPage({ initialData }: DashPageProps) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const initialData = await fetchData()
-
-  return {
-    props: { initialData }
-  }
+  return { props: { initialData } }
 }

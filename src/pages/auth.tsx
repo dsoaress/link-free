@@ -1,8 +1,9 @@
-import type { GetServerSideProps } from 'next'
 import { useState } from 'react'
 
-import { useAuth } from '../hooks/useAuth'
-import { fetchData } from '../services/fetchData'
+import { useAuth } from 'hooks/useAuth'
+import { fetchData } from 'services/fetchData'
+
+import type { GetStaticProps } from 'next'
 
 export default function AuthPage() {
   const { signIn } = useAuth()
@@ -35,10 +36,7 @@ export default function AuthPage() {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const initialData = await fetchData()
-
-  return {
-    props: { initialData }
-  }
+  return { props: { initialData }, revalidate: 1 }
 }

@@ -16,7 +16,7 @@ async function main() {
       name: 'John Doe',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam nunc nisl euismod.',
-      font: '"Roboto", sans-serif',
+      font: 'oswald',
       buttonBorderRadius: '4',
       colors: {
         texts: '#e11d48',

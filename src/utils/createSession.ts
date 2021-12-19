@@ -1,30 +1,25 @@
-import type { User } from '@prisma/client'
 import jwt from 'jsonwebtoken'
 
-import { prisma } from '../services/prisma'
-import { ExceptionError } from './error'
+import { authConstants } from 'constants/auth'
+import { prisma } from 'services/prisma'
+import { ExceptionError } from 'utils/error'
 
-const EXPIRES_IN = 30 // days
-const EXPIRES_IN_MS = EXPIRES_IN * 24 * 60 * 60 * 1000
+import type { User } from '@prisma/client'
 
 export async function createSession(user: User) {
-  const { JWT_SECRET } = process.env
-
-  if (!JWT_SECRET) {
-    throw new ExceptionError('JWT_SECRET is not defined')
-  }
+  const { SESSION_EXPIRES_IN_MS, JWT_EXPIRES_IN, JWT_SECRET } = authConstants
 
   try {
     const session = await prisma.session.create({
       data: {
         userId: user.id,
-        expiresAt: new Date(Date.now() + EXPIRES_IN_MS)
+        expiresAt: new Date(Date.now() + SESSION_EXPIRES_IN_MS)
       }
     })
 
     const payload = { role: user.role, sub: user.id }
-    const accessToken = jwt.sign(payload, JWT_SECRET, {
-      expiresIn: '15m'
+    const accessToken = jwt.sign(payload, JWT_SECRET!, {
+      expiresIn: `${JWT_EXPIRES_IN}m`
     })
 
     return { accessToken, refreshToken: session.id }

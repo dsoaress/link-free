@@ -6,7 +6,6 @@ type ButtonProps = {
   backgroundColor?: string
   borderColor?: string
   borderRadius?: string
-  font?: string
   size?: 'small' | 'medium'
 }
 
@@ -15,7 +14,6 @@ export const Button = styled.button.attrs((props: ButtonProps) => ({
   backgroundColor: props.backgroundColor || '#e11d48',
   borderColor: props.borderColor || '#e11d48',
   borderRadius: props.borderRadius || 8,
-  font: props.font || 'inherit',
   size: props.size || 'medium'
 }))<ButtonProps>`
   display: flex;
@@ -23,7 +21,6 @@ export const Button = styled.button.attrs((props: ButtonProps) => ({
   justify-content: center;
   width: 100%;
   padding: 0 1rem;
-  font-family: ${({ font }) => font};
   color: ${({ labelColor }) => labelColor};
   background: ${({ backgroundColor }) => backgroundColor};
   border-radius: ${({ borderRadius }) => borderRadius}px;

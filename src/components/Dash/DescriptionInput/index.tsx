@@ -1,4 +1,4 @@
-import { useData } from '../../../hooks/useData'
+import { useData } from 'hooks/useData'
 
 export function DescriptionInput() {
   const { data, setData } = useData()

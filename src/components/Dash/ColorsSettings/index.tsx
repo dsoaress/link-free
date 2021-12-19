@@ -1,4 +1,4 @@
-import { ColorPicker } from '../ColorPicker'
+import { ColorPicker } from 'components/Dash/ColorPicker'
 
 export function ColorsSettings() {
   return (

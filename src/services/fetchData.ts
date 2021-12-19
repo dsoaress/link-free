@@ -1,5 +1,6 @@
-import type { Data } from '../types/Data'
-import { prisma } from './prisma'
+import { prisma } from 'services/prisma'
+
+import type { Data } from 'types/Data'
 
 export async function fetchData(): Promise<Data> {
   const response = await prisma.data.findUnique({

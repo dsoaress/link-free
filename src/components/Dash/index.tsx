@@ -2,15 +2,17 @@ import { isEqual } from 'lodash'
 import { useEffect, useState } from 'react'
 import Collapsible from 'react-collapsible'
 
-import { useAuth } from '../../hooks/useAuth'
-import { useData } from '../../hooks/useData'
-import type { Data } from '../../types/Data'
-import { getLocalStorageData, setLocalStorageData } from '../../utils/localStorage'
-import { Home } from '../Home'
-import { ColorsSettings } from './ColorsSettings'
-import { DataSettings } from './DataSettings'
-import { SaveChangesAlert } from './SaveChangesAlert'
+import { useAuth } from 'hooks/useAuth'
+import { useData } from 'hooks/useData'
+import { getLocalStorageData, setLocalStorageData } from 'utils/localStorage'
+import { Home } from 'components/Home'
+import { ColorsSettings } from 'components/Dash/ColorsSettings'
+import { DataSettings } from 'components/Dash/DataSettings'
+import { SaveChangesAlert } from 'components/Dash/SaveChangesAlert'
+
 import { Content, Preview, Wrapper } from './styles'
+
+import type { Data } from 'types/Data'
 
 type DashProps = {
   initialData: Data

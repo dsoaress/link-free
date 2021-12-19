@@ -1,4 +1,6 @@
-import { useData } from '../../../hooks/useData'
+import { useData } from 'hooks/useData'
+
+import type { Fonts } from 'types/Fonts'
 
 export function FontsSelect() {
   const { data, setData } = useData()
@@ -11,14 +13,18 @@ export function FontsSelect() {
           ...data,
           settings: {
             ...data.settings,
-            font: e.target.value
+            font: e.target.value as Fonts
           }
         })
       }
     >
-      <option value="'Baloo Bhaijaan 2', sans-serif">Baloo</option>
-      <option value="'Montserrat', sans-serif">Montserrat</option>
-      <option value="'Roboto', sans-serif">Roboto</option>
+      <option value="inconsolata">Inconsolata</option>
+      <option value="oswald">Oswald</option>
+      <option value="poppins">Poppins</option>
+      <option value="quicksand">Quicksand</option>
+      <option value="roboto">Roboto</option>
+      <option value="robotoSlab">Roboto Slab</option>
+      <option value="ubuntu">Ubuntu</option>
     </select>
   )
 }

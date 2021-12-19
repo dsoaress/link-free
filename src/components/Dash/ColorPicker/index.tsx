@@ -1,7 +1,7 @@
 import { BlockPicker } from 'react-color'
 
-import { useData } from '../../../hooks/useData'
-import { colors } from '../../../styles/colors'
+import { colors } from 'constants/colors'
+import { useData } from 'hooks/useData'
 
 type ColorPickerProps = {
   prop:

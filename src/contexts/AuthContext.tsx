@@ -1,17 +1,16 @@
-import type { User } from '@prisma/client'
 import { useRouter } from 'next/router'
 import { parseCookies } from 'nookies'
-import type { ReactNode } from 'react'
-import { useEffect } from 'react'
-import { createContext, useState } from 'react'
+import { useEffect, createContext, useState } from 'react'
 
-import { api } from '../services/api'
-import { destroyCookies } from '../utils/destroyCookies'
-import { retrieveUser } from '../utils/retrieveUser'
-import { setCookies } from '../utils/setCookies'
+import { api } from 'services/api'
+import { destroyCookies, setCookies } from 'utils/cookies'
+import { retrieveUser } from 'utils/retrieveUser'
+
+import type { ReactNode } from 'react'
+import type { User } from 'types/User'
 
 type AuthContextType = {
-  user?: Omit<User, 'password'>
+  user?: User
   signIn: (username: string, password: string) => Promise<void>
   signOut: () => void
 }
@@ -23,7 +22,7 @@ type AuthProviderProps = {
 export const AuthContext = createContext({} as AuthContextType)
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-  const [user, setUser] = useState<Omit<User, 'password'>>()
+  const [user, setUser] = useState<User>()
   const { push } = useRouter()
 
   useEffect(() => {

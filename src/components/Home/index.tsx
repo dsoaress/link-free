@@ -1,7 +1,9 @@
-import { useData } from '../../hooks/useData'
-import { Avatar } from '../Avatar'
-import { Button } from '../Button'
-import { SocialLinks } from '../SocialLinks'
+import { fonts } from 'constants/fonts'
+import { useData } from 'hooks/useData'
+import { Button } from 'components/Button'
+import { Avatar } from 'components/Avatar'
+import { SocialLinks } from 'components/SocialLinks'
+
 import { Content, Description, Name, Wrapper } from './styles'
 
 export const Home = () => {
@@ -9,7 +11,7 @@ export const Home = () => {
   const { colors, buttonBorderRadius, font, name, description } = data.settings
 
   return (
-    <Wrapper color={colors.texts} font={font}>
+    <Wrapper color={colors.texts} font={fonts[font].name}>
       <Content>
         <Avatar />
         <Name>{name}</Name>

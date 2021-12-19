@@ -1,4 +1,4 @@
-import { useData } from '../../../hooks/useData'
+import { useData } from 'hooks/useData'
 
 export function NameInput() {
   const { data, setData } = useData()

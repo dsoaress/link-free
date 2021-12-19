@@ -1,4 +1,5 @@
-import { useData } from '../../hooks/useData'
+import { useData } from 'hooks/useData'
+
 import { Wrapper } from './styles'
 
 export function Avatar() {

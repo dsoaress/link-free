@@ -1,12 +1,14 @@
 import { useRouter } from 'next/router'
-import type { Dispatch, SetStateAction } from 'react'
 
-import { useData } from '../../../hooks/useData'
-import { api } from '../../../services/api'
-import type { Data } from '../../../types/Data'
-import { removeLocalStorageData } from '../../../utils/localStorage'
-import { Button } from '../../Button'
+import { useData } from 'hooks/useData'
+import { api } from 'services/api'
+import { removeLocalStorageData } from 'utils/localStorage'
+import { Button } from 'components/Button'
+
 import { ButtonsGroup, Wrapper } from './styles'
+
+import type { Data } from '../../../types/Data'
+import type { Dispatch, SetStateAction } from 'react'
 
 type SaveChangesAlertProps = {
   hasUnsavedChanges: boolean

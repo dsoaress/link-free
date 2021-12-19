@@ -1,9 +1,30 @@
 {
-  "extends": ["next", "next/core-web-vitals", "plugin:prettier/recommended"],
-  "plugins": ["prettier", "simple-import-sort"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
+  ],
+  "plugins": ["prettier", "import"],
   "rules": {
     "prettier/prettier": "error",
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "@next/next/no-page-custom-font": "off"
   }
 }
