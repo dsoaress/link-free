@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next'
+import type { GetStaticProps } from 'next'
 
 import { Home } from '../components/Home'
 import { fetchData } from '../services/fetchData'

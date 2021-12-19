@@ -4,13 +4,14 @@ export type Data = {
     name: string
     description: string
     font: string
-    buttonsSchema: 'square' | 'rounded' | 'pill'
-    outline: boolean
+    buttonBorderRadius: string
     colors: {
       texts: string
-      socialLinks: string
-      buttonLinks: string
+      icons: string
       background: string
+      buttonLabelColor: string
+      buttonBackgroundColor: string
+      buttonBorderColor: string
     }
   }
   socialLinks: {

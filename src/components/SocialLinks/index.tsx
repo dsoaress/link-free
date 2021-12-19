@@ -34,7 +34,7 @@ export function SocialLinks() {
               aria-label={label}
               rel="noopener noreferrer"
               target="_blank"
-              color={data.settings.colors.socialLinks}
+              color={data.settings.colors.icons}
             >
               <Icon size={22} />
             </Link>

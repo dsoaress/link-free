@@ -17,13 +17,14 @@ async function main() {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam nunc nisl euismod.',
       font: '"Roboto", sans-serif',
-      buttonsSchema: 'rounded',
-      outline: true,
+      buttonBorderRadius: '4',
       colors: {
-        texts: '#000000',
-        socialLinks: '#e11d48',
-        buttonLinks: '#e11d48',
-        background: '#f8fafc'
+        texts: '#e11d48',
+        icons: '#e11d48',
+        background: '#f8fafc',
+        buttonLabelColor: '#f8fafc',
+        buttonBackgroundColor: '#e11d48',
+        buttonBorderColor: '#e11d48'
       }
     },
     socialLinks: [

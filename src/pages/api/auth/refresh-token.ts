@@ -67,7 +67,7 @@ const handler = nc<NextApiRequest, NextApiResponse>({
     where: { id: refreshToken }
   })
 
-  res.status(200).json({ token: tokens.token, refreshToken: tokens.refreshToken })
+  res.status(200).json({ accessToken: tokens.accessToken, refreshToken: tokens.refreshToken })
 })
 
 export default handler

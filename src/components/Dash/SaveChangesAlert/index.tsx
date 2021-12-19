@@ -44,7 +44,7 @@ export function SaveChangesAlert({
     <Wrapper>
       You have unsaved changes.
       <ButtonsGroup>
-        <Button size="small" outlined onClick={() => handleCancel()}>
+        <Button size="small" backgroundColor="transparent" onClick={() => handleCancel()}>
           Cancel
         </Button>
         <Button size="small" onClick={() => handleSave()}>

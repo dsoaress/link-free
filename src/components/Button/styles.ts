@@ -2,19 +2,19 @@ import { darken } from 'polished'
 import styled from 'styled-components'
 
 type ButtonProps = {
-  color?: string
-  background?: string
-  variant?: 'square' | 'rounded' | 'pill'
-  outlined?: boolean
+  labelColor?: string
+  backgroundColor?: string
+  borderColor?: string
+  borderRadius?: string
   font?: string
   size?: 'small' | 'medium'
 }
 
 export const Button = styled.button.attrs((props: ButtonProps) => ({
-  color: props.color || '#f8fafc',
-  background: props.background || '#e11d48',
-  variant: props.variant || 'rounded',
-  outlined: props.outlined || false,
+  labelColor: props.labelColor || '#f8fafc',
+  backgroundColor: props.backgroundColor || '#e11d48',
+  borderColor: props.borderColor || '#e11d48',
+  borderRadius: props.borderRadius || 8,
   font: props.font || 'inherit',
   size: props.size || 'medium'
 }))<ButtonProps>`
@@ -24,29 +24,27 @@ export const Button = styled.button.attrs((props: ButtonProps) => ({
   width: 100%;
   padding: 0 1rem;
   font-family: ${({ font }) => font};
-  color: ${({ color }) => color};
-  background: ${({ background }) => background};
+  color: ${({ labelColor }) => labelColor};
+  background: ${({ backgroundColor }) => backgroundColor};
+  border-radius: ${({ borderRadius }) => borderRadius}px;
   border-width: 2.5px;
   border-style: solid;
+  border-color: ${({ borderColor }) => borderColor};
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.25s ease;
 
   &:hover {
-    background: ${({ background }) => darken(0.1, background)};
+    background: ${({ backgroundColor }) => darken(0.1, backgroundColor!)};
+    border-color: ${({ borderColor }) => darken(0.1, borderColor!)};
     transform: translateY(-0.15rem);
   }
 
   &:active {
-    background: ${({ background }) => darken(0.2, background)};
+    background: ${({ backgroundColor }) => darken(0.2, backgroundColor!)};
+    border-color: ${({ borderColor }) => darken(0.2, borderColor!)};
   }
-
-  ${({ variant }) => variant === 'square' && `border-radius: 0;`}
-
-  ${({ variant }) => variant === 'rounded' && `border-radius: 0.5rem;`}
-
-  ${({ variant }) => variant === 'pill' && `border-radius: 9999px;`}
 
   ${({ size }) =>
     size === 'small' &&
@@ -60,13 +58,5 @@ export const Button = styled.button.attrs((props: ButtonProps) => ({
     `
     height: 3rem;
     font-size: 1rem;
-  `}
-
-  ${({ outlined, color }) =>
-    outlined &&
-    `
-    background: transparent;
-    color: ${color};
-    border-color: ${color};
   `}
 `

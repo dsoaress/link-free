@@ -4,7 +4,13 @@ import { useData } from '../../../hooks/useData'
 import { colors } from '../../../styles/colors'
 
 type ColorPickerProps = {
-  prop: 'texts' | 'socialLinks' | 'background' | 'buttonLinks'
+  prop:
+    | 'texts'
+    | 'icons'
+    | 'background'
+    | 'buttonLabelColor'
+    | 'buttonBackgroundColor'
+    | 'buttonBorderColor'
 }
 
 export function ColorPicker({ prop }: ColorPickerProps) {

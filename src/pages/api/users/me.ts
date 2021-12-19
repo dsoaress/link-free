@@ -1,13 +1,17 @@
 import { Prisma } from '@prisma/client'
-import { compare } from 'bcryptjs'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import nc from 'next-connect'
 
 import { prisma } from '../../../services/prisma'
-import { createSession } from '../../../utils/createSession'
+import { authMiddleware } from '../../../utils/authMiddleware'
 import { ExceptionError } from '../../../utils/error'
 
-const handler = nc<NextApiRequest, NextApiResponse>({
+interface Request extends NextApiRequest {
+  userId: string
+  userRole: string
+}
+
+const handler = nc<Request, NextApiResponse>({
   onNoMatch: (_req, res) => {
     res.status(404).json({ error: 'Not found' })
   },
@@ -29,30 +33,24 @@ const handler = nc<NextApiRequest, NextApiResponse>({
       })
     }
   }
-}).post(async (req, res) => {
-  const { username, password } = req.body
-
-  if (!username || !password) {
-    throw new ExceptionError('Username and password are required')
-  }
-
-  const user = await prisma.user.findUnique({
-    where: { username }
-  })
-
-  if (!user) {
-    throw new ExceptionError('Credentials are invalid', 401)
-  }
-
-  const isValidPassword = await compare(password, user.password)
-
-  if (!isValidPassword) {
-    throw new ExceptionError('Credentials are invalid', 401)
-  }
-
-  const { accessToken, refreshToken } = await createSession(user)
-
-  res.status(200).json({ accessToken, refreshToken })
 })
+  .use(authMiddleware)
+  .get(async (req, res) => {
+    const { userId } = req
+    const response = await prisma.user.findUnique({
+      where: { id: +userId },
+      select: {
+        id: true,
+        username: true,
+        role: true
+      }
+    })
+
+    if (!response) {
+      throw new ExceptionError('User not found')
+    }
+
+    res.status(200).json(response)
+  })
 
 export default handler

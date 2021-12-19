@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next'
+import type { GetServerSideProps } from 'next'
 
 import { Dash } from '../components/Dash'
 import { fetchData } from '../services/fetchData'

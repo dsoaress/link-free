@@ -11,7 +11,7 @@ type SetCookiesProps = {
 
 export function setCookies({ ctx = undefined, accessToken, refreshToken }: SetCookiesProps) {
   // @ts-ignore
-  api.defaults.headers['Authorization'] = `Bearer ${accessToken}`
+  api.defaults.headers['authorization'] = `Bearer ${accessToken}`
 
   setCookie(ctx, 'accessToken', accessToken, {
     maxAge: 60 * 60 * 24 * 30, // 30 days

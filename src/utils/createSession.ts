@@ -23,11 +23,11 @@ export async function createSession(user: User) {
     })
 
     const payload = { role: user.role, sub: user.id }
-    const token = jwt.sign(payload, JWT_SECRET, {
+    const accessToken = jwt.sign(payload, JWT_SECRET, {
       expiresIn: '15m'
     })
 
-    return { token, refreshToken: session.id }
+    return { accessToken, refreshToken: session.id }
   } catch (err: any) {
     throw new ExceptionError(err)
   }

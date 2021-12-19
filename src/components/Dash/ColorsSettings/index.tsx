@@ -17,17 +17,25 @@ export function ColorsSettings() {
 
       <div>
         <h1>Icons</h1>
-        <ColorPicker prop="socialLinks" />
-      </div>
-
-      <div>
-        <h1>Buttons</h1>
-        <ColorPicker prop="buttonLinks" />
+        <ColorPicker prop="icons" />
       </div>
 
       <div>
         <h1>Background</h1>
         <ColorPicker prop="background" />
+      </div>
+
+      <div>
+        <h1>Buttons</h1>
+
+        <h2>Label</h2>
+        <ColorPicker prop="buttonLabelColor" />
+
+        <h2>Background</h2>
+        <ColorPicker prop="buttonBackgroundColor" />
+
+        <h2>Border</h2>
+        <ColorPicker prop="buttonBorderColor" />
       </div>
     </div>
   )

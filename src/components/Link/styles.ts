@@ -8,6 +8,7 @@ type LinkProps = {
 export const Link = styled.a.attrs((props: LinkProps) => ({
   color: props.color || '#e11d48'
 }))<LinkProps>`
+  color: ${({ color }) => color};
   text-decoration: none;
   cursor: pointer;
   transition: color 0.25s ease;

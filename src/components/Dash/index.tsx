@@ -2,6 +2,7 @@ import { isEqual } from 'lodash'
 import { useEffect, useState } from 'react'
 import Collapsible from 'react-collapsible'
 
+import { useAuth } from '../../hooks/useAuth'
 import { useData } from '../../hooks/useData'
 import type { Data } from '../../types/Data'
 import { getLocalStorageData, setLocalStorageData } from '../../utils/localStorage'
@@ -20,6 +21,8 @@ export function Dash({ initialData }: DashProps) {
   const [isLoading, setIsLoading] = useState(true)
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false)
   const [activeTab, setActiveTab] = useState<'data' | 'colors'>('data')
+
+  const { user } = useAuth()
 
   useEffect(() => {
     if (isLoading) {
@@ -53,6 +56,8 @@ export function Dash({ initialData }: DashProps) {
           initialData={initialData}
         />
         <h1>Dash </h1>
+
+        <pre>{JSON.stringify(user, null, 2)}</pre>
 
         {tabs.map((tab, i) => (
           <button key={i} onClick={() => setActiveTab(tab.value as 'data' | 'colors')}>
