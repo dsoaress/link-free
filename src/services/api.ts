@@ -35,7 +35,7 @@ export function setupAPIClient(ctx: GetServerSidePropsContext | undefined = unde
           isRefreshing = true
 
           api
-            .post('session/refresh-token', { refreshToken })
+            .post('auth/refresh-token', { refreshToken })
             .then(response => {
               const { accessToken, refreshToken } = response.data
 

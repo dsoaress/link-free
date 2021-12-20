@@ -1,7 +1,7 @@
 import { prisma } from 'services/prisma'
-// import { authMiddleware } from '../../utils/authMiddleware'
 import { ExceptionError } from 'utils/error'
 import { nc } from 'utils/nc'
+import { authMiddleware } from 'utils/authMiddleware'
 
 const handler = nc
   .get(async (_req, res) => {
@@ -15,7 +15,7 @@ const handler = nc
 
     res.status(200).json(response?.data)
   })
-  // .use(authMiddleware)
+  .use(authMiddleware)
   .put(async (req, res) => {
     const { data } = req.body
 
