@@ -2,7 +2,6 @@ import { isEqual } from 'lodash'
 import { useEffect, useState } from 'react'
 import Collapsible from 'react-collapsible'
 
-import { useAuth } from 'hooks/useAuth'
 import { useData } from 'hooks/useData'
 import { getLocalStorageData, setLocalStorageData } from 'utils/localStorage'
 import { Home } from 'components/Home'
@@ -22,9 +21,6 @@ export function Dash({ initialData }: DashProps) {
   const { data, setData } = useData()
   const [isLoading, setIsLoading] = useState(true)
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false)
-  const [activeTab, setActiveTab] = useState<'data' | 'colors'>('data')
-
-  const { user } = useAuth()
 
   useEffect(() => {
     if (isLoading) {
@@ -43,12 +39,6 @@ export function Dash({ initialData }: DashProps) {
     }
   }, [data, initialData, isLoading, setData])
 
-  const tabs = [
-    { label: 'Data', value: 'data' },
-    { label: 'Colors', value: 'colors' }
-  ]
-  const body = { data: <DataSettings />, colors: <ColorsSettings /> }
-
   return (
     <Wrapper>
       <Content>
@@ -59,15 +49,8 @@ export function Dash({ initialData }: DashProps) {
         />
         <h1>Dash </h1>
 
-        <pre>{JSON.stringify(user, null, 2)}</pre>
-
-        {tabs.map((tab, i) => (
-          <button key={i} onClick={() => setActiveTab(tab.value as 'data' | 'colors')}>
-            {tab.label}
-          </button>
-        ))}
-
-        {body[activeTab]}
+        <DataSettings />
+        <ColorsSettings />
 
         <Collapsible trigger="Start here">
           <p>This is the collapsible content. It can be any element or React component you like.</p>
