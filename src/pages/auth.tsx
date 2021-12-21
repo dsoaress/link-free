@@ -2,8 +2,9 @@ import { useState } from 'react'
 
 import { useAuth } from 'hooks/useAuth'
 import { fetchData } from 'services/fetchData'
+import { guestUserRoute } from 'utils/guestUserRoute'
 
-import type { GetStaticProps } from 'next'
+import type { GetServerSideProps } from 'next'
 
 export default function AuthPage() {
   const { signIn } = useAuth()
@@ -36,7 +37,7 @@ export default function AuthPage() {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = guestUserRoute(async () => {
   const initialData = await fetchData()
-  return { props: { initialData }, revalidate: 1 }
-}
+  return { props: { initialData } }
+})
