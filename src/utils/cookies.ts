@@ -18,21 +18,20 @@ export function setCookies({ ctx = undefined, accessToken, refreshToken }: SetCo
 
   setCookie(ctx, 'accessToken', accessToken, {
     maxAge: SESSION_EXPIRES_IN_S,
-    path: '/'
+    path: '/',
+    sameSite: 'strict',
+    secure: process.env.NODE_ENV === 'production'
   })
 
   setCookie(ctx, 'refreshToken', refreshToken, {
     maxAge: SESSION_EXPIRES_IN_S,
-    path: '/'
+    path: '/',
+    sameSite: 'strict',
+    secure: process.env.NODE_ENV === 'production'
   })
 }
 
 export function destroyCookies(ctx: GetServerSidePropsContext | undefined = undefined) {
-  destroyCookie(ctx, 'accessToken', {
-    path: '/'
-  })
-
-  destroyCookie(ctx, 'refreshToken', {
-    path: '/'
-  })
+  destroyCookie(ctx, 'accessToken')
+  destroyCookie(ctx, 'refreshToken')
 }

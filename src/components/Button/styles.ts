@@ -6,7 +6,8 @@ type ButtonProps = {
   backgroundColor?: string
   borderColor?: string
   borderRadius?: string
-  size?: 'small' | 'medium'
+  size?: 'small' | 'medium' | 'large'
+  fullWidth?: boolean
 }
 
 export const Button = styled.button.attrs((props: ButtonProps) => ({
@@ -14,13 +15,15 @@ export const Button = styled.button.attrs((props: ButtonProps) => ({
   backgroundColor: props.backgroundColor || '#e11d48',
   borderColor: props.borderColor || '#e11d48',
   borderRadius: props.borderRadius || 8,
-  size: props.size || 'medium'
+  size: props.size || 'medium',
+  fullWidth: props.fullWidth || false
 }))<ButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  padding: 0 1rem;
+  flex-shrink: 0;
+  padding: 0 2rem;
+  width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
   color: ${({ labelColor }) => labelColor};
   background: ${({ backgroundColor }) => backgroundColor};
   border-radius: ${({ borderRadius }) => borderRadius}px;
@@ -46,14 +49,22 @@ export const Button = styled.button.attrs((props: ButtonProps) => ({
   ${({ size }) =>
     size === 'small' &&
     `
-    height: 2rem;
+    height: 1.8rem;
+    padding: 0 0.5rem;
     font-size: 0.875rem;
   `}
 
   ${({ size }) =>
     size === 'medium' &&
     `
-    height: 3rem;
+    height: 2.5rem;
     font-size: 1rem;
+  `}
+
+  ${({ size }) =>
+    size === 'large' &&
+    `
+    height: 3rem;
+    font-size: 1.125rem;
   `}
 `

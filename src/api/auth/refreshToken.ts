@@ -1,9 +1,10 @@
 import { prisma } from 'services/prisma'
 import { createSession } from 'utils/createSession'
 import { ExceptionError } from 'utils/error'
-import { nc } from 'utils/nc'
 
-const handler = nc.post(async (req, res) => {
+import type { NextApiRequest, NextApiResponse } from 'next'
+
+export async function refreshToken(req: NextApiRequest, res: NextApiResponse) {
   const { refreshToken } = req.body
 
   if (!refreshToken) {
@@ -43,6 +44,4 @@ const handler = nc.post(async (req, res) => {
   })
 
   res.status(200).json({ accessToken: tokens.accessToken, refreshToken: tokens.refreshToken })
-})
-
-export default handler
+}

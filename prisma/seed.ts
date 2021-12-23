@@ -27,32 +27,23 @@ async function main() {
         buttonBorderColor: '#e11d48'
       }
     },
-    socialLinks: [
-      {
-        label: 'Email',
-        href: '1'
-      },
-      {
-        label: 'GitHub',
-        href: '2'
-      },
-      {
-        label: 'LinkedIn',
-        href: '3'
-      },
-      {
-        label: 'Dev',
-        href: '4'
-      },
-      {
-        label: 'Instagram',
-        href: '5'
-      },
-      {
-        label: 'WhatsApp',
-        href: '6'
-      }
-    ],
+    socialLinks: {
+      Facebook: '1',
+      Instagram: '2',
+      Snapchat: '3',
+      Twitter: '4',
+      Messenger: '5',
+      WhatsApp: '',
+      LinkedIn: '',
+      GitHub: '',
+      Dev: '',
+      Medium: '',
+      YouTube: '',
+      Twitch: '',
+      Discord: '',
+      Steam: '',
+      Email: ''
+    },
     buttonLinks: [
       {
         id: cuid(),
@@ -77,8 +68,6 @@ async function main() {
   })
 
   if (!hasData) {
-    console.log(`Start seeding...`)
-
     await prisma.data.create({
       data: {
         id: 1,
@@ -90,8 +79,6 @@ async function main() {
   const hasUser = await prisma.user.findFirst()
 
   if (!hasUser) {
-    console.log(`Start seeding user...`)
-
     const { USERNAME, PASSWORD } = process.env
 
     if (!USERNAME || !PASSWORD) {
@@ -102,6 +89,7 @@ async function main() {
       data: {
         username: USERNAME,
         password: hashSync(PASSWORD, 10),
+        lang: 'en',
         role: 'ADMIN'
       }
     })
@@ -109,8 +97,8 @@ async function main() {
 }
 
 main()
-  .catch(e => {
-    console.error(e)
+  .catch(err => {
+    console.error(err)
     process.exit(1)
   })
   .finally(async () => {

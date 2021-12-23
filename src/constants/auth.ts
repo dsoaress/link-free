@@ -1,4 +1,4 @@
-const JWT_EXPIRES_IN = 15 // minutes
+const JWT_EXPIRES_IN = 15000000 // minutes
 const SESSION_EXPIRES_IN = 30 // days
 
 const { JWT_SECRET } = process.env

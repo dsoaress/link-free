@@ -3,13 +3,15 @@ import { useEffect, useState } from 'react'
 import Collapsible from 'react-collapsible'
 
 import { useData } from 'hooks/useData'
-import { getLocalStorageData, setLocalStorageData } from 'utils/localStorage'
+import { getLocalStorage, setLocalStorage } from 'utils/localStorage'
 import { Home } from 'components/Home'
 import { ColorsSettings } from 'components/Dash/ColorsSettings'
-import { DataSettings } from 'components/Dash/DataSettings'
+import { DataSettings } from 'components/Dash/NameInput/DataSettings'
 import { SaveChangesAlert } from 'components/Dash/SaveChangesAlert'
 
 import { Content, Preview, Wrapper } from './styles'
+import { UserSettings } from './UserSettings'
+import { SocialLinksSettings } from './SocialLinksSettings'
 
 import type { Data } from 'types/Data'
 
@@ -24,7 +26,7 @@ export function Dash({ initialData }: DashProps) {
 
   useEffect(() => {
     if (isLoading) {
-      const storageData = getLocalStorageData()
+      const storageData = getLocalStorage<Data>('data')
       if (storageData) setData(storageData)
       else setData(initialData)
 
@@ -33,7 +35,7 @@ export function Dash({ initialData }: DashProps) {
 
     if (!isLoading && !isEqual(initialData, data)) {
       setHasUnsavedChanges(true)
-      setLocalStorageData(data)
+      setLocalStorage('data', data)
     } else {
       setHasUnsavedChanges(false)
     }
@@ -47,15 +49,17 @@ export function Dash({ initialData }: DashProps) {
           setHasUnsavedChanges={setHasUnsavedChanges}
           initialData={initialData}
         />
-        <h1>Dash </h1>
+        <h1>Dash</h1>
 
-        <DataSettings />
-        <ColorsSettings />
+        <UserSettings />
+        {/* <SocialLinksSettings /> */}
+        {/* <DataSettings /> */}
+        {/* <ColorsSettings />
 
         <Collapsible trigger="Start here">
           <p>This is the collapsible content. It can be any element or React component you like.</p>
           <p>It can even be another Collapsible component. Check out the next section!</p>
-        </Collapsible>
+        </Collapsible> */}
       </Content>
       <Preview>
         <Home />

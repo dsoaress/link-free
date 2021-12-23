@@ -1,16 +1,12 @@
-import type { Data } from 'types/Data'
-
-const KEY = 'link-free-data'
-
-export function getLocalStorageData(): Data | null {
-  const data = process.browser && localStorage.getItem(KEY)
+export function getLocalStorage<T>(key: string): T | null {
+  const data = process.browser && localStorage.getItem(key)
   return data ? JSON.parse(data) : null
 }
 
-export function setLocalStorageData(data = {}) {
-  process.browser && localStorage.setItem(KEY, JSON.stringify(data))
+export function setLocalStorage(key: string, data: {} | string) {
+  process.browser && localStorage.setItem(key, JSON.stringify(data))
 }
 
-export function removeLocalStorageData() {
-  process.browser && localStorage.removeItem(KEY)
+export function removeLocalStorage(key: string) {
+  process.browser && localStorage.removeItem(key)
 }

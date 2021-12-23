@@ -16,6 +16,7 @@ model User {
   id       Int    @id @default(autoincrement())
   username String @unique
   password String
+  lang     String @default("en")
   role     Role
 }
 

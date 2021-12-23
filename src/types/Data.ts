@@ -1,4 +1,5 @@
 import type { Fonts } from './Fonts'
+import type { SocialLinks } from './SocialLinks'
 
 export type Data = {
   settings: {
@@ -16,10 +17,7 @@ export type Data = {
       buttonBorderColor: string
     }
   }
-  socialLinks: {
-    label: string
-    href: string
-  }[]
+  socialLinks: SocialLinks
   buttonLinks: {
     id: string
     label: string

@@ -28,6 +28,8 @@ export const Home = () => {
             borderRadius={buttonBorderRadius}
             rel="noopener noreferrer"
             target="_blank"
+            size="large"
+            fullWidth
           >
             {link.label}
           </Button>

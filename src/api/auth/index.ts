@@ -3,9 +3,10 @@ import { compare } from 'bcryptjs'
 import { prisma } from 'services/prisma'
 import { createSession } from 'utils/createSession'
 import { ExceptionError } from 'utils/error'
-import { nc } from 'utils/nc'
 
-const handler = nc.post(async (req, res) => {
+import type { NextApiRequest, NextApiResponse } from 'next'
+
+export async function auth(req: NextApiRequest, res: NextApiResponse) {
   const { username, password } = req.body
 
   if (!username || !password) {
@@ -29,6 +30,4 @@ const handler = nc.post(async (req, res) => {
   const { accessToken, refreshToken } = await createSession(user)
 
   res.status(200).json({ accessToken, refreshToken })
-})
-
-export default handler
+}

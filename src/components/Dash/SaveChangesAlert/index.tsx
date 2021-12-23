@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 
 import { useData } from 'hooks/useData'
 import { api } from 'services/api'
-import { removeLocalStorageData } from 'utils/localStorage'
+import { removeLocalStorage } from 'utils/localStorage'
 import { Button } from 'components/Button'
 
 import { ButtonsGroup, Wrapper } from './styles'
@@ -27,7 +27,7 @@ export function SaveChangesAlert({
   const handleSave = async () => {
     try {
       await api.put('data', { data })
-      removeLocalStorageData()
+      removeLocalStorage('data')
       setHasUnsavedChanges(false)
       setData(data)
       push('/')
@@ -38,7 +38,7 @@ export function SaveChangesAlert({
 
   const handleCancel = () => {
     setHasUnsavedChanges(false)
-    removeLocalStorageData()
+    removeLocalStorage('data')
     setData(initialData)
   }
 

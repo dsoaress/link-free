@@ -5,6 +5,7 @@ import { useEffect, createContext, useState } from 'react'
 import { api } from 'services/api'
 import { destroyCookies, setCookies } from 'utils/cookies'
 import { retrieveUser } from 'utils/retrieveUser'
+import { setLocalStorage } from 'utils/localStorage'
 
 import type { ReactNode } from 'react'
 import type { User } from 'types/User'
@@ -28,7 +29,12 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   useEffect(() => {
     const { accessToken } = parseCookies()
     if (accessToken) {
-      retrieveUser().then(data => setUser(data))
+      retrieveUser().then(data => {
+        if (data) {
+          setUser(data)
+          setLocalStorage('lang', data.lang || 'en')
+        }
+      })
     }
   }, [])
 
@@ -45,7 +51,12 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       })
 
       retrieveUser()
-        .then(data => setUser(data))
+        .then(data => {
+          if (data) {
+            setUser(data)
+            setLocalStorage('lang', data.lang || 'en')
+          }
+        })
         .then(() => push('/dash'))
     } catch (err) {
       console.error(err)

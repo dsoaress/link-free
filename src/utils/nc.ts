@@ -6,6 +6,7 @@ import { ExceptionError } from 'utils/error'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 export const nc = nextConnect<NextApiRequest, NextApiResponse>({
+  attachParams: true,
   onNoMatch: (_req, res) => {
     res.status(404).json({ error: 'Not found' })
   },
