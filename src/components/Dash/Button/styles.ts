@@ -10,27 +10,28 @@ type ButtonProps = {
 }
 
 export const Button = styled(BaseButton)<ButtonProps>`
-  background: #0284c7;
-  border-color: #0284c7;
+  background: #000;
+  border-color: #000;
   border-width: 1px;
+  border-radius: 4px;
 
   &:hover {
     transform: translateY(0);
-    background: ${({ outlined }) => (outlined ? '#0284c7' : darken(0.1, '#0284c7'))};
-    border-color: ${({ outlined }) => (outlined ? '#0284c7' : darken(0.1, '#0284c7'))};
+    background: ${({ outlined }) => (outlined ? '#000' : lighten(0.3, '#000'))};
+    border-color: ${({ outlined }) => (outlined ? '#000' : lighten(0.3, '#000'))};
   }
 
   &:active {
-    background: ${({ outlined }) => (outlined ? '#0284c7' : darken(0.2, '#0284c7'))};
-    border-color: ${({ outlined }) => (outlined ? '#0284c7' : darken(0.2, '#0284c7'))};
+    background: ${({ outlined }) => (outlined ? '#000' : lighten(0.4, '#000'))};
+    border-color: ${({ outlined }) => (outlined ? '#000' : lighten(0.4, '#000'))};
   }
 
   ${({ outlined }) =>
     outlined &&
     `
-    color: #0284c7;
+    color: #000;
     background: transparent;
-    border-color: #0284c7;
+    border-color: #000;
 
     &:hover {
       color: #f8fafc;

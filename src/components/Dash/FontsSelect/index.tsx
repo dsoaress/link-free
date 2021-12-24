@@ -1,30 +1,29 @@
-import { useData } from 'hooks/useData'
+import { FaFont } from 'react-icons/fa'
 
-import type { Fonts } from 'types/Fonts'
+import { useData } from 'hooks/useData'
+import { fonts } from 'constants/fonts'
+import { Select } from 'components/Select'
+
+import type { Fonts as FontsType } from 'types/Fonts'
 
 export function FontsSelect() {
   const { data, setData } = useData()
 
   return (
-    <select
+    <Select
+      label="Font select"
+      icon={FaFont}
       value={data.settings.font}
       onChange={e =>
         setData({
           ...data,
           settings: {
             ...data.settings,
-            font: e.target.value as Fonts
+            font: e.target.value as FontsType
           }
         })
       }
-    >
-      <option value="inconsolata">Inconsolata</option>
-      <option value="oswald">Oswald</option>
-      <option value="poppins">Poppins</option>
-      <option value="quicksand">Quicksand</option>
-      <option value="roboto">Roboto</option>
-      <option value="robotoSlab">Roboto Slab</option>
-      <option value="ubuntu">Ubuntu</option>
-    </select>
+      options={Object.entries(fonts).map(([value, { name: label }]) => ({ label, value }))}
+    />
   )
 }

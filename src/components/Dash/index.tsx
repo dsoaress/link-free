@@ -1,6 +1,5 @@
 import { isEqual } from 'lodash'
 import { useEffect, useState } from 'react'
-import Collapsible from 'react-collapsible'
 
 import { useData } from 'hooks/useData'
 import { getLocalStorage, setLocalStorage } from 'utils/localStorage'
@@ -8,10 +7,12 @@ import { Home } from 'components/Home'
 import { ColorsSettings } from 'components/Dash/ColorsSettings'
 import { DataSettings } from 'components/Dash/NameInput/DataSettings'
 import { SaveChangesAlert } from 'components/Dash/SaveChangesAlert'
+import { useAuth } from 'hooks/useAuth'
 
 import { Content, Preview, Wrapper } from './styles'
 import { UserSettings } from './UserSettings'
 import { SocialLinksSettings } from './SocialLinksSettings'
+import { Button } from './Button'
 
 import type { Data } from 'types/Data'
 
@@ -21,6 +22,7 @@ type DashProps = {
 
 export function Dash({ initialData }: DashProps) {
   const { data, setData } = useData()
+  const { signOut } = useAuth()
   const [isLoading, setIsLoading] = useState(true)
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false)
 
@@ -28,8 +30,6 @@ export function Dash({ initialData }: DashProps) {
     if (isLoading) {
       const storageData = getLocalStorage<Data>('data')
       if (storageData) setData(storageData)
-      else setData(initialData)
-
       setIsLoading(false)
     }
 
@@ -50,16 +50,14 @@ export function Dash({ initialData }: DashProps) {
           initialData={initialData}
         />
         <h1>Dash</h1>
+        <Button outlined size="small" onClick={() => signOut()}>
+          Logout
+        </Button>
 
         <UserSettings />
-        {/* <SocialLinksSettings /> */}
-        {/* <DataSettings /> */}
-        {/* <ColorsSettings />
-
-        <Collapsible trigger="Start here">
-          <p>This is the collapsible content. It can be any element or React component you like.</p>
-          <p>It can even be another Collapsible component. Check out the next section!</p>
-        </Collapsible> */}
+        <DataSettings />
+        <SocialLinksSettings />
+        <ColorsSettings />
       </Content>
       <Preview>
         <Home />

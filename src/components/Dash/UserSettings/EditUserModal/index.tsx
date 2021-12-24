@@ -15,7 +15,7 @@ import { InputsGroup, Wrapper } from './styles'
 
 import type { User } from 'types/User'
 import type { Role } from '@prisma/client'
-import type { FormEvent, Dispatch, SetStateAction } from 'react'
+import type { FormEvent } from 'react'
 
 type EditUserModalProps = {
   isOpen: boolean
@@ -138,7 +138,7 @@ export function EditUserModal({ isOpen, onClose, user }: EditUserModalProps) {
             autoComplete="new-password"
             errorMessage={errors.password}
           />
-          {user.id !== 1 && (
+          {user?.id !== 1 && (
             <Can roles={['ADMIN']}>
               <Select
                 label={t.userSection.common.role}

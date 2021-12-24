@@ -1,10 +1,12 @@
+import { Input } from 'components/Input'
 import { useData } from 'hooks/useData'
 
 export function NameInput() {
   const { data, setData } = useData()
 
   return (
-    <input
+    <Input
+      label="Name"
       value={data.settings.name}
       onChange={e =>
         setData({

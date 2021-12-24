@@ -4,10 +4,11 @@ import { authConstants } from 'constants/auth'
 import { ExceptionError } from 'utils/error'
 
 import type { NextApiRequest, NextApiResponse } from 'next'
+import type { Role } from '@prisma/client'
 
 type Token = {
   sub: string
-  role: string
+  role: Role
 }
 
 export async function authMiddleware(req: NextApiRequest, _res: NextApiResponse, next: () => void) {

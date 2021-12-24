@@ -1,4 +1,5 @@
 import { Toaster } from 'react-hot-toast'
+import Modal from 'react-modal'
 
 import { Layout } from 'components/Layout'
 import { AuthProvider } from 'contexts/AuthContext'
@@ -19,7 +20,8 @@ export default function App({ Component, pageProps }: AppProps) {
           </I18nProvider>
         </AuthProvider>
       </DataProvider>
-      <Toaster toastOptions={{ duration: 5000, position: 'top-left' }} />
+      <Toaster toastOptions={{ duration: 5000, position: 'top-right' }} />
+      {Modal.setAppElement('#__next')}
     </>
   )
 }

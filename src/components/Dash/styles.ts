@@ -14,6 +14,7 @@ export const Content = styled.div`
   padding: 5rem 1rem 1rem;
   font-family: 'Roboto', sans-serif;
   overflow-y: scroll;
+  background: #fff;
 `
 
 export const Preview = styled.div`

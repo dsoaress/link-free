@@ -1,14 +1,14 @@
-import 'rc-slider/assets/index.css'
-
-import Slider from 'rc-slider'
+import { useState } from 'react'
 
 import { useData } from 'hooks/useData'
 import { DescriptionInput } from 'components/Dash/DescriptionInput'
 import { FontsSelect } from 'components/Dash/FontsSelect'
 import { NameInput } from 'components/Dash/NameInput'
+import { Input } from 'components/Input'
 
 export function DataSettings() {
   const { data, setData } = useData()
+  const [number, setNumber] = useState(0)
 
   return (
     <>
@@ -18,23 +18,22 @@ export function DataSettings() {
         <FontsSelect />
       </div>
 
-      <div>
-        <Slider
-          value={+data.settings.buttonBorderRadius}
-          min={0}
-          max={40}
-          step={1}
-          onChange={value =>
-            setData({
-              ...data,
-              settings: {
-                ...data.settings,
-                buttonBorderRadius: String(value)
-              }
-            })
-          }
-        />
-      </div>
+      <Input
+        label="Border radius"
+        type="number"
+        min={0}
+        step={1}
+        value={+data.settings.buttonBorderRadius}
+        onChange={e =>
+          setData({
+            ...data,
+            settings: {
+              ...data.settings,
+              buttonBorderRadius: e.target.value
+            }
+          })
+        }
+      />
     </>
   )
 }

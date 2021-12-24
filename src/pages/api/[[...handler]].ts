@@ -1,34 +1,24 @@
 import { nc } from 'utils/nc'
-import { authMiddleware } from 'utils/authMiddleware'
-import {
-  auth,
-  checkUsername,
-  createUser,
-  deleteUser,
-  getData,
-  getUserById,
-  getUsers,
-  me,
-  refreshToken,
-  updateData,
-  updateUser
-} from 'api'
+import { authMiddleware } from 'middlewares/auth.middleware'
+import { dataController } from 'modules/data/data.controller'
+import { authController } from 'modules/auth/auth.controller'
+import { usersController } from 'modules/users/users.controller'
 
 const handler = nc
-  .post('/api/auth', auth)
-  .post('/api/auth/refresh-token', refreshToken)
+  .post('/api/auth', authController.auth)
+  .post('/api/auth/refresh-token', authController.refreshToken)
 
   .use(authMiddleware)
 
-  .get('/api/data', getData)
-  .put('/api/data', updateData)
+  .get('/api/data', dataController.getData)
+  .put('/api/data', dataController.updateData)
 
-  .get('/api/users', getUsers)
-  .get('/api/me', me)
-  .get('/api/users/:id', getUserById)
-  .post('/api/users/check-username', checkUsername)
-  .post('/api/users', createUser)
-  .patch('/api/users/:id', updateUser)
-  .delete('/api/users/:id', deleteUser)
+  .get('/api/users', usersController.getUsers)
+  .get('/api/me', usersController.getMe)
+  .get('/api/users/:id', usersController.getUser)
+  .post('/api/users/check-username', usersController.checkUserExists)
+  .post('/api/users', usersController.createUser)
+  .patch('/api/users/:id', usersController.updateUser)
+  .delete('/api/users/:id', usersController.deleteUser)
 
 export default handler

@@ -87,6 +87,7 @@ async function main() {
 
     await prisma.user.create({
       data: {
+        id: 1,
         username: USERNAME,
         password: hashSync(PASSWORD, 10),
         lang: 'en',

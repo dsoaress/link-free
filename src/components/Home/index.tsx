@@ -11,7 +11,7 @@ export const Home = () => {
   const { colors, buttonBorderRadius, font, name, description } = data.settings
 
   return (
-    <Wrapper color={colors.texts} font={fonts[font].name}>
+    <Wrapper color={colors.texts} font={fonts[font].value}>
       <Content>
         <Avatar />
         <Name>{name}</Name>

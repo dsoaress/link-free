@@ -11,6 +11,8 @@ export const Wrapper = styled.div`
   padding: 1rem;
   font-size: 0.875rem;
   line-height: 1;
+  background-color: #ddd;
+  z-index: 10;
 `
 
 export const ButtonsGroup = styled.div`
