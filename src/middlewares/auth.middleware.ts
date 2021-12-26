@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
 
-import { authConstants } from 'constants/auth'
+import { env } from 'constants/env'
 import { ExceptionError } from 'utils/error'
 
 import type { NextApiRequest, NextApiResponse } from 'next'
@@ -12,7 +12,7 @@ type Token = {
 }
 
 export async function authMiddleware(req: NextApiRequest, _res: NextApiResponse, next: () => void) {
-  const { JWT_SECRET } = authConstants
+  const { JWT_SECRET } = env
   const token = req.headers['authorization']
 
   if (!token) {

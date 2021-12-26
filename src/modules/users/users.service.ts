@@ -65,7 +65,6 @@ export class UsersService {
   }
 
   async getUsers() {
-    console.log('getUsers')
     const response = await prisma.user.findMany({
       select: {
         id: true,
@@ -74,8 +73,6 @@ export class UsersService {
         role: true
       }
     })
-
-    console.log(response)
 
     if (!response) {
       throw new ExceptionError('No data found', 404)

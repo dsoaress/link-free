@@ -5,7 +5,7 @@ import { useData } from 'hooks/useData'
 import { getLocalStorage, setLocalStorage } from 'utils/localStorage'
 import { Home } from 'components/Home'
 import { ColorsSettings } from 'components/Dash/ColorsSettings'
-import { DataSettings } from 'components/Dash/NameInput/DataSettings'
+import { DataSettings } from 'components/Dash/DataSettings'
 import { SaveChangesAlert } from 'components/Dash/SaveChangesAlert'
 import { useAuth } from 'hooks/useAuth'
 

@@ -1,6 +1,6 @@
 import { destroyCookie, setCookie } from 'nookies'
 
-import { authConstants } from 'constants/auth'
+import { env } from 'constants/env'
 import { api } from 'services/api'
 
 import type { GetServerSidePropsContext } from 'next'
@@ -12,7 +12,7 @@ type SetCookiesProps = {
 }
 
 export function setCookies({ ctx = undefined, accessToken, refreshToken }: SetCookiesProps) {
-  const { SESSION_EXPIRES_IN_S } = authConstants
+  const { SESSION_EXPIRES_IN_S } = env
   // @ts-ignore
   api.defaults.headers['authorization'] = `Bearer ${accessToken}`
 

@@ -3,7 +3,7 @@ import { compare } from 'bcryptjs'
 
 import { prisma } from 'services/prisma'
 import { ExceptionError } from 'utils/error'
-import { authConstants } from 'constants/auth'
+import { env } from 'constants/env'
 
 import type { User } from '@prisma/client'
 
@@ -73,7 +73,7 @@ export class AuthService {
   }
 
   private async createSession(user: User) {
-    const { SESSION_EXPIRES_IN_MS, JWT_EXPIRES_IN, JWT_SECRET } = authConstants
+    const { SESSION_EXPIRES_IN_MS, JWT_EXPIRES_IN, JWT_SECRET } = env
 
     try {
       const session = await prisma.session.create({

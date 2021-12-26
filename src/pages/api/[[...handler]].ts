@@ -1,4 +1,4 @@
-import { nc } from 'utils/nc'
+import { nc } from 'services/nc'
 import { authMiddleware } from 'middlewares/auth.middleware'
 import { dataController } from 'modules/data/data.controller'
 import { authController } from 'modules/auth/auth.controller'
@@ -14,7 +14,7 @@ const handler = nc
   .put('/api/data', dataController.updateData)
 
   .get('/api/users', usersController.getUsers)
-  .get('/api/me', usersController.getMe)
+  .get('/api/users/me', usersController.getMe)
   .get('/api/users/:id', usersController.getUser)
   .post('/api/users/check-username', usersController.checkUserExists)
   .post('/api/users', usersController.createUser)

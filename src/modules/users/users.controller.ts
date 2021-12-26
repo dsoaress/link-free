@@ -8,34 +8,34 @@ class UsersController {
     const { username, password, role } = req.body
     const { userRole } = req
     const result = await usersService.createUser(username, password, role, userRole)
-    res.status(200).json(result)
+    res.json(result)
   }
 
   async getUser(req: NextApiRequest, res: NextApiResponse) {
     const usersService = new UsersService()
     const { id: userId } = req.params
     const result = await usersService.getUser(+userId)
-    res.status(200).json(result)
+    res.json(result)
   }
 
   async getUsers(_req: NextApiRequest, res: NextApiResponse) {
     const usersService = new UsersService()
     const result = await usersService.getUsers()
-    res.status(200).json(result)
+    res.json(result)
   }
 
   async getMe(req: NextApiRequest, res: NextApiResponse) {
     const usersService = new UsersService()
     const { userId } = req
     const result = await usersService.getUser(+userId)
-    res.status(200).json(result)
+    res.json(result)
   }
 
   async checkUserExists(req: NextApiRequest, res: NextApiResponse) {
     const usersService = new UsersService()
     const { username } = req.body
     const result = await usersService.checkUserExists(username)
-    res.status(200).json({ isTaken: result })
+    res.json({ isTaken: result })
   }
 
   async updateUser(req: NextApiRequest, res: NextApiResponse) {
@@ -44,7 +44,7 @@ class UsersController {
     const { oldPassword, password, role } = req.body
     const { userRole } = req
     const result = await usersService.updateUser(+userId, userRole, oldPassword, password, role)
-    res.status(200).json(result)
+    res.json(result)
   }
 
   async deleteUser(req: NextApiRequest, res: NextApiResponse) {

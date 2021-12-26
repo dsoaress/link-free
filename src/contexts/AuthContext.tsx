@@ -4,7 +4,7 @@ import { useEffect, createContext, useState } from 'react'
 
 import { api } from 'services/api'
 import { destroyCookies, setCookies } from 'utils/cookies'
-import { retrieveUser } from 'utils/retrieveUser'
+import { retrieveUser } from 'services/retrieveUser'
 import { setLocalStorage } from 'utils/localStorage'
 
 import type { ReactNode } from 'react'

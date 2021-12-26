@@ -12,7 +12,7 @@ dotenv.config({
 async function main() {
   const data = {
     settings: {
-      avatar: '/avatar.jpeg',
+      avatar: 'https://ucarecdn.com/cd0ece6a-1d16-4405-947d-9a71d1b7a6cd/avatar.png',
       name: 'John Doe',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam nunc nisl euismod.',
